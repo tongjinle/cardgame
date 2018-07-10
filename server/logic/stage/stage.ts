@@ -61,7 +61,7 @@ export default class Stage {
     this.status = ECombatStatus.pending;
 
     // record
-    this.writeRecord(ERecord.prepare, { armyList: this.armyList.toString() });
+    this.writeRecord(ERecord.prepare, { armyList: this.armyList.map(ar => ar.toInfo()), });
   }
 
 
@@ -72,8 +72,8 @@ export default class Stage {
 
     // record
     this.writeRecord(ERecord.start);
-
-    while (1) {
+    let count = 100;
+    while (count) {
       this.judge();
       if (this.status as ECombatStatus === ECombatStatus.end) {
         break;
@@ -88,8 +88,11 @@ export default class Stage {
 
       this.cardCombat();
 
+      this.clearCombatField();
+
       // 回合数统计
       this.roundIndex++;
+      count--;
     }
   }
 
@@ -118,7 +121,7 @@ export default class Stage {
       this.activeArmy.cardListForWait.push(card);
 
       // record
-      this.writeRecord(ERecord.drawCard, { card: card.toString() });
+      this.writeRecord(ERecord.drawCard, { card: card.toInfo() });
 
       // 刷新手牌位置
       this.resetCardPosition(this.activeArmy.cardListForWait);
@@ -131,7 +134,7 @@ export default class Stage {
   putCard(): void {
     // 减少等待回合
     this.activeArmy.cardListForWait.forEach(ca => {
-      ca.waitRound = Math.min(0, ca.waitRound - 1);
+      ca.waitRound = Math.max(0, ca.waitRound - 1);
     });
     // record
     this.writeRecord(ERecord.reduceWaitRound, )
@@ -146,7 +149,7 @@ export default class Stage {
       this.activeArmy.cardList.push(ca);
 
       // record
-      this.writeRecord(ERecord.putCard, { card: ca.toString() });
+      this.writeRecord(ERecord.putCard, { card: ca.toInfo() });
     }
 
     // 刷新手牌位置
@@ -194,11 +197,10 @@ export default class Stage {
   // 清理战场
   clearCombatField(): void {
     let enemy = this.armyList.find(ar => ar != this.activeArmy);
-    let idList = enemy.cardList.map(ca => {
-      if (ca.hp === 0) {
-        return ca.id;
-      }
-    });
+    let idList = enemy.cardList
+      .filter(ca => ca.hp === 0)
+      .map(ca => ca.id)
+
     enemy.cardList = enemy.cardList.filter(ca => !idList.some(n => n === ca.id));
 
     // record
@@ -240,6 +242,7 @@ export default class Stage {
 
     let rec = {
       type,
+      typeStr: ERecord[type],
       info,
       roundIndex: this.roundIndex,
     };

@@ -36,7 +36,7 @@ export default abstract class Tool {
 
 
 
-  toString(): string {
+  toInfo(): string {
     let info = {
       level: this.level,
       star: this.star,

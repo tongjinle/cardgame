@@ -3,7 +3,7 @@ import Skill from '../skill/skill';
 import Hero from '../hero/hero';
 import Stage from '../stage/stage';
 
-export default abstract class Card {
+export default class Card {
   // id
   id: string;
   // 星
@@ -40,7 +40,7 @@ export default abstract class Card {
   // 普通攻击(攻击卡牌)
   attack(target: Card | Hero): void {
     let damage: number = this.power;
-    target.hp = Math.min(0, target.hp - damage);
+    target.hp = Math.max(0, target.hp - damage);
   }
 
   // 寻找卡牌的攻击对象
@@ -56,7 +56,7 @@ export default abstract class Card {
     return enemy.hero;
   }
 
-  toString(): string {
+  toInfo() {
     let info = {
       id: this.id,
       star: this.star,
@@ -66,10 +66,10 @@ export default abstract class Card {
       hp: this.hp,
       level: this.level,
       nature: this.nature,
-      skillList: this.skillList.map(n => n.toString()),
+      skillList: this.skillList.map(n => n.toInfo()),
       status: this.status,
     };
-    return JSON.stringify(info);
+    return info;
   }
 
 }

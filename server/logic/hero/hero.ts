@@ -35,14 +35,14 @@ export default class Hero {
     this.id = Math.floor(1e8 * Math.random()).toString();
   }  
 
-  toString(): string {
+  toInfo() {
     let info = {
       id:this.id,
       hp: this.hp,
       cardCount: this.cardCount,
       toolCount: this.toolCount,
     };
-    return JSON.stringify(info);
+    return info
   }
 
 }

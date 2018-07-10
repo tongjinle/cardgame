@@ -4,15 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha --require intelli-espower-loader dist/test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/seedrandom": "^2.4.27",
     "mongodb": "^3.1.1",
     "seedrandom": "^2.4.3",
     "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "@types/supertest": "^2.0.0",
+    "@types/mocha": "^5.2.4",
+    "@types/power-assert": "^1.5.0",
+    "@types/seedrandom": "^2.4.27",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.0"
+  },
+  "directories": {
+    "test": "dist/test/"
   }
 }

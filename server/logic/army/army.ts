@@ -36,12 +36,12 @@ export default class Army {
 
 
 
-  toString() {
+  toInfo() {
     return {
       color: this.color,
-      hero: this.hero.toString(),
-      cardListForDraw: this.cardListForDraw.map(n => n.toString()),
-      toolList: this.toolList.map(n => n.toString()),
+      hero: this.hero.toInfo(),
+      cardListForDraw: this.cardListForDraw.map(n => n.toInfo()),
+      toolList: this.toolList.map(n => n.toInfo()),
 
     }
   }
