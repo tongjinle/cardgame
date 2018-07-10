@@ -23,17 +23,26 @@
 */
 
 export default class Hero {
+  // id
+  id: string;
   // 生命值
   hp: number;
-  // 花费
-  cost: number;
   // 卡牌格子数量
   cardCount: number;
   // 道具格子数量
   toolCount: number;
   constructor() {
+    this.id = Math.floor(1e8 * Math.random()).toString();
+  }  
 
+  toString(): string {
+    let info = {
+      id:this.id,
+      hp: this.hp,
+      cardCount: this.cardCount,
+      toolCount: this.toolCount,
+    };
+    return JSON.stringify(info);
   }
-
 
 }

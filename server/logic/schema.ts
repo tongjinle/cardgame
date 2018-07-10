@@ -60,7 +60,7 @@ export enum ECombatStatus{
 }
 
 // 战斗记录类型
-export enum ERecType{
+export enum ERecord{
   // 战斗准备(双方军队,颜色,种子,卡牌库)
   prepare,
   // 战斗开始
@@ -83,6 +83,16 @@ export enum ERecType{
   clearCard,
   // 卡牌重置位置(旧位置,新位置)
   resetCardPosition,
+  // 战斗结束
+  end,
+}
+
+
+export enum EDefeat{
+  // 击溃对方英雄
+  hero,
+  // 击溃对方所有卡牌
+  card,
 }
 
 

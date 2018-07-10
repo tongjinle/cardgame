@@ -20,7 +20,7 @@ export default class Army {
   // 道具列表
   toolList: Tool[];
 
-  constructor(){
+  constructor() {
     this.cardListForDraw = [];
     this.cardListForWait = [];
     this.cardList = [];
@@ -32,6 +32,18 @@ export default class Army {
   getTotalValue(): number {
     let rst: number = 0;
     return rst;
+  }
+
+
+
+  toString() {
+    return {
+      color: this.color,
+      hero: this.hero.toString(),
+      cardListForDraw: this.cardListForDraw.map(n => n.toString()),
+      toolList: this.toolList.map(n => n.toString()),
+
+    }
   }
 
 

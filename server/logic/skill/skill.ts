@@ -13,4 +13,10 @@ export default abstract class Skill {
   cast() {
 
   }
+
+  toString():string{
+    let info = {};
+    return JSON.stringify(info);
+  }
+
 }

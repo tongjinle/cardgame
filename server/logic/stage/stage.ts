@@ -26,11 +26,13 @@ import Record from './record';
 import Army from '../army/army';
 import Card from '../card/card';
 import Hero from '../hero/hero';
-import { ECombatStatus, EArmyColor, } from '../schema';
+import { ECombatStatus, EArmyColor, ERecord, EDefeat, } from '../schema';
 import *  as conf from '../config';
 import rnd from 'seedrandom';
 // 战斗场景
 export default class Stage {
+  // 是否处于播放录像
+  isReplay: boolean = false;
   // 战斗状态
   status: ECombatStatus;
   // 军队列表
@@ -49,7 +51,7 @@ export default class Stage {
     this.roundIndex = 0;
     this.seed = Math.random();
     this.rndGen = rnd(this.seed.toString());
-
+    this.recordList = [];
   }
 
   // 加载军队,打乱卡牌顺序
@@ -57,6 +59,9 @@ export default class Stage {
     this.armyList = armyList;
     // 默认是准备状态
     this.status = ECombatStatus.pending;
+
+    // record
+    this.writeRecord(ERecord.prepare, { armyList: this.armyList.toString() });
   }
 
 
@@ -64,6 +69,9 @@ export default class Stage {
   combat(): void {
     // 进入战斗状态
     this.status = ECombatStatus.combat;
+
+    // record
+    this.writeRecord(ERecord.start);
 
     while (1) {
       this.judge();
@@ -91,7 +99,11 @@ export default class Stage {
       return this.getFirstActiveArmy();
     }
     // 交换回合
-    return this.armyList.find(ar => ar != this.activeArmy);
+    let army = this.armyList.find(ar => ar != this.activeArmy);
+
+    // record
+    this.writeRecord(ERecord.round, { heroId: army.hero.id, });
+    return army;
   }
 
 
@@ -104,6 +116,9 @@ export default class Stage {
       let card = this.activeArmy.cardListForDraw[index];
       this.activeArmy.cardListForDraw.splice(index, 1);
       this.activeArmy.cardListForWait.push(card);
+
+      // record
+      this.writeRecord(ERecord.drawCard, { card: card.toString() });
 
       // 刷新手牌位置
       this.resetCardPosition(this.activeArmy.cardListForWait);
@@ -118,6 +133,9 @@ export default class Stage {
     this.activeArmy.cardListForWait.forEach(ca => {
       ca.waitRound = Math.min(0, ca.waitRound - 1);
     });
+    // record
+    this.writeRecord(ERecord.reduceWaitRound, )
+
     // 查看能上场的手牌
     // while,因为上场的可能不止一个
     let ca: Card;
@@ -126,6 +144,9 @@ export default class Stage {
       let index = this.activeArmy.cardListForWait.indexOf(ca);
       this.activeArmy.cardListForWait.splice(index, 1);
       this.activeArmy.cardList.push(ca);
+
+      // record
+      this.writeRecord(ERecord.putCard, { card: ca.toString() });
     }
 
     // 刷新手牌位置
@@ -136,8 +157,11 @@ export default class Stage {
   resetCardPosition(list: Card[]): void {
     list.forEach((ca, index) => {
       if (ca.position !== index) {
+        let lastPosition = ca.position;
         ca.position = index;
+
         // record
+        this.writeRecord(ERecord.resetCardPosition, { cardId: ca.id, lastPosition, position: ca.position })
       }
     });
   }
@@ -158,7 +182,11 @@ export default class Stage {
       // 普通攻击
       {
         let target = ca.findTargetForCard(this);
+        let lastHp = target.hp;
         target && ca.attack(target);
+
+        // record
+        this.writeRecord(ERecord.cardAttack, { cardId: ca.id, targetId: target.id, lastHp, hp: target.hp, });
       }
     });
   }
@@ -166,14 +194,17 @@ export default class Stage {
   // 清理战场
   clearCombatField(): void {
     let enemy = this.armyList.find(ar => ar != this.activeArmy);
-    let indexList = enemy.cardList.map((ca, index) => {
+    let idList = enemy.cardList.map(ca => {
       if (ca.hp === 0) {
-        return index;
+        return ca.id;
       }
     });
-    enemy.cardList = enemy.cardList.filter((ca, index) => indexList.every(n => n !== index));
+    enemy.cardList = enemy.cardList.filter(ca => !idList.some(n => n === ca.id));
 
     // record
+    idList.forEach(id => {
+      this.writeRecord(ERecord.clearCard, { cardId: id, });
+    });
 
   }
 
@@ -183,11 +214,13 @@ export default class Stage {
       if (ar.hero.hp <= 0) {
         this.status = ECombatStatus.end;
         // record
+        this.writeRecord(ERecord.end, { loserId: ar.hero.id, defeatType: EDefeat.hero, });
         return true;
       }
-      if (ar.cardList.length === 0 && ar.cardListForDraw.length === 0) {
+      if (ar.cardList.length === 0 && ar.cardListForDraw.length === 0 && ar.cardListForWait.length === 0) {
         this.status = ECombatStatus.end;
         // record
+        this.writeRecord(ERecord.end, { loserId: ar.hero.id, defeatType: EDefeat.card, });
         return true;
       }
     })
@@ -200,8 +233,18 @@ export default class Stage {
 
 
 
+  // 记录
+  private writeRecord(type: ERecord, info: any = {}): void {
+    // 如果是在播放replay,则不用生成记录
+    if (this.isReplay) return;
 
-
+    let rec = {
+      type,
+      info,
+      roundIndex: this.roundIndex,
+    };
+    this.recordList.push(rec);
+  };
 
 
 }

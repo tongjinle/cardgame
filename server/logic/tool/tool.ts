@@ -33,4 +33,18 @@ export default abstract class Tool {
   skill: Skill;
   // 技能次数
   skillCount: number;
+
+
+
+  toString(): string {
+    let info = {
+      level: this.level,
+      star: this.star,
+      skill: this.skill.toString(),
+      skillCount: this.skillCount,
+
+    };
+    return JSON.stringify(info);
+  }
+
 }

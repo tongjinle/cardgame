@@ -4,15 +4,13 @@ import Hero from '../hero/hero';
 import Stage from '../stage/stage';
 
 export default abstract class Card {
+  // id
+  id: string;
   // 星
   star: number;
-  // 花费
-  cost: number;
-  // 序号
-  index: number;
   // 上场前的等待回合
   waitRound: number;
-  // 战斗位置
+  // 位置
   position: number;
   // 攻击力
   power: number;
@@ -27,25 +25,26 @@ export default abstract class Card {
   // 卡牌状态
   status: ECardStatus;
   constructor() {
+    this.id = Math.floor(1e8 * Math.random()).toString();
     this.status = ECardStatus.normal;
     this.skillList = [];
     this.position = -1;
   }
-  
+
 
   // 使用技能攻击(尝试)
-  cast(skill:Skill  ):void{
+  cast(skill: Skill): void {
 
   }
 
   // 普通攻击(攻击卡牌)
-  attack(target:Card|Hero):void{
-    let damage:number = this.power;
+  attack(target: Card | Hero): void {
+    let damage: number = this.power;
     target.hp = Math.min(0, target.hp - damage);
   }
 
   // 寻找卡牌的攻击对象
-  findTargetForCard(stage:Stage): Card | Hero {
+  findTargetForCard(stage: Stage): Card | Hero {
     let color = stage.activeArmy.color;
     let enemy = stage.armyList.find(ar => ar.color !== color);
     // 优先寻找卡牌攻击对象
@@ -57,6 +56,20 @@ export default abstract class Card {
     return enemy.hero;
   }
 
-  
+  toString(): string {
+    let info = {
+      id: this.id,
+      star: this.star,
+      waitRound: this.waitRound,
+      position: this.position,
+      power: this.power,
+      hp: this.hp,
+      level: this.level,
+      nature: this.nature,
+      skillList: this.skillList.map(n => n.toString()),
+      status: this.status,
+    };
+    return JSON.stringify(info);
+  }
 
 }
