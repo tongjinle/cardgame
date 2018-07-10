@@ -58,3 +58,32 @@ export enum ECombatStatus{
   // 战斗借宿
   end,
 }
+
+// 战斗记录类型
+export enum ERecType{
+  // 战斗准备(双方军队,颜色,种子,卡牌库)
+  prepare,
+  // 战斗开始
+  start,
+  // 某方行动(回合,军队颜色)
+  round,
+  // 抽牌(卡牌信息)
+  drawCard,
+  // 减少等待回合
+  reduceWaitRound,
+  // 卡牌上场(卡牌信息)
+  putCard,
+  // 道具攻击
+  castTool,
+  // 卡牌技能攻击
+  castCardSkill,
+  // 卡牌普通攻击(目标,伤害)
+  cardAttack,
+  // 卡牌离场(也就是死亡,卡牌信息)
+  clearCard,
+  // 卡牌重置位置(旧位置,新位置)
+  resetCardPosition,
+}
+
+
+
