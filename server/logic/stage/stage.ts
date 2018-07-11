@@ -26,9 +26,13 @@ import Record from './record';
 import Army from '../army/army';
 import Card from '../card/card';
 import Hero from '../hero/hero';
+import Buff from '../buff/buff';
+import Flow from '../flow/flow';
 import { ECombatStatus, EArmyColor, ERecord, EDefeat, } from '../schema';
 import *  as conf from '../config';
 import rnd from 'seedrandom';
+
+
 // 战斗场景
 export default class Stage {
   // 是否处于播放录像
@@ -47,6 +51,10 @@ export default class Stage {
   recordList: Record[];
   // 回合计数
   roundIndex: number;
+
+  private buffList: Buff[];
+
+
   constructor() {
     this.roundIndex = 0;
     this.seed = Math.random();
@@ -232,6 +240,19 @@ export default class Stage {
   getFirstActiveArmy(): Army {
     return this.armyList.sort((a, b) => { return b.getTotalValue() - a.getTotalValue(); })[0];
   };
+
+  // 处理效果流
+  dealFlow(flow: Flow) {
+    // 遍历所有的buff
+    this.buffList.some(bu => {
+      // 如果流已经结束,就返回
+      if (flow.isDone) return true;
+      // 如果buff对这个flow具备触发条件,则处理这个flow
+      if (bu.trigger(this, flow)) {
+        bu.deal(this, flow);
+      }
+    });
+  }
 
 
 

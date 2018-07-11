@@ -21,43 +21,46 @@
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
                佛祖保佑       永无BUG  
 */
-
 import Stage from '../stage/stage';
+import Army from '../army/army';
 import Card from '../card/card';
+import Tool from '../tool/tool';
 import Hero from '../hero/hero';
+import { ECastType, ECastSubtype, EFlowType, } from '../schema';
 
+// 效果流
+export default class Flow {
+  // 效果流类型
+  type: EFlowType;
+  // 当前阶段
+  step: any;
+  // 数据
+  data: any;
+  // 来源
+  source: Card | Tool;
 
-export default abstract class Skill  {
-  id: number;
-  // 技能拥有者
-  card: Card;
-  // 名称
-  // 属性
-  // 描述
-  // 触发条件
+  // 阶段队列  
+  stepQueue: any[];
 
-  // 是否是主动技能
+  // 是否处理完毕
+  isDone: boolean;
+
+  // 处理记录
+  dealList: any[];
 
   constructor() {
-
+    this.isDone = false;
+    this.dealList = [];
   }
 
+  // 处理
+  deal(stage: Stage): void {
+    this.stepQueue.some(st => {
+      this.step = st;
+      stage.dealFlow(this);
+      return this.isDone;
+    });
 
-  // 索敌,查找目标
-  findTarget(stage:Stage): Card[] | Hero {
-    let rst: Card[] | Hero;
-    return rst;
+    this.isDone = true;
   }
-
-
-  // 技能效果
-  cast() {
-
-  }
-
-  toInfo() {
-    let info = {};
-    return info;
-  }
-
 }

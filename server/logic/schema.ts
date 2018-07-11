@@ -28,7 +28,7 @@ export enum ENature {
 };
 
 // 卡牌状态
-export enum ECardStatus{
+export enum ECardStatus {
   // 冰冻
   frozen,
   // 麻痹
@@ -50,7 +50,7 @@ export enum EArmyColor {
 
 
 // 游戏战斗状态
-export enum ECombatStatus{
+export enum ECombatStatus {
   // 战斗准备
   pending,
   // 战斗中
@@ -60,7 +60,7 @@ export enum ECombatStatus{
 }
 
 // 战斗记录类型
-export enum ERecord{
+export enum ERecord {
   // 战斗准备(双方军队,颜色,种子,卡牌库)
   prepare,
   // 战斗开始
@@ -87,8 +87,8 @@ export enum ERecord{
   end,
 }
 
-
-export enum EDefeat{
+// 获胜方式
+export enum EDefeat {
   // 击溃对方英雄
   hero,
   // 击溃对方所有卡牌
@@ -96,4 +96,47 @@ export enum EDefeat{
 }
 
 
+export enum ECastFlowStep {
+  // 使用技能前
+  beforeCast,
+  // 被使用技能前
+  beforeBeCast,
+  // 使用技能中
+  cast,
+  // 被使用技能后
+  afterBeCast,
+  // 使用技能后
+  afterCast,
 
+}
+
+// 效果类型
+export enum ECastType {
+  // 攻击
+  attack,
+  // 治疗
+  heal,
+}
+
+// 效果细分类型(更加详细的解释效果类型)
+export enum ECastSubtype {
+  // 法术伤害
+  magic,
+  // 神圣伤害
+  sacred,
+  // 特殊伤害
+  special,
+  // 其他伤害(例如"毒")
+  other,
+
+  // 治疗现在只有一种,所以略
+}
+
+
+
+export enum EFlowType{
+  // 效果流
+  Cast,
+  // 卡牌死亡流
+  // 卡牌登场流
+}

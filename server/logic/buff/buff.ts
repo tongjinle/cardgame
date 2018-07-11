@@ -21,43 +21,27 @@
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
                佛祖保佑       永无BUG  
 */
-
-import Stage from '../stage/stage';
+import Army from '../army/army';
 import Card from '../card/card';
 import Hero from '../hero/hero';
+import Stage from '../stage/stage';
+import Flow from '../flow/flow';
 
-
-export default abstract class Skill  {
-  id: number;
-  // 技能拥有者
+export default class Buff {
+  // id
+  id: string;
+  // 所属的card
   card: Card;
-  // 名称
-  // 属性
-  // 描述
-  // 触发条件
-
-  // 是否是主动技能
-
-  constructor() {
-
-  }
+  // 回合
+  round: number;
 
 
-  // 索敌,查找目标
-  findTarget(stage:Stage): Card[] | Hero {
-    let rst: Card[] | Hero;
+  // 触发器
+  trigger(stage: Stage, flow: Flow): boolean {
+    let rst: boolean = false;
     return rst;
   }
 
-
-  // 技能效果
-  cast() {
-
-  }
-
-  toInfo() {
-    let info = {};
-    return info;
-  }
-
+  // 效果
+  deal(stage: Stage, flow: Flow): void { }
 }

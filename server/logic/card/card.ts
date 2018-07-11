@@ -2,6 +2,7 @@ import { ENature, ECardStatus, } from '../schema';
 import Skill from '../skill/skill';
 import Hero from '../hero/hero';
 import Stage from '../stage/stage';
+import Army from '../army/army';
 
 export default class Card {
   // id
@@ -24,6 +25,8 @@ export default class Card {
   skillList: Skill[];
   // 卡牌状态
   status: ECardStatus;
+  // 所属的army
+  army: Army;  
   constructor() {
     this.id = Math.floor(1e8 * Math.random()).toString();
     this.status = ECardStatus.normal;

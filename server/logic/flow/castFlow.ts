@@ -23,41 +23,61 @@
 */
 
 import Stage from '../stage/stage';
+import Army from '../army/army';
 import Card from '../card/card';
+import Tool from '../tool/tool';
 import Hero from '../hero/hero';
+import Flow from './flow';
+import { ECastType, ECastSubtype, EFlowType, ECastFlowStep, } from '../schema';
+
+// 效果流
+
+export default class CastFlow extends Flow {
+  // 目标
+  target: Card | Hero;
+
+  // 效果类型
+  castType: ECastType;
+
+  // 效果详细类型
+  castSubtype: ECastSubtype;
 
 
-export default abstract class Skill  {
-  id: number;
-  // 技能拥有者
-  card: Card;
-  // 名称
-  // 属性
-  // 描述
-  // 触发条件
 
-  // 是否是主动技能
+  constructor(target: Card | Hero, castType: ECastType, castSubtype: ECastSubtype) {
+    super();
+    this.type = EFlowType.Cast;
+    this.stepQueue = [
+      ECastFlowStep.beforeCast,
+      ECastFlowStep.beforeBeCast,
+      ECastFlowStep.cast,
+      ECastFlowStep.afterBeCast,
+      ECastFlowStep.afterCast,
+    ];
 
-  constructor() {
 
+    this.target = target;
+    this.castType = castType;
+    this.castSubtype = castSubtype;
   }
-
-
-  // 索敌,查找目标
-  findTarget(stage:Stage): Card[] | Hero {
-    let rst: Card[] | Hero;
-    return rst;
-  }
-
-
-  // 技能效果
-  cast() {
-
-  }
-
-  toInfo() {
-    let info = {};
-    return info;
-  }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
