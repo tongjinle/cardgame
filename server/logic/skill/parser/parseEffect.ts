@@ -66,7 +66,7 @@ enum EEffect {
 
 // 解析效果字符串,返回一个效果流
 export default function parseEffect(stage: Stage, sender: Card | Tool, target: Card | Hero, effectStr: string): CastFlow {
-  let rst: CastFlow = new CastFlow(target);
+  let rst: CastFlow = new CastFlow(sender, target);
   let parseNumberFormulaWithEnv = (numberFormulaStr: string) => {
     return parseNumberFormula(stage, sender, target, rst, numberFormulaStr);
   };

@@ -53,11 +53,16 @@ function parseSingleFormula(stage: Stage, sender: Card, formula: string): CastFl
     }
     formula = actionStr;
   }
-  let [findTargetStr, ...effectStr] = formula.split('#');
+  let [findTargetStr, ...effectStrList] = formula.split('#');
 
   let targetList: (Card | Hero)[] = parseFindTarget(stage, sender, findTargetStr);
-  
-  rst.push(...targetList.map(ta => parseEffect(stage, sender, ta, formula)));
+
+  targetList.forEach(ta => {
+    effectStrList.forEach(ef => {
+      rst.push(parseEffect(stage, sender, ta, ef));
+    });
+  });
+
   return rst;
 }
 

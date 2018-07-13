@@ -48,7 +48,7 @@ export default class CastFlow extends Flow<ICastData> {
 
 
 
-  constructor(target: Card | Hero) {
+  constructor(sender: Card | Tool, target: Card | Hero) {
     super();
     this.type = EFlowType.Cast;
     this.stepQueue = [
@@ -59,7 +59,7 @@ export default class CastFlow extends Flow<ICastData> {
       ECastFlowStep.afterCast,
     ];
 
-
+    this.sender = sender;
     this.target = target;
     this.initData();
   }
