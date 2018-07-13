@@ -22,49 +22,32 @@
                佛祖保佑       永无BUG  
 */
 
-import Stage from '../stage/stage';
-import Card from '../card/card';
-import Hero from '../hero/hero';
-import {ESkillNature, ESkillType,} from '../schema';
 
-export default abstract  class Skill  {
-  id: number;
-  // 技能编号
-  skillId: number;
-  // 技能拥有者
-  card: Card;
-  // 名称
-  name: string;
-  // 属性
-  nature: ESkillNature;
-  // 描述
-  desc: string;
-  // 是否是主动技能
-  useType: ESkillType;
-  // 索敌方式
-  
+import Stage from '../../stage/stage';
+import Card from '../../card/card';
+import Hero from '../../hero/hero';
 
 
-  constructor() {
-
-  }
-
-
-  // 索敌,查找目标
-  findTarget(stage:Stage): Card[] | Hero {
-    let rst: Card[] | Hero;
-    return rst;
-  }
-
-
-  // 技能效果
-  cast() {
-
-  }
-
-  toInfo() {
-    let info = {};
-    return info;
-  }
-
+enum ETeam{
+  Ttm_sf,
+  Ttm_op,
+  Ttm_al,
 }
+
+// 解析目标队伍枚举
+export default function parseTeam(stage: Stage, sender: Card, teamStr: string): Card[] {
+  let rst: Card[] = [];
+  let type:ETeam = ETeam[teamStr];
+  if(ETeam.Ttm_sf === type){
+    rst.push(...sender.army.cardList);
+  }else if(ETeam.Ttm_op === type){
+    let enemy = stage.armyList.find(ar => ar != sender.army);
+    rst.push(...enemy.cardList);
+  }else if(ETeam.Ttm_al === type){
+    rst.push(...parseTeam(stage, sender, ETeam[ETeam.Ttm_sf]), ...parseTeam(stage, sender, ETeam[ETeam.Ttm_op]), );
+  }
+
+  return rst;
+}
+
+

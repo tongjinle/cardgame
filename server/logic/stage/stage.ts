@@ -270,5 +270,9 @@ export default class Stage {
     this.recordList.push(rec);
   };
 
+  // 从一个区间获取随机数
+  genRnd(min: number, max: number): number {
+    return Math.floor(this.rndGen() * (max - min)) + min;
+  }
 
 }

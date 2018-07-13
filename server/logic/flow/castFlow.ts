@@ -28,23 +28,27 @@ import Card from '../card/card';
 import Tool from '../tool/tool';
 import Hero from '../hero/hero';
 import Flow from './flow';
-import { ECastType, ECastSubtype, EFlowType, ECastFlowStep, } from '../schema';
+import {
+  ECastType, ECastSubtype, EFlowType, ECastFlowStep,
+  ICastData,
+  ICastDamage,
+} from '../schema';
 
 // 效果流
 
-export default class CastFlow extends Flow {
+export default class CastFlow extends Flow<ICastData> {
   // 目标
   target: Card | Hero;
 
-  // 效果类型
-  castType: ECastType;
+  // // 效果类型
+  // castType: ECastType;
 
-  // 效果详细类型
-  castSubtype: ECastSubtype;
+  // // 效果详细类型
+  // castSubtype: ECastSubtype;
 
 
 
-  constructor(target: Card | Hero, castType: ECastType, castSubtype: ECastSubtype) {
+  constructor(target: Card | Hero) {
     super();
     this.type = EFlowType.Cast;
     this.stepQueue = [
@@ -57,8 +61,15 @@ export default class CastFlow extends Flow {
 
 
     this.target = target;
-    this.castType = castType;
-    this.castSubtype = castSubtype;
+    this.initData();
+  }
+
+
+  // 初始化数据
+  private initData(): void {
+    // 伤害
+    let damage: ICastDamage = { magic: 0, sacred: 0, special: 0, other: 0, physical: 0, };
+    this.data = { damage, };
   }
 }
 

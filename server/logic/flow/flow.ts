@@ -29,15 +29,15 @@ import Hero from '../hero/hero';
 import { ECastType, ECastSubtype, EFlowType, } from '../schema';
 
 // 效果流
-export default class Flow {
+export default abstract class Flow<T = any> {
   // 效果流类型
   type: EFlowType;
   // 当前阶段
   step: any;
   // 数据
-  data: any;
+  data: T;
   // 来源
-  source: Card | Tool;
+  sender: Card | Tool;
 
   // 阶段队列  
   stepQueue: any[];

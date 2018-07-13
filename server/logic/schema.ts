@@ -34,7 +34,7 @@ export enum ECardStatus {
   // 麻痹
   stun,
   // 中毒
-  posion,
+  poison,
   // 正常
   normal,
 }
@@ -95,7 +95,7 @@ export enum EDefeat {
   card,
 }
 
-
+// 技能流各个阶段
 export enum ECastFlowStep {
   // 使用技能前
   beforeCast,
@@ -134,9 +134,114 @@ export enum ECastSubtype {
 
 
 
-export enum EFlowType{
+export enum EFlowType {
   // 效果流
   Cast,
   // 卡牌死亡流
   // 卡牌登场流
 }
+
+
+// 技能属性
+export enum ESkillNature {
+  water,
+  fire,
+  grass,
+  elec,
+  ice,
+  normal,
+  dragon,
+  psychic,
+  rock,
+  flying,
+  fighting,
+  poison,
+  ghost,
+  diss,
+  assist,
+}
+
+
+// 技能使用类型
+export enum ESkillType {
+  // 主动
+  active,
+  // 被动
+  unactive,
+}
+
+
+export interface ICastDamage{
+  // 法术伤害
+  magic,
+  // 物理伤害
+  physical,
+  // 神圣伤害
+  sacred,
+  // 特殊伤害
+  special,
+  // 其他伤害(例如"毒")
+  other,
+}
+
+export interface ICastData {
+  damage?:ICastDamage,
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

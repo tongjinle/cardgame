@@ -13,10 +13,16 @@ export default class Card {
   waitRound: number;
   // 位置
   position: number;
-  // 攻击力
+  // 攻击力(当前攻击力)
   power: number;
-  // 生命值
+  // 最大基础攻击力
+  maxPower: number;
+  // 生命值(当前生命值)
   hp: number;
+  // 最大生命值
+  maxHp: number;
+
+
   // 等级
   level: number;
   // 属性
