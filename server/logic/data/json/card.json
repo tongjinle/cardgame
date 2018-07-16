@@ -9,30 +9,30 @@
         "quality": "Epic",
         "nature": "Grass",
         "racePointList": [
-            "318",
-            "405",
-            "525"
+            318,
+            405,
+            525
         ],
-        "waitRound": "2",
-        "power": "220",
-        "hp": "800",
-        "powerGrow": "16",
-        "hpGrow": "50",
+        "waitRound": 2,
+        "power": 220,
+        "hp": 800,
+        "powerGrow": 16,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "10202",
                 "name": "藤鞭",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "12004",
                 "name": "芳香治疗",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10203",
                 "name": "阳光烈焰",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -46,30 +46,30 @@
         "quality": "Epic",
         "nature": "Fire",
         "racePointList": [
-            "309",
-            "405",
-            "534"
+            309,
+            405,
+            534
         ],
-        "waitRound": "2",
-        "power": "250",
-        "hp": "750",
-        "powerGrow": "23",
-        "hpGrow": "40",
+        "waitRound": 2,
+        "power": 250,
+        "hp": 750,
+        "powerGrow": 23,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10601",
                 "name": "龙息",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -83,30 +83,30 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "314",
-            "405",
-            "530"
+            314,
+            405,
+            530
         ],
-        "waitRound": "2",
-        "power": "180",
-        "hp": "900",
-        "powerGrow": "18",
-        "hpGrow": "45",
+        "waitRound": 2,
+        "power": 180,
+        "hp": 900,
+        "powerGrow": 18,
+        "hpGrow": 45,
         "skillList": [
             {
                 "id": "10001",
                 "name": "水枪",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14007",
                 "name": "光之壁",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -120,30 +120,30 @@
         "quality": "General",
         "nature": "Bug",
         "racePointList": [
-            "195",
-            "205",
-            "395"
+            195,
+            205,
+            395
         ],
-        "waitRound": "1",
-        "power": "110",
-        "hp": "650",
-        "powerGrow": "19",
-        "hpGrow": "40",
+        "waitRound": 1,
+        "power": 110,
+        "hp": 650,
+        "powerGrow": 19,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "15010",
                 "name": "叫声",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "14001",
                 "name": "变硬",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10702",
                 "name": "幻象光线",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -157,30 +157,30 @@
         "quality": "General",
         "nature": "Bug",
         "racePointList": [
-            "195",
-            "205",
-            "395"
+            195,
+            205,
+            395
         ],
-        "waitRound": "1",
-        "power": "110",
-        "hp": "650",
-        "powerGrow": "22",
-        "hpGrow": "35",
+        "waitRound": 1,
+        "power": 110,
+        "hp": 650,
+        "powerGrow": 22,
+        "hpGrow": 35,
         "skillList": [
             {
                 "id": "11201",
                 "name": "毒针",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "14001",
                 "name": "变硬",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "11001",
                 "name": "啄",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -194,30 +194,30 @@
         "quality": "General",
         "nature": "Flying",
         "racePointList": [
-            "251",
-            "349",
-            "479"
+            251,
+            349,
+            479
         ],
-        "waitRound": "1",
-        "power": "150",
-        "hp": "600",
-        "powerGrow": "20",
-        "hpGrow": "30",
+        "waitRound": 1,
+        "power": 150,
+        "hp": 600,
+        "powerGrow": 20,
+        "hpGrow": 30,
         "skillList": [
             {
                 "id": "11002",
                 "name": "翅膀拍击",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "11003",
                 "name": "空气切割",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -230,29 +230,29 @@
         "quality": "General",
         "nature": "Normal",
         "racePointList": [
-            "253",
-            "413"
+            253,
+            413
         ],
-        "waitRound": "1",
-        "power": "190",
-        "hp": "480",
-        "powerGrow": "18",
-        "hpGrow": "41",
+        "waitRound": 1,
+        "power": 190,
+        "hp": 480,
+        "powerGrow": 18,
+        "hpGrow": 41,
         "skillList": [
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10801",
                 "name": "咬住",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "15012",
                 "name": "恐惧颜",
-                "level": "4"
+                "level": 4
             }
         ]
     },
@@ -265,29 +265,29 @@
         "quality": "General",
         "nature": "Poison",
         "racePointList": [
-            "288",
-            "438"
+            288,
+            438
         ],
-        "waitRound": "1",
-        "power": "170",
-        "hp": "520",
-        "powerGrow": "22",
-        "hpGrow": "42",
+        "waitRound": 1,
+        "power": 170,
+        "hp": 520,
+        "powerGrow": 22,
+        "hpGrow": 42,
         "skillList": [
             {
                 "id": "11201",
                 "name": "毒针",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "13007",
                 "name": "瞪眼",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10801",
                 "name": "咬住",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -300,29 +300,29 @@
         "quality": "Epic",
         "nature": "Electric",
         "racePointList": [
-            "320",
-            "485"
+            320,
+            485
         ],
-        "waitRound": "2",
-        "power": "200",
-        "hp": "750",
-        "powerGrow": "25",
-        "hpGrow": "45",
+        "waitRound": 2,
+        "power": 200,
+        "hp": 750,
+        "powerGrow": 25,
+        "hpGrow": 45,
         "skillList": [
             {
                 "id": "10301",
                 "name": "电击",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10302",
                 "name": "十万伏特",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -335,29 +335,29 @@
         "quality": "General",
         "nature": "Ground",
         "racePointList": [
-            "300",
-            "450"
+            300,
+            450
         ],
-        "waitRound": "2",
-        "power": "210",
-        "hp": "620",
-        "powerGrow": "23",
-        "hpGrow": "32",
+        "waitRound": 2,
+        "power": 210,
+        "hp": 620,
+        "powerGrow": 23,
+        "hpGrow": 32,
         "skillList": [
             {
                 "id": "12008",
                 "name": "巨大化",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "13003",
                 "name": "居合斩",
-                "level": "0"
+                "level": 0
             }
         ]
     },
@@ -370,29 +370,29 @@
         "quality": "Rare",
         "nature": "Fairy",
         "racePointList": [
-            "323",
-            "483"
+            323,
+            483
         ],
-        "waitRound": "2",
-        "power": "140",
-        "hp": "830",
-        "powerGrow": "16",
-        "hpGrow": "33",
+        "waitRound": 2,
+        "power": 140,
+        "hp": 830,
+        "powerGrow": 16,
+        "hpGrow": 33,
         "skillList": [
             {
                 "id": "12002",
                 "name": "月光",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15004",
                 "name": "唱歌",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "12002",
                 "name": "月光",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -405,29 +405,29 @@
         "quality": "General",
         "nature": "Fire",
         "racePointList": [
-            "299",
-            "505"
+            299,
+            505
         ],
-        "waitRound": "1",
-        "power": "180",
-        "hp": "660",
-        "powerGrow": "15",
-        "hpGrow": "44",
+        "waitRound": 1,
+        "power": 180,
+        "hp": 660,
+        "powerGrow": 15,
+        "hpGrow": 44,
         "skillList": [
             {
                 "id": "10101",
                 "name": "火苗",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15011",
                 "name": "摇尾巴",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -440,29 +440,29 @@
         "quality": "General",
         "nature": "Fairy",
         "racePointList": [
-            "270",
-            "435"
+            270,
+            435
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "550",
-        "powerGrow": "18",
-        "hpGrow": "36",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 550,
+        "powerGrow": 18,
+        "hpGrow": 36,
         "skillList": [
             {
                 "id": "15004",
                 "name": "唱歌",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "14002",
                 "name": "变圆",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "12007",
                 "name": "报恩",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -476,30 +476,30 @@
         "quality": "Epic",
         "nature": "Poison",
         "racePointList": [
-            "245",
-            "455",
-            "535"
+            245,
+            455,
+            535
         ],
-        "waitRound": "1",
-        "power": "110",
-        "hp": "580",
-        "powerGrow": "30",
-        "hpGrow": "62",
+        "waitRound": 1,
+        "power": 110,
+        "hp": 580,
+        "powerGrow": 30,
+        "hpGrow": 62,
         "skillList": [
             {
                 "id": "15007",
                 "name": "超声波",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10801",
                 "name": "咬住",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "15008",
                 "name": "怪异光",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -513,30 +513,30 @@
         "quality": "Rare",
         "nature": "Grass",
         "racePointList": [
-            "320",
-            "395",
-            "490"
+            320,
+            395,
+            490
         ],
-        "waitRound": "2",
-        "power": "120",
-        "hp": "610",
-        "powerGrow": "24",
-        "hpGrow": "48",
+        "waitRound": 2,
+        "power": 120,
+        "hp": 610,
+        "powerGrow": 24,
+        "hpGrow": 48,
         "skillList": [
             {
                 "id": "10201",
                 "name": "飞叶快刀",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "12002",
                 "name": "月光",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "11203",
                 "name": "毒爆弹",
-                "level": "5"
+                "level": 5
             }
         ]
     },
@@ -549,29 +549,29 @@
         "quality": "General",
         "nature": "Ground",
         "racePointList": [
-            "265",
-            "405"
+            265,
+            405
         ],
-        "waitRound": "1",
-        "power": "220",
-        "hp": "570",
-        "powerGrow": "20",
-        "hpGrow": "34",
+        "waitRound": 1,
+        "power": 220,
+        "hp": 570,
+        "powerGrow": 20,
+        "hpGrow": 34,
         "skillList": [
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10902",
                 "name": "岩崩",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -584,29 +584,29 @@
         "quality": "General",
         "nature": "Normal",
         "racePointList": [
-            "290",
-            "440"
+            290,
+            440
         ],
-        "waitRound": "1",
-        "power": "160",
-        "hp": "730",
-        "powerGrow": "16",
-        "hpGrow": "26",
+        "waitRound": 1,
+        "power": 160,
+        "hp": 730,
+        "powerGrow": 16,
+        "hpGrow": 26,
         "skillList": [
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "12009",
                 "name": "虚张声势",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -619,29 +619,29 @@
         "quality": "Rare",
         "nature": "Water",
         "racePointList": [
-            "320",
-            "500"
+            320,
+            500
         ],
-        "waitRound": "2",
-        "power": "150",
-        "hp": "850",
-        "powerGrow": "15",
-        "hpGrow": "25",
+        "waitRound": 2,
+        "power": 150,
+        "hp": 850,
+        "powerGrow": 15,
+        "hpGrow": 25,
         "skillList": [
             {
                 "id": "14006",
                 "name": "反射壁",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "10701",
                 "name": "念力",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10401",
                 "name": "细雪",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -654,29 +654,29 @@
         "quality": "General",
         "nature": "Fighting",
         "racePointList": [
-            "305",
-            "455"
+            305,
+            455
         ],
-        "waitRound": "2",
-        "power": "230",
-        "hp": "540",
-        "powerGrow": "24",
-        "hpGrow": "37",
+        "waitRound": 2,
+        "power": 230,
+        "hp": 540,
+        "powerGrow": 24,
+        "hpGrow": 37,
         "skillList": [
             {
                 "id": "14013",
                 "name": "愤怒",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "11101",
                 "name": "音速拳",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13006",
                 "name": "聚气",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -689,29 +689,29 @@
         "quality": "Epic",
         "nature": "Fire",
         "racePointList": [
-            "350",
-            "555"
+            350,
+            555
         ],
-        "waitRound": "1",
-        "power": "270",
-        "hp": "720",
-        "powerGrow": "17",
-        "hpGrow": "65",
+        "waitRound": 1,
+        "power": 270,
+        "hp": 720,
+        "powerGrow": 17,
+        "hpGrow": 65,
         "skillList": [
             {
                 "id": "10102",
                 "name": "火焰推进",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "15014",
                 "name": "吼叫",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10502",
                 "name": "神速",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -725,30 +725,30 @@
         "quality": "Rare",
         "nature": "Water",
         "racePointList": [
-            "300",
-            "385",
-            "510"
+            300,
+            385,
+            510
         ],
-        "waitRound": "1",
-        "power": "130",
-        "hp": "610",
-        "powerGrow": "17",
-        "hpGrow": "50",
+        "waitRound": 1,
+        "power": 130,
+        "hp": 610,
+        "powerGrow": 17,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "10002",
                 "name": "泡沫光线",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15005",
                 "name": "催眠术",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "11102",
                 "name": "十字拳",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -762,30 +762,30 @@
         "quality": "Epic",
         "nature": "Psychic",
         "racePointList": [
-            "310",
-            "400",
-            "500"
+            310,
+            400,
+            500
         ],
-        "waitRound": "2",
-        "power": "110",
-        "hp": "700",
-        "powerGrow": "32",
-        "hpGrow": "60",
+        "waitRound": 2,
+        "power": 110,
+        "hp": 700,
+        "powerGrow": 32,
+        "hpGrow": 60,
         "skillList": [
             {
                 "id": "10702",
                 "name": "幻象光线",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10703",
                 "name": "精神干扰",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -799,30 +799,30 @@
         "quality": "Epic",
         "nature": "Fighting",
         "racePointList": [
-            "305",
-            "405",
-            "505"
+            305,
+            405,
+            505
         ],
-        "waitRound": "2",
-        "power": "250",
-        "hp": "640",
-        "powerGrow": "20",
-        "hpGrow": "62",
+        "waitRound": 2,
+        "power": 250,
+        "hp": 640,
+        "powerGrow": 20,
+        "hpGrow": 62,
         "skillList": [
             {
                 "id": "13004",
                 "name": "吸收拳",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "11103",
                 "name": "近身战",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -836,30 +836,30 @@
         "quality": "Rare",
         "nature": "Grass",
         "racePointList": [
-            "300",
-            "390",
-            "490"
+            300,
+            390,
+            490
         ],
-        "waitRound": "2",
-        "power": "160",
-        "hp": "760",
-        "powerGrow": "15",
-        "hpGrow": "37",
+        "waitRound": 2,
+        "power": 160,
+        "hp": 760,
+        "powerGrow": 15,
+        "hpGrow": 37,
         "skillList": [
             {
                 "id": "10202",
                 "name": "藤鞭",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15007",
                 "name": "超声波",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "12004",
                 "name": "芳香治疗",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -872,29 +872,29 @@
         "quality": "General",
         "nature": "Poison",
         "racePointList": [
-            "335",
-            "515"
+            335,
+            515
         ],
-        "waitRound": "2",
-        "power": "120",
-        "hp": "730",
-        "powerGrow": "18",
-        "hpGrow": "33",
+        "waitRound": 2,
+        "power": 120,
+        "hp": 730,
+        "powerGrow": 18,
+        "hpGrow": 33,
         "skillList": [
             {
                 "id": "11202",
                 "name": "溶解液",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "15007",
                 "name": "超声波",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "11203",
                 "name": "毒爆弹",
-                "level": "5"
+                "level": 5
             }
         ]
     },
@@ -908,30 +908,30 @@
         "quality": "Rare",
         "nature": "Rock",
         "racePointList": [
-            "300",
-            "390",
-            "495"
+            300,
+            390,
+            495
         ],
-        "waitRound": "2",
-        "power": "140",
-        "hp": "700",
-        "powerGrow": "10",
-        "hpGrow": "55",
+        "waitRound": 2,
+        "power": 140,
+        "hp": 700,
+        "powerGrow": 10,
+        "hpGrow": 55,
         "skillList": [
             {
                 "id": "10901",
                 "name": "落石",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14002",
                 "name": "变圆",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10902",
                 "name": "岩崩",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -944,29 +944,29 @@
         "quality": "General",
         "nature": "Psychic",
         "racePointList": [
-            "315",
-            "490"
+            315,
+            490
         ],
-        "waitRound": "2",
-        "power": "150",
-        "hp": "750",
-        "powerGrow": "15",
-        "hpGrow": "25",
+        "waitRound": 2,
+        "power": 150,
+        "hp": 750,
+        "powerGrow": 15,
+        "hpGrow": 25,
         "skillList": [
             {
                 "id": "10701",
                 "name": "念力",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14007",
                 "name": "光之壁",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -979,29 +979,29 @@
         "quality": "Rare",
         "nature": "Electric",
         "racePointList": [
-            "325",
-            "465"
+            325,
+            465
         ],
-        "waitRound": "2",
-        "power": "200",
-        "hp": "600",
-        "powerGrow": "20",
-        "hpGrow": "35",
+        "waitRound": 2,
+        "power": 200,
+        "hp": 600,
+        "powerGrow": 20,
+        "hpGrow": 35,
         "skillList": [
             {
                 "id": "14001",
                 "name": "变硬",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15010",
                 "name": "叫声",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10302",
                 "name": "十万伏特",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1013,28 +1013,28 @@
         "quality": "General",
         "nature": "Flying",
         "racePointList": [
-            "352"
+            352
         ],
-        "waitRound": "1",
-        "power": "210",
-        "hp": "690",
-        "powerGrow": "18",
-        "hpGrow": "21",
+        "waitRound": 1,
+        "power": 210,
+        "hp": 690,
+        "powerGrow": 18,
+        "hpGrow": 21,
         "skillList": [
             {
                 "id": "11002",
                 "name": "翅膀拍击",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "13003",
                 "name": "居合斩",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "12009",
                 "name": "虚张声势",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -1047,29 +1047,29 @@
         "quality": "General",
         "nature": "Water",
         "racePointList": [
-            "325",
-            "475"
+            325,
+            475
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "810",
-        "powerGrow": "18",
-        "hpGrow": "19",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 810,
+        "powerGrow": 18,
+        "hpGrow": 19,
         "skillList": [
             {
                 "id": "10401",
                 "name": "细雪",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -1082,29 +1082,29 @@
         "quality": "General",
         "nature": "Poison",
         "racePointList": [
-            "325",
-            "500"
+            325,
+            500
         ],
-        "waitRound": "2",
-        "power": "110",
-        "hp": "850",
-        "powerGrow": "11",
-        "hpGrow": "35",
+        "waitRound": 2,
+        "power": 110,
+        "hp": 850,
+        "powerGrow": 11,
+        "hpGrow": 35,
         "skillList": [
             {
                 "id": "11202",
                 "name": "溶解液",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14014",
                 "name": "大爆炸",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -1118,30 +1118,30 @@
         "quality": "Epic",
         "nature": "Ghost",
         "racePointList": [
-            "310",
-            "405",
-            "500"
+            310,
+            405,
+            500
         ],
-        "waitRound": "1",
-        "power": "250",
-        "hp": "770",
-        "powerGrow": "18",
-        "hpGrow": "58",
+        "waitRound": 1,
+        "power": 250,
+        "hp": 770,
+        "powerGrow": 18,
+        "hpGrow": 58,
         "skillList": [
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "11203",
                 "name": "毒爆弹",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "15005",
                 "name": "催眠术",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1154,29 +1154,29 @@
         "quality": "Rare",
         "nature": "Rock",
         "racePointList": [
-            "385",
-            "510"
+            385,
+            510
         ],
-        "waitRound": "2",
-        "power": "130",
-        "hp": "760",
-        "powerGrow": "19",
-        "hpGrow": "34",
+        "waitRound": 2,
+        "power": 130,
+        "hp": 760,
+        "powerGrow": 19,
+        "hpGrow": 34,
         "skillList": [
             {
                 "id": "10902",
                 "name": "岩崩",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14001",
                 "name": "变硬",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1189,29 +1189,29 @@
         "quality": "General",
         "nature": "Electric",
         "racePointList": [
-            "330",
-            "480"
+            330,
+            480
         ],
-        "waitRound": "1",
-        "power": "180",
-        "hp": "660",
-        "powerGrow": "21",
-        "hpGrow": "33",
+        "waitRound": 1,
+        "power": 180,
+        "hp": 660,
+        "powerGrow": 21,
+        "hpGrow": 33,
         "skillList": [
             {
                 "id": "14010",
                 "name": "静电",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10302",
                 "name": "十万伏特",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14007",
                 "name": "光之壁",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -1224,29 +1224,29 @@
         "quality": "General",
         "nature": "Poison",
         "racePointList": [
-            "340",
-            "490"
+            340,
+            490
         ],
-        "waitRound": "1",
-        "power": "210",
-        "hp": "530",
-        "powerGrow": "24",
-        "hpGrow": "22",
+        "waitRound": 1,
+        "power": 210,
+        "hp": 530,
+        "powerGrow": 24,
+        "hpGrow": 22,
         "skillList": [
             {
                 "id": "11203",
                 "name": "毒爆弹",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "14014",
                 "name": "大爆炸",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -1259,29 +1259,29 @@
         "quality": "Epic",
         "nature": "Normal",
         "racePointList": [
-            "450",
-            "540"
+            450,
+            540
         ],
-        "waitRound": "3",
-        "power": "100",
-        "hp": "900",
-        "powerGrow": "17",
-        "hpGrow": "55",
+        "waitRound": 3,
+        "power": 100,
+        "hp": 900,
+        "powerGrow": 17,
+        "hpGrow": 55,
         "skillList": [
             {
                 "id": "12007",
                 "name": "报恩",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "12005",
                 "name": "治愈铃声",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1295,30 +1295,30 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "295",
-            "440",
-            "540"
+            295,
+            440,
+            540
         ],
-        "waitRound": "2",
-        "power": "200",
-        "hp": "820",
-        "powerGrow": "29",
-        "hpGrow": "49",
+        "waitRound": 2,
+        "power": 200,
+        "hp": 820,
+        "powerGrow": 29,
+        "hpGrow": 49,
         "skillList": [
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10003",
                 "name": "冲浪",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -1330,28 +1330,28 @@
         "quality": "Epic",
         "nature": "Psychic",
         "racePointList": [
-            "460"
+            460
         ],
-        "waitRound": "3",
-        "power": "220",
-        "hp": "700",
-        "powerGrow": "21",
-        "hpGrow": "50",
+        "waitRound": 3,
+        "power": 220,
+        "hp": 700,
+        "powerGrow": 21,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14006",
                 "name": "反射壁",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -1364,29 +1364,29 @@
         "quality": "Epic",
         "nature": "Bug",
         "racePointList": [
-            "500",
-            "500"
+            500,
+            500
         ],
-        "waitRound": "2",
-        "power": "300",
-        "hp": "600",
-        "powerGrow": "25",
-        "hpGrow": "50",
+        "waitRound": 2,
+        "power": 300,
+        "hp": 600,
+        "powerGrow": 25,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "12009",
                 "name": "虚张声势",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13001",
                 "name": "剑舞",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1398,28 +1398,28 @@
         "quality": "Epic",
         "nature": "Ice",
         "racePointList": [
-            "455"
+            455
         ],
-        "waitRound": "2",
-        "power": "160",
-        "hp": "720",
-        "powerGrow": "20",
-        "hpGrow": "53",
+        "waitRound": 2,
+        "power": 160,
+        "hp": 720,
+        "powerGrow": 20,
+        "hpGrow": 53,
         "skillList": [
             {
                 "id": "10401",
                 "name": "细雪",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15001",
                 "name": "诅咒",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "15006",
                 "name": "恶魔之吻",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -1431,28 +1431,28 @@
         "quality": "Rare",
         "nature": "Fire",
         "racePointList": [
-            "495"
+            495
         ],
-        "waitRound": "2",
-        "power": "150",
-        "hp": "800",
-        "powerGrow": "15",
-        "hpGrow": "30",
+        "waitRound": 2,
+        "power": 150,
+        "hp": 800,
+        "powerGrow": 15,
+        "hpGrow": 30,
         "skillList": [
             {
                 "id": "14009",
                 "name": "火焰之躯",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -1465,29 +1465,29 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "200",
-            "540"
+            200,
+            540
         ],
-        "waitRound": "3",
-        "power": "100",
-        "hp": "550",
-        "powerGrow": "35",
-        "hpGrow": "65",
+        "waitRound": 3,
+        "power": 100,
+        "hp": 550,
+        "powerGrow": 35,
+        "hpGrow": 65,
         "skillList": [
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "13007",
                 "name": "瞪眼",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10601",
                 "name": "龙息",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -1500,29 +1500,29 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "325",
-            "525"
+            325,
+            525
         ],
-        "waitRound": "1",
-        "power": "150",
-        "hp": "850",
-        "powerGrow": "15",
-        "hpGrow": "45",
+        "waitRound": 1,
+        "power": 150,
+        "hp": 850,
+        "powerGrow": 15,
+        "hpGrow": 45,
         "skillList": [
             {
                 "id": "14016",
                 "name": "神秘守护",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10002",
                 "name": "泡沫光线",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14016",
                 "name": "接力棒",
-                "level": "1"
+                "level": 1
             }
         ]
     },
@@ -1535,29 +1535,29 @@
         "quality": "Epic",
         "nature": "Electric",
         "racePointList": [
-            "325",
-            "525"
+            325,
+            525
         ],
-        "waitRound": "1",
-        "power": "250",
-        "hp": "750",
-        "powerGrow": "25",
-        "hpGrow": "35",
+        "waitRound": 1,
+        "power": 250,
+        "hp": 750,
+        "powerGrow": 25,
+        "hpGrow": 35,
         "skillList": [
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10302",
                 "name": "十万伏特",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14016",
                 "name": "接力棒",
-                "level": "1"
+                "level": 1
             }
         ]
     },
@@ -1570,29 +1570,29 @@
         "quality": "Epic",
         "nature": "Fire",
         "racePointList": [
-            "325",
-            "525"
+            325,
+            525
         ],
-        "waitRound": "1",
-        "power": "250",
-        "hp": "750",
-        "powerGrow": "25",
-        "hpGrow": "35",
+        "waitRound": 1,
+        "power": 250,
+        "hp": 750,
+        "powerGrow": 25,
+        "hpGrow": 35,
         "skillList": [
             {
                 "id": "12009",
                 "name": "虚张声势",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10102",
                 "name": "火焰推进",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14016",
                 "name": "接力棒",
-                "level": "1"
+                "level": 1
             }
         ]
     },
@@ -1605,29 +1605,29 @@
         "quality": "Epic",
         "nature": "Psychic",
         "racePointList": [
-            "325",
-            "525"
+            325,
+            525
         ],
-        "waitRound": "1",
-        "power": "200",
-        "hp": "800",
-        "powerGrow": "20",
-        "hpGrow": "40",
+        "waitRound": 1,
+        "power": 200,
+        "hp": 800,
+        "powerGrow": 20,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "14017",
                 "name": "神秘力量",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10702",
                 "name": "幻象光线",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14016",
                 "name": "接力棒",
-                "level": "1"
+                "level": 1
             }
         ]
     },
@@ -1640,29 +1640,29 @@
         "quality": "Epic",
         "nature": "Dark",
         "racePointList": [
-            "325",
-            "525"
+            325,
+            525
         ],
-        "waitRound": "1",
-        "power": "200",
-        "hp": "800",
-        "powerGrow": "20",
-        "hpGrow": "40",
+        "waitRound": 1,
+        "power": 200,
+        "hp": 800,
+        "powerGrow": 20,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "15008",
                 "name": "怪异光",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10802",
                 "name": "恶之波动",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14016",
                 "name": "接力棒",
-                "level": "1"
+                "level": 1
             }
         ]
     },
@@ -1674,28 +1674,28 @@
         "quality": "Epic",
         "nature": "Ice",
         "racePointList": [
-            "535"
+            535
         ],
-        "waitRound": "3",
-        "power": "220",
-        "hp": "830",
-        "powerGrow": "20",
-        "hpGrow": "55",
+        "waitRound": 3,
+        "power": 220,
+        "hp": 830,
+        "powerGrow": 20,
+        "hpGrow": 55,
         "skillList": [
             {
                 "id": "10401",
                 "name": "细雪",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14011",
                 "name": "冰冻之躯",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10403",
                 "name": "暴风雪",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1708,29 +1708,29 @@
         "quality": "Epic",
         "nature": "Normal",
         "racePointList": [
-            "395",
-            "515"
+            395,
+            515
         ],
-        "waitRound": "2",
-        "power": "160",
-        "hp": "960",
-        "powerGrow": "14",
-        "hpGrow": "34",
+        "waitRound": 2,
+        "power": 160,
+        "hp": 960,
+        "powerGrow": 14,
+        "hpGrow": 34,
         "skillList": [
             {
                 "id": "14017",
                 "name": "神秘力量",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14016",
                 "name": "神秘守护",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -1742,28 +1742,28 @@
         "quality": "Epic",
         "nature": "Rock",
         "racePointList": [
-            "515"
+            515
         ],
-        "waitRound": "1",
-        "power": "270",
-        "hp": "810",
-        "powerGrow": "25",
-        "hpGrow": "38",
+        "waitRound": 1,
+        "power": 270,
+        "hp": 810,
+        "powerGrow": 25,
+        "hpGrow": 38,
         "skillList": [
             {
                 "id": "10601",
                 "name": "龙息",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10902",
                 "name": "岩崩",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -1775,28 +1775,28 @@
         "quality": "Epic",
         "nature": "Normal",
         "racePointList": [
-            "540"
+            540
         ],
-        "waitRound": "3",
-        "power": "220",
-        "hp": "1000",
-        "powerGrow": "16",
-        "hpGrow": "48",
+        "waitRound": 3,
+        "power": 220,
+        "hp": 1000,
+        "powerGrow": 16,
+        "hpGrow": 48,
         "skillList": [
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "10503",
                 "name": "破坏死光",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -1808,28 +1808,28 @@
         "quality": "Legend",
         "nature": "Ice",
         "racePointList": [
-            "580"
+            580
         ],
-        "waitRound": "2",
-        "power": "300",
-        "hp": "900",
-        "powerGrow": "20",
-        "hpGrow": "70",
+        "waitRound": 2,
+        "power": 300,
+        "hp": 900,
+        "powerGrow": 20,
+        "hpGrow": 70,
         "skillList": [
             {
                 "id": "11002",
                 "name": "翅膀拍击",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10403",
                 "name": "暴风雪",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -1841,28 +1841,28 @@
         "quality": "Legend",
         "nature": "Electric",
         "racePointList": [
-            "580"
+            580
         ],
-        "waitRound": "2",
-        "power": "300",
-        "hp": "900",
-        "powerGrow": "20",
-        "hpGrow": "70",
+        "waitRound": 2,
+        "power": 300,
+        "hp": 900,
+        "powerGrow": 20,
+        "hpGrow": 70,
         "skillList": [
             {
                 "id": "11003",
                 "name": "空气切割",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10303",
                 "name": "打雷",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1874,28 +1874,28 @@
         "quality": "Legend",
         "nature": "Fire",
         "racePointList": [
-            "580"
+            580
         ],
-        "waitRound": "2",
-        "power": "300",
-        "hp": "900",
-        "powerGrow": "20",
-        "hpGrow": "70",
+        "waitRound": 2,
+        "power": 300,
+        "hp": 900,
+        "powerGrow": 20,
+        "hpGrow": 70,
         "skillList": [
             {
                 "id": "15013",
                 "name": "吹飞",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "9"
+                "level": 9
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             }
         ]
     },
@@ -1909,30 +1909,30 @@
         "quality": "Legend",
         "nature": "Dragon",
         "racePointList": [
-            "420",
-            "600",
-            "680"
+            420,
+            600,
+            680
         ],
-        "waitRound": "3",
-        "power": "250",
-        "hp": "800",
-        "powerGrow": "35",
-        "hpGrow": "70",
+        "waitRound": 3,
+        "power": 250,
+        "hp": 800,
+        "powerGrow": 35,
+        "hpGrow": 70,
         "skillList": [
             {
                 "id": "10502",
                 "name": "神速",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13002",
                 "name": "龙舞",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10603",
                 "name": "逆鳞",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -1944,28 +1944,28 @@
         "quality": "Legend",
         "nature": "Psychic",
         "racePointList": [
-            "680"
+            680
         ],
-        "waitRound": "2",
-        "power": "400",
-        "hp": "1000",
-        "powerGrow": "30",
-        "hpGrow": "70",
+        "waitRound": 2,
+        "power": 400,
+        "hp": 1000,
+        "powerGrow": 30,
+        "hpGrow": 70,
         "skillList": [
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10703",
                 "name": "精神干扰",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10503",
                 "name": "破坏死光",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -1977,28 +1977,28 @@
         "quality": "Legend",
         "nature": "Psychic",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "3",
-        "power": "250",
-        "hp": "950",
-        "powerGrow": "25",
-        "hpGrow": "60",
+        "waitRound": 3,
+        "power": 250,
+        "hp": 950,
+        "powerGrow": 25,
+        "hpGrow": 60,
         "skillList": [
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "12010",
                 "name": "摇手指",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -2012,30 +2012,30 @@
         "quality": "Epic",
         "nature": "Grass",
         "racePointList": [
-            "315",
-            "405",
-            "525"
+            315,
+            405,
+            525
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "760",
-        "powerGrow": "21",
-        "hpGrow": "55",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 760,
+        "powerGrow": 21,
+        "hpGrow": 55,
         "skillList": [
             {
                 "id": "14007",
                 "name": "光之壁",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "12007",
                 "name": "报恩",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10203",
                 "name": "阳光烈焰",
-                "level": "9"
+                "level": 9
             }
         ]
     },
@@ -2049,30 +2049,30 @@
         "quality": "Epic",
         "nature": "Fire",
         "racePointList": [
-            "309",
-            "405",
-            "534"
+            309,
+            405,
+            534
         ],
-        "waitRound": "2",
-        "power": "230",
-        "hp": "730",
-        "powerGrow": "23",
-        "hpGrow": "47",
+        "waitRound": 2,
+        "power": 230,
+        "hp": 730,
+        "powerGrow": 23,
+        "hpGrow": 47,
         "skillList": [
             {
                 "id": "10102",
                 "name": "火焰推进",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14002",
                 "name": "变圆",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "13001",
                 "name": "剑舞",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2086,30 +2086,30 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "314",
-            "405",
-            "530"
+            314,
+            405,
+            530
         ],
-        "waitRound": "2",
-        "power": "250",
-        "hp": "750",
-        "powerGrow": "18",
-        "hpGrow": "50",
+        "waitRound": 2,
+        "power": 250,
+        "hp": 750,
+        "powerGrow": 18,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "10001",
                 "name": "水枪",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "13006",
                 "name": "聚气",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "13002",
                 "name": "龙舞",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2122,29 +2122,29 @@
         "quality": "General",
         "nature": "Flying",
         "racePointList": [
-            "262",
-            "442"
+            262,
+            442
         ],
-        "waitRound": "1",
-        "power": "150",
-        "hp": "670",
-        "powerGrow": "16",
-        "hpGrow": "27",
+        "waitRound": 1,
+        "power": 150,
+        "hp": 670,
+        "powerGrow": 16,
+        "hpGrow": 27,
         "skillList": [
             {
                 "id": "15005",
                 "name": "催眠术",
-                "level": "2"
+                "level": 2
             },
             {
                 "id": "11001",
                 "name": "啄",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13007",
                 "name": "瞪眼",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2157,29 +2157,29 @@
         "quality": "Epic",
         "nature": "Fairy",
         "racePointList": [
-            "245",
-            "405"
+            245,
+            405
         ],
-        "waitRound": "2",
-        "power": "120",
-        "hp": "700",
-        "powerGrow": "22",
-        "hpGrow": "55",
+        "waitRound": 2,
+        "power": 120,
+        "hp": 700,
+        "powerGrow": 22,
+        "hpGrow": 55,
         "skillList": [
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "12010",
                 "name": "摇手指",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "15009",
                 "name": "天使之吻",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2193,30 +2193,30 @@
         "quality": "Rare",
         "nature": "Electric",
         "racePointList": [
-            "280",
-            "365",
-            "510"
+            280,
+            365,
+            510
         ],
-        "waitRound": "2",
-        "power": "140",
-        "hp": "730",
-        "powerGrow": "22",
-        "hpGrow": "38",
+        "waitRound": 2,
+        "power": 140,
+        "hp": 730,
+        "powerGrow": 22,
+        "hpGrow": 38,
         "skillList": [
             {
                 "id": "15011",
                 "name": "摇尾巴",
-                "level": "3"
+                "level": 3
             },
             {
                 "id": "10302",
                 "name": "十万伏特",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -2229,29 +2229,29 @@
         "quality": "General",
         "nature": "Water",
         "racePointList": [
-            "250",
-            "420"
+            250,
+            420
         ],
-        "waitRound": "1",
-        "power": "130",
-        "hp": "720",
-        "powerGrow": "14",
-        "hpGrow": "32",
+        "waitRound": 1,
+        "power": 130,
+        "hp": 720,
+        "powerGrow": 14,
+        "hpGrow": 32,
         "skillList": [
             {
                 "id": "10002",
                 "name": "泡沫光线",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2263,28 +2263,28 @@
         "quality": "Rare",
         "nature": "Rock",
         "racePointList": [
-            "410"
+            410
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "750",
-        "powerGrow": "27",
-        "hpGrow": "25",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 750,
+        "powerGrow": 27,
+        "hpGrow": 25,
         "skillList": [
             {
                 "id": "10902",
                 "name": "岩崩",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14006",
                 "name": "反射壁",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "11102",
                 "name": "十字拳",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -2296,28 +2296,28 @@
         "quality": "Rare",
         "nature": "Ghost",
         "racePointList": [
-            "435"
+            435
         ],
-        "waitRound": "2",
-        "power": "150",
-        "hp": "650",
-        "powerGrow": "25",
-        "hpGrow": "25",
+        "waitRound": 2,
+        "power": 150,
+        "hp": 650,
+        "powerGrow": 25,
+        "hpGrow": 25,
         "skillList": [
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "15008",
                 "name": "怪异光",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "15002",
                 "name": "黑夜魔影",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2329,28 +2329,28 @@
         "quality": "Epic",
         "nature": "Psychic",
         "racePointList": [
-            "405"
+            405
         ],
-        "waitRound": "3",
-        "power": "100",
-        "hp": "1000",
-        "powerGrow": "12",
-        "hpGrow": "55",
+        "waitRound": 3,
+        "power": 100,
+        "hp": 1000,
+        "powerGrow": 12,
+        "hpGrow": 55,
         "skillList": [
             {
                 "id": "14006",
                 "name": "反射壁",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -2362,28 +2362,28 @@
         "quality": "Epic",
         "nature": "Bug",
         "racePointList": [
-            "505"
+            505
         ],
-        "waitRound": "3",
-        "power": "110",
-        "hp": "960",
-        "powerGrow": "13",
-        "hpGrow": "43",
+        "waitRound": 3,
+        "power": 110,
+        "hp": 960,
+        "powerGrow": 13,
+        "hpGrow": 43,
         "skillList": [
             {
                 "id": "12008",
                 "name": "巨大化",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14013",
                 "name": "愤怒",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2395,28 +2395,28 @@
         "quality": "Epic",
         "nature": "Bug",
         "racePointList": [
-            "500"
+            500
         ],
-        "waitRound": "2",
-        "power": "280",
-        "hp": "850",
-        "powerGrow": "27",
-        "hpGrow": "40",
+        "waitRound": 2,
+        "power": 280,
+        "hp": 850,
+        "powerGrow": 27,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "13003",
                 "name": "居合斩",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "13005",
                 "name": "吸血",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -2428,28 +2428,28 @@
         "quality": "Epic",
         "nature": "Dark",
         "racePointList": [
-            "430"
+            430
         ],
-        "waitRound": "1",
-        "power": "270",
-        "hp": "770",
-        "powerGrow": "27",
-        "hpGrow": "30",
+        "waitRound": 1,
+        "power": 270,
+        "hp": 770,
+        "powerGrow": 27,
+        "hpGrow": 30,
         "skillList": [
             {
                 "id": "15003",
                 "name": "追击",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "14004",
                 "name": "影分身",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13003",
                 "name": "居合斩",
-                "level": "0"
+                "level": 0
             }
         ]
     },
@@ -2461,28 +2461,28 @@
         "quality": "Epic",
         "nature": "Steel",
         "racePointList": [
-            "465"
+            465
         ],
-        "waitRound": "2",
-        "power": "180",
-        "hp": "780",
-        "powerGrow": "18",
-        "hpGrow": "38",
+        "waitRound": 2,
+        "power": 180,
+        "hp": 780,
+        "powerGrow": 18,
+        "hpGrow": 38,
         "skillList": [
             {
                 "id": "11003",
                 "name": "空气切割",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14001",
                 "name": "变硬",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "15013",
                 "name": "吹飞",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -2494,28 +2494,28 @@
         "quality": "Epic",
         "nature": "Normal",
         "racePointList": [
-            "490"
+            490
         ],
-        "waitRound": "3",
-        "power": "150",
-        "hp": "930",
-        "powerGrow": "18",
-        "hpGrow": "50",
+        "waitRound": 3,
+        "power": 150,
+        "hp": 930,
+        "powerGrow": 18,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "12005",
                 "name": "治愈铃声",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2527,28 +2527,28 @@
         "quality": "Legend",
         "nature": "Electric",
         "racePointList": [
-            "580"
+            580
         ],
-        "waitRound": "1",
-        "power": "320",
-        "hp": "960",
-        "powerGrow": "23",
-        "hpGrow": "59",
+        "waitRound": 1,
+        "power": 320,
+        "hp": 960,
+        "powerGrow": 23,
+        "hpGrow": 59,
         "skillList": [
             {
                 "id": "14010",
                 "name": "静电",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10302",
                 "name": "十万伏特",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "10502",
                 "name": "神速",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2560,28 +2560,28 @@
         "quality": "Legend",
         "nature": "Fire",
         "racePointList": [
-            "580"
+            580
         ],
-        "waitRound": "1",
-        "power": "320",
-        "hp": "960",
-        "powerGrow": "23",
-        "hpGrow": "59",
+        "waitRound": 1,
+        "power": 320,
+        "hp": 960,
+        "powerGrow": 23,
+        "hpGrow": 59,
         "skillList": [
             {
                 "id": "14009",
                 "name": "火焰之躯",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "15012",
                 "name": "恐惧颜",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10102",
                 "name": "火焰推进",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -2593,28 +2593,28 @@
         "quality": "Legend",
         "nature": "Water",
         "racePointList": [
-            "580"
+            580
         ],
-        "waitRound": "1",
-        "power": "320",
-        "hp": "960",
-        "powerGrow": "23",
-        "hpGrow": "59",
+        "waitRound": 1,
+        "power": 320,
+        "hp": 960,
+        "powerGrow": 23,
+        "hpGrow": 59,
         "skillList": [
             {
                 "id": "14011",
                 "name": "冰冻之躯",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10003",
                 "name": "冲浪",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2628,30 +2628,30 @@
         "quality": "Legend",
         "nature": "Rock",
         "racePointList": [
-            "300",
-            "410",
-            "600"
+            300,
+            410,
+            600
         ],
-        "waitRound": "3",
-        "power": "270",
-        "hp": "900",
-        "powerGrow": "27",
-        "hpGrow": "53",
+        "waitRound": 3,
+        "power": 270,
+        "hp": 900,
+        "powerGrow": 27,
+        "hpGrow": 53,
         "skillList": [
             {
                 "id": "10802",
                 "name": "恶之波动",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13001",
                 "name": "剑舞",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10903",
                 "name": "地震",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -2663,28 +2663,28 @@
         "quality": "Legend",
         "nature": "Flying",
         "racePointList": [
-            "680"
+            680
         ],
-        "waitRound": "3",
-        "power": "360",
-        "hp": "1100",
-        "powerGrow": "33",
-        "hpGrow": "56",
+        "waitRound": 3,
+        "power": 360,
+        "hp": 1100,
+        "powerGrow": 33,
+        "hpGrow": 56,
         "skillList": [
             {
                 "id": "10003",
                 "name": "冲浪",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "11003",
                 "name": "空气切割",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "15014",
                 "name": "吼叫",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2696,28 +2696,28 @@
         "quality": "Legend",
         "nature": "Fire",
         "racePointList": [
-            "680"
+            680
         ],
-        "waitRound": "3",
-        "power": "360",
-        "hp": "1100",
-        "powerGrow": "33",
-        "hpGrow": "56",
+        "waitRound": 3,
+        "power": 360,
+        "hp": 1100,
+        "powerGrow": 33,
+        "hpGrow": 56,
         "skillList": [
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "15013",
                 "name": "吹飞",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -2729,28 +2729,28 @@
         "quality": "Legend",
         "nature": "Grass",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "1",
-        "power": "300",
-        "hp": "990",
-        "powerGrow": "36",
-        "hpGrow": "34",
+        "waitRound": 1,
+        "power": 300,
+        "hp": 990,
+        "powerGrow": 36,
+        "hpGrow": 34,
         "skillList": [
             {
                 "id": "14017",
                 "name": "预知未来",
-                "level": "1"
+                "level": 1
             },
             {
                 "id": "14016",
                 "name": "神秘守护",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -2764,30 +2764,30 @@
         "quality": "Epic",
         "nature": "Grass",
         "racePointList": [
-            "310",
-            "405",
-            "530"
+            310,
+            405,
+            530
         ],
-        "waitRound": "1",
-        "power": "240",
-        "hp": "750",
-        "powerGrow": "23",
-        "hpGrow": "45",
+        "waitRound": 1,
+        "power": 240,
+        "hp": 750,
+        "powerGrow": 23,
+        "hpGrow": 45,
         "skillList": [
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "13006",
                 "name": "聚气",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "13003",
                 "name": "居合斩",
-                "level": "0"
+                "level": 0
             }
         ]
     },
@@ -2801,30 +2801,30 @@
         "quality": "Epic",
         "nature": "Fire",
         "racePointList": [
-            "310",
-            "405",
-            "530"
+            310,
+            405,
+            530
         ],
-        "waitRound": "1",
-        "power": "260",
-        "hp": "740",
-        "powerGrow": "23",
-        "hpGrow": "40",
+        "waitRound": 1,
+        "power": 260,
+        "hp": 740,
+        "powerGrow": 23,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "11001",
                 "name": "啄",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14009",
                 "name": "火焰之躯",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2838,30 +2838,30 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "310",
-            "405",
-            "530"
+            310,
+            405,
+            530
         ],
-        "waitRound": "1",
-        "power": "220",
-        "hp": "780",
-        "powerGrow": "22",
-        "hpGrow": "50",
+        "waitRound": 1,
+        "power": 220,
+        "hp": 780,
+        "powerGrow": 22,
+        "hpGrow": 50,
         "skillList": [
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10001",
                 "name": "水枪",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2875,30 +2875,30 @@
         "quality": "General",
         "nature": "Bug",
         "racePointList": [
-            "195",
-            "205",
-            "395"
+            195,
+            205,
+            395
         ],
-        "waitRound": "2",
-        "power": "130",
-        "hp": "630",
-        "powerGrow": "13",
-        "hpGrow": "37",
+        "waitRound": 2,
+        "power": 130,
+        "hp": 630,
+        "powerGrow": 13,
+        "hpGrow": 37,
         "skillList": [
             {
                 "id": "11201",
                 "name": "毒针",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "11003",
                 "name": "空气切割",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -2911,29 +2911,29 @@
         "quality": "General",
         "nature": "Flying",
         "racePointList": [
-            "270",
-            "430"
+            270,
+            430
         ],
-        "waitRound": "2",
-        "power": "190",
-        "hp": "670",
-        "powerGrow": "14",
-        "hpGrow": "30",
+        "waitRound": 2,
+        "power": 190,
+        "hp": 670,
+        "powerGrow": 14,
+        "hpGrow": 30,
         "skillList": [
             {
                 "id": "11001",
                 "name": "啄",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "15010",
                 "name": "叫声",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -2947,30 +2947,30 @@
         "quality": "Epic",
         "nature": "Psychic",
         "racePointList": [
-            "198",
-            "278",
-            "518"
+            198,
+            278,
+            518
         ],
-        "waitRound": "2",
-        "power": "180",
-        "hp": "760",
-        "powerGrow": "25",
-        "hpGrow": "63",
+        "waitRound": 2,
+        "power": 180,
+        "hp": 760,
+        "powerGrow": 25,
+        "hpGrow": 63,
         "skillList": [
             {
                 "id": "10702",
                 "name": "幻象光线",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "12005",
                 "name": "治愈铃声",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "15005",
                 "name": "催眠术",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -2983,29 +2983,29 @@
         "quality": "Rare",
         "nature": "Normal",
         "racePointList": [
-            "260",
-            "380"
+            260,
+            380
         ],
-        "waitRound": "2",
-        "power": "120",
-        "hp": "680",
-        "powerGrow": "15",
-        "hpGrow": "33",
+        "waitRound": 2,
+        "power": 120,
+        "hp": 680,
+        "powerGrow": 15,
+        "hpGrow": 33,
         "skillList": [
             {
                 "id": "15011",
                 "name": "摇尾巴",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "12001",
                 "name": "许愿",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "15009",
                 "name": "天使之吻",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -3017,28 +3017,28 @@
         "quality": "Rare",
         "nature": "Ghost",
         "racePointList": [
-            "380"
+            380
         ],
-        "waitRound": "1",
-        "power": "150",
-        "hp": "750",
-        "powerGrow": "24",
-        "hpGrow": "14",
+        "waitRound": 1,
+        "power": 150,
+        "hp": 750,
+        "powerGrow": 24,
+        "hpGrow": 14,
         "skillList": [
             {
                 "id": "15001",
                 "name": "诅咒",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14017",
                 "name": "神秘力量",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -3050,28 +3050,28 @@
         "quality": "Rare",
         "nature": "Grass",
         "racePointList": [
-            "400"
+            400
         ],
-        "waitRound": "1",
-        "power": "160",
-        "hp": "730",
-        "powerGrow": "15",
-        "hpGrow": "38",
+        "waitRound": 1,
+        "power": 160,
+        "hp": 730,
+        "powerGrow": 15,
+        "hpGrow": 38,
         "skillList": [
             {
                 "id": "11202",
                 "name": "溶解液",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "12004",
                 "name": "芳香治疗",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10203",
                 "name": "阳光烈焰",
-                "level": "6"
+                "level": 6
             }
         ]
     },
@@ -3084,29 +3084,29 @@
         "quality": "General",
         "nature": "Electric",
         "racePointList": [
-            "295",
-            "475"
+            295,
+            475
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "700",
-        "powerGrow": "16",
-        "hpGrow": "38",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 700,
+        "powerGrow": 16,
+        "hpGrow": 38,
         "skillList": [
             {
                 "id": "10301",
                 "name": "电击",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14010",
                 "name": "静电",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3119,29 +3119,29 @@
         "quality": "Rare",
         "nature": "Dragon",
         "racePointList": [
-            "310",
-            "490"
+            310,
+            490
         ],
-        "waitRound": "2",
-        "power": "180",
-        "hp": "680",
-        "powerGrow": "18",
-        "hpGrow": "38",
+        "waitRound": 2,
+        "power": 180,
+        "hp": 680,
+        "powerGrow": 18,
+        "hpGrow": 38,
         "skillList": [
             {
                 "id": "15004",
                 "name": "唱歌",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "13002",
                 "name": "龙舞",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10602",
                 "name": "龙之波动",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -3154,29 +3154,29 @@
         "quality": "Epic",
         "nature": "Water",
         "racePointList": [
-            "200",
-            "540"
+            200,
+            540
         ],
-        "waitRound": "3",
-        "power": "110",
-        "hp": "880",
-        "powerGrow": "25",
-        "hpGrow": "67",
+        "waitRound": 3,
+        "power": 110,
+        "hp": 880,
+        "powerGrow": 25,
+        "hpGrow": 67,
         "skillList": [
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "4"
+                "level": 4
             },
             {
                 "id": "10402",
                 "name": "冰冻光线",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "12005",
                 "name": "治愈铃声",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3188,28 +3188,28 @@
         "quality": "General",
         "nature": "Normal",
         "racePointList": [
-            "420"
+            420
         ],
-        "waitRound": "1",
-        "power": "130",
-        "hp": "720",
-        "powerGrow": "13",
-        "hpGrow": "32",
+        "waitRound": 1,
+        "power": 130,
+        "hp": 720,
+        "powerGrow": 13,
+        "hpGrow": 32,
         "skillList": [
             {
                 "id": "10401",
                 "name": "细雪",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "10001",
                 "name": "水枪",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10101",
                 "name": "火苗",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3222,29 +3222,29 @@
         "quality": "General",
         "nature": "Ghost",
         "racePointList": [
-            "295",
-            "455"
+            295,
+            455
         ],
-        "waitRound": "1",
-        "power": "150",
-        "hp": "600",
-        "powerGrow": "20",
-        "hpGrow": "25",
+        "waitRound": 1,
+        "power": 150,
+        "hp": 600,
+        "powerGrow": 20,
+        "hpGrow": 25,
         "skillList": [
             {
                 "id": "15008",
                 "name": "怪异光",
-                "level": "2"
+                "level": 2
             },
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "15001",
                 "name": "诅咒",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3256,28 +3256,28 @@
         "quality": "Epic",
         "nature": "Dark",
         "racePointList": [
-            "465"
+            465
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "920",
-        "powerGrow": "26",
-        "hpGrow": "40",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 920,
+        "powerGrow": 26,
+        "hpGrow": 40,
         "skillList": [
             {
                 "id": "15014",
                 "name": "吼叫",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10501",
                 "name": "电光一闪",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10803",
                 "name": "咬碎",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3290,29 +3290,29 @@
         "quality": "Epic",
         "nature": "Ice",
         "racePointList": [
-            "300",
-            "480"
+            300,
+            480
         ],
-        "waitRound": "2",
-        "power": "170",
-        "hp": "920",
-        "powerGrow": "23",
-        "hpGrow": "45",
+        "waitRound": 2,
+        "power": 170,
+        "hp": 920,
+        "powerGrow": 23,
+        "hpGrow": 45,
         "skillList": [
             {
                 "id": "14011",
                 "name": "冰冻之躯",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "14001",
                 "name": "变硬",
-                "level": "9"
+                "level": 9
             },
             {
                 "id": "15012",
                 "name": "恐惧颜",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -3326,30 +3326,30 @@
         "quality": "Legend",
         "nature": "Dragon",
         "racePointList": [
-            "300",
-            "420",
-            "600"
+            300,
+            420,
+            600
         ],
-        "waitRound": "2",
-        "power": "240",
-        "hp": "880",
-        "powerGrow": "40",
-        "hpGrow": "60",
+        "waitRound": 2,
+        "power": 240,
+        "hp": 880,
+        "powerGrow": 40,
+        "hpGrow": 60,
         "skillList": [
             {
                 "id": "14013",
                 "name": "愤怒",
-                "level": "6"
+                "level": 6
             },
             {
                 "id": "13005",
                 "name": "吸血",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "13002",
                 "name": "龙舞",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3363,30 +3363,30 @@
         "quality": "Legend",
         "nature": "Steel",
         "racePointList": [
-            "300",
-            "420",
-            "600"
+            300,
+            420,
+            600
         ],
-        "waitRound": "3",
-        "power": "260",
-        "hp": "900",
-        "powerGrow": "34",
-        "hpGrow": "66",
+        "waitRound": 3,
+        "power": 260,
+        "hp": 900,
+        "powerGrow": 34,
+        "hpGrow": 66,
         "skillList": [
             {
                 "id": "14005",
                 "name": "替身",
-                "level": "5"
+                "level": 5
             },
             {
                 "id": "10701",
                 "name": "念力",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "14012",
                 "name": "反击",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3398,28 +3398,28 @@
         "quality": "Legend",
         "nature": "Dragon",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "3",
-        "power": "280",
-        "hp": "950",
-        "powerGrow": "27",
-        "hpGrow": "65",
+        "waitRound": 3,
+        "power": 280,
+        "hp": 950,
+        "powerGrow": 27,
+        "hpGrow": 65,
         "skillList": [
             {
                 "id": "10601",
                 "name": "龙息",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "10702",
                 "name": "幻象光线",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14017",
                 "name": "神秘力量",
-                "level": "7"
+                "level": 7
             }
         ]
     },
@@ -3431,28 +3431,28 @@
         "quality": "Legend",
         "nature": "Dragon",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "3",
-        "power": "280",
-        "hp": "950",
-        "powerGrow": "27",
-        "hpGrow": "65",
+        "waitRound": 3,
+        "power": 280,
+        "hp": 950,
+        "powerGrow": 27,
+        "hpGrow": 65,
         "skillList": [
             {
                 "id": "10701",
                 "name": "念力",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "10602",
                 "name": "龙之波动",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "14016",
                 "name": "神秘守护",
-                "level": "8"
+                "level": 8
             }
         ]
     },
@@ -3464,28 +3464,28 @@
         "quality": "Legend",
         "nature": "Water",
         "racePointList": [
-            "670"
+            670
         ],
-        "waitRound": "3",
-        "power": "350",
-        "hp": "1000",
-        "powerGrow": "30",
-        "hpGrow": "80",
+        "waitRound": 3,
+        "power": 350,
+        "hp": 1000,
+        "powerGrow": 30,
+        "hpGrow": 80,
         "skillList": [
             {
                 "id": "10003",
                 "name": "冲浪",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "10503",
                 "name": "破坏死光",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14007",
                 "name": "光之壁",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3497,28 +3497,28 @@
         "quality": "Legend",
         "nature": "Fire",
         "racePointList": [
-            "670"
+            670
         ],
-        "waitRound": "3",
-        "power": "350",
-        "hp": "1000",
-        "powerGrow": "30",
-        "hpGrow": "80",
+        "waitRound": 3,
+        "power": 350,
+        "hp": 1000,
+        "powerGrow": 30,
+        "hpGrow": 80,
         "skillList": [
             {
                 "id": "10103",
                 "name": "喷射火焰",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "10503",
                 "name": "破坏死光",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14006",
                 "name": "反射壁",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3530,28 +3530,28 @@
         "quality": "Legend",
         "nature": "Dragon",
         "racePointList": [
-            "680"
+            680
         ],
-        "waitRound": "3",
-        "power": "350",
-        "hp": "1000",
-        "powerGrow": "30",
-        "hpGrow": "80",
+        "waitRound": 3,
+        "power": 350,
+        "hp": 1000,
+        "powerGrow": 30,
+        "hpGrow": 80,
         "skillList": [
             {
                 "id": "12006",
                 "name": "自我再生",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "10603",
                 "name": "逆鳞",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3563,28 +3563,28 @@
         "quality": "Legend",
         "nature": "Steel",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "3",
-        "power": "300",
-        "hp": "1100",
-        "powerGrow": "20",
-        "hpGrow": "65",
+        "waitRound": 3,
+        "power": 300,
+        "hp": 1100,
+        "powerGrow": 20,
+        "hpGrow": 65,
         "skillList": [
             {
                 "id": "12001",
                 "name": "许愿",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "12007",
                 "name": "报恩",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "14017",
                 "name": "预知未来",
-                "level": "2"
+                "level": 2
             }
         ]
     },
@@ -3596,28 +3596,28 @@
         "quality": "Legend",
         "nature": "Psychic",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "2",
-        "power": "330",
-        "hp": "1000",
-        "powerGrow": "22",
-        "hpGrow": "60",
+        "waitRound": 2,
+        "power": 330,
+        "hp": 1000,
+        "powerGrow": 22,
+        "hpGrow": 60,
         "skillList": [
             {
                 "id": "14017",
                 "name": "神秘力量",
-                "level": "8"
+                "level": 8
             },
             {
                 "id": "14016",
                 "name": "接力棒",
-                "level": "1"
+                "level": 1
             },
             {
                 "id": "10703",
                 "name": "精神干扰",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3629,28 +3629,28 @@
         "quality": "Legend",
         "nature": "Psychic",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "2",
-        "power": "400",
-        "hp": "860",
-        "powerGrow": "27",
-        "hpGrow": "47",
+        "waitRound": 2,
+        "power": 400,
+        "hp": 860,
+        "powerGrow": 27,
+        "hpGrow": 47,
         "skillList": [
             {
                 "id": "13003",
                 "name": "居合斩",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "14008",
                 "name": "精神力",
-                "level": "0"
+                "level": 0
             },
             {
                 "id": "13001",
                 "name": "剑舞",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3662,28 +3662,28 @@
         "quality": "Legend",
         "nature": "Psychic",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "3",
-        "power": "240",
-        "hp": "1100",
-        "powerGrow": "14",
-        "hpGrow": "78",
+        "waitRound": 3,
+        "power": 240,
+        "hp": 1100,
+        "powerGrow": 14,
+        "hpGrow": 78,
         "skillList": [
             {
                 "id": "14003",
                 "name": "保护",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "15005",
                 "name": "催眠术",
-                "level": "7"
+                "level": 7
             },
             {
                 "id": "14016",
                 "name": "神秘守护",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3695,28 +3695,28 @@
         "quality": "Legend",
         "nature": "Psychic",
         "racePointList": [
-            "600"
+            600
         ],
-        "waitRound": "1",
-        "power": "360",
-        "hp": "950",
-        "powerGrow": "27",
-        "hpGrow": "30",
+        "waitRound": 1,
+        "power": 360,
+        "hp": 950,
+        "powerGrow": 27,
+        "hpGrow": 30,
         "skillList": [
             {
                 "id": "12009",
                 "name": "虚张声势",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "14015",
                 "name": "起死回生",
-                "level": "10"
+                "level": 10
             },
             {
                 "id": "10502",
                 "name": "神速",
-                "level": "10"
+                "level": 10
             }
         ]
     },
@@ -3728,24 +3728,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3757,24 +3759,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3786,24 +3790,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3815,24 +3821,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3844,24 +3852,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3873,24 +3883,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3902,24 +3914,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3931,24 +3945,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3960,24 +3976,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -3989,24 +4007,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4018,24 +4038,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4047,24 +4069,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4076,24 +4100,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4105,24 +4131,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4134,24 +4162,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4163,24 +4193,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4192,24 +4224,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4221,24 +4255,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4250,24 +4286,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4279,24 +4317,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4308,24 +4348,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4337,24 +4379,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4366,24 +4410,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4395,24 +4441,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4424,24 +4472,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4453,24 +4503,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4482,24 +4534,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4511,24 +4565,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4540,24 +4596,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4569,24 +4627,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4598,24 +4658,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4627,24 +4689,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     },
@@ -4656,24 +4720,26 @@
         "quality": "",
         "nature": "",
         "racePointList": [
-            ""
+            0
         ],
-        "waitRound": "",
-        "power": "",
-        "hp": "",
-        "powerGrow": "",
-        "hpGrow": "",
+        "waitRound": 0,
+        "power": 0,
+        "hp": 0,
+        "powerGrow": 0,
+        "hpGrow": 0,
         "skillList": [
             {
                 "id": "",
                 "name": "",
-                "level": ""
+                "level": 0
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             },
             {
-                "name": ""
+                "name": "",
+                "level": null
             }
         ]
     }

@@ -63,11 +63,15 @@ format.buff = () => {
     })
     .map(line => {
       let cellList = line.split(',');
-      let propNameList = 'buffId,name,desc,maxLayer,clearLayer,triggerStep,buffType'.split(',');
-      let rst = {};
-      propNameList.forEach((propName, index) => {
-        rst[propName] = cellList[index];
-      });
+      let rst = {
+        buffId:cellList[0],
+        name:cellList[1],
+        desc:cellList[2],
+        maxLayer:cellList[3]-0,
+        clearLayer:cellList[4]-0,
+        triggerStep:cellList[5],
+        buffType:cellList[6],
+      };
       return rst;
     });
 
@@ -100,7 +104,7 @@ format.card = () => {
         return {
           id: skillIdList[index],
           name: cellList[n],
-          level: skillLevelList[index],
+          level: skillLevelList[index]-0,
         };
       });
 
@@ -110,12 +114,12 @@ format.card = () => {
         nameList: cellList[1].split('||'),
         quality: cellList[2],
         nature: cellList[3],
-        racePointList: cellList[4].split('||'),
-        waitRound: cellList[5],
-        power: cellList[6],
-        hp: cellList[7],
-        powerGrow: cellList[8],
-        hpGrow: cellList[9],
+        racePointList: cellList[4].split('||').map(n=>n-0),
+        waitRound: cellList[5]-0,
+        power: cellList[6]-0,
+        hp: cellList[7]-0,
+        powerGrow: cellList[8]-0,
+        hpGrow: cellList[9]-0,
         skillList,
 
       };
