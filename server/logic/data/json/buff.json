@@ -1,0 +1,74 @@
+[
+    {
+        "buffId": "101",
+        "name": "烧伤",
+        "desc": "无法被治疗",
+        "maxLayer": "1",
+        "clearLayer": "1",
+        "triggerStep": "Dura",
+        "buffType": "Buf_burn"
+    },
+    {
+        "buffId": "102",
+        "name": "麻痹",
+        "desc": "无法攻击",
+        "maxLayer": "1",
+        "clearLayer": "1",
+        "triggerStep": "Round_atk",
+        "buffType": "Buf_para"
+    },
+    {
+        "buffId": "103",
+        "name": "冰冻",
+        "desc": "无法行动",
+        "maxLayer": "1",
+        "clearLayer": "1",
+        "triggerStep": "Round_begin",
+        "buffType": "Buf_free"
+    },
+    {
+        "buffId": "104",
+        "name": "中毒",
+        "desc": "回合结束造成层数*{0}点伤害",
+        "maxLayer": "-1",
+        "clearLayer": "1",
+        "triggerStep": "Round_over",
+        "buffType": "Buf_pois"
+    },
+    {
+        "buffId": "105",
+        "name": "晕眩",
+        "desc": "攻击时选择己方英雄",
+        "maxLayer": "1",
+        "clearLayer": "1",
+        "triggerStep": "Round_begin",
+        "buffType": "Buf_stun"
+    },
+    {
+        "buffId": "106",
+        "name": "睡眠",
+        "desc": "无法行动",
+        "maxLayer": "1",
+        "clearLayer": "1",
+        "triggerStep": "Round_begin",
+        "buffType": "Buf_slee"
+    },
+    {
+        "buffId": "107",
+        "name": "攻击增强",
+        "desc": "增加{0}点攻击力",
+        "maxLayer": "-1",
+        "clearLayer": "-1",
+        "triggerStep": "Round_begin",
+        "buffType": "Buf_atk_add"
+    },
+    {
+        "buffId": "108",
+        "name": "攻击倍增",
+        "desc": "增加{0}%点攻击力",
+        "maxLayer": "-1",
+        "clearLayer": "-1",
+        "triggerStep": "Round_atk",
+        "buffType": "Buf_atk_mul"
+    }
+]

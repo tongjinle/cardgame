@@ -1,0 +1,10 @@
+﻿编号,名称,效果描述,最大层数,结束清除层数,触发阶段,buff效果枚举
+ID,Name,Desc,MaxLayer,ClearLayer,TriggerStep,BuffType
+101,烧伤,无法被治疗,1,1,Dura,Buf_burn
+102,麻痹,无法攻击,1,1,Round_atk,Buf_para
+103,冰冻,无法行动,1,1,Round_begin,Buf_free
+104,中毒,回合结束造成层数*{0}点伤害,-1,1,Round_over,Buf_pois
+105,晕眩,攻击时选择己方英雄,1,1,Round_begin,Buf_stun
+106,睡眠,无法行动,1,1,Round_begin,Buf_slee
+107,攻击增强,增加{0}点攻击力,-1,-1,Round_begin,Buf_atk_add
+108,攻击倍增,增加{0}%点攻击力,-1,-1,Round_atk,Buf_atk_mul

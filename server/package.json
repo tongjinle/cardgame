@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format":"node logic/data/format.js",
     "test": "npx mocha --require intelli-espower-loader dist/test",
     "test-inspect": "npx mocha --require intelli-espower-loader --inspect-brk dist/test"
   },
