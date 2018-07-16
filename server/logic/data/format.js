@@ -14,7 +14,7 @@ let format = {
 
 // skill
 format.skill = () => {
-  let csvFilename = `${__dirname}/csv/skill.csv`;
+  let csvFilename = `${__dirname}/csv/PokemonSkill.csv`;
   let jsonFilename = `${__dirname}/json/skill.json`;
   let content = fs.readFileSync(csvFilename, 'utf-8');
 
@@ -75,9 +75,9 @@ format.buff = () => {
 };
 
 
-format.sprite = () => {
-  let csvFilename = `${__dirname}/csv/sprite.csv`;
-  let jsonFilename = `${__dirname}/json/sprite.json`;
+format.card = () => {
+  let csvFilename = `${__dirname}/csv/Pokemon.csv`;
+  let jsonFilename = `${__dirname}/json/card.json`;
   let content = fs.readFileSync(csvFilename, 'utf-8');
 
   let lineList = content.replace(/\r/g, '').split('\n');
@@ -106,7 +106,7 @@ format.sprite = () => {
 
 
       let rst = {
-        spriteId: cellList[0],
+        cardId: cellList[0],
         nameList: cellList[1].split('||'),
         quality: cellList[2],
         nature: cellList[3],
