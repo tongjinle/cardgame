@@ -95,7 +95,7 @@ function parseSingleCondition(stage: Stage, sender: Card, target: Card | Hero, c
     let next = parseInt(args[1]);
     rst = prev > next;
   } else if (ECondition.Con_has_sk === type) {
-    let skillIdList = args.map(n => parseInt(n));
+    let skillIdList = args;
     rst = (target instanceof Card) && target.skillList.some(sk => skillIdList.some(n => n === sk.skillId));
   } else if (ECondition.Con_has_fun_sk === type) {
 

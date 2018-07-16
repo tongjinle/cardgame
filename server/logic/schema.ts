@@ -22,10 +22,28 @@
                佛祖保佑       永无BUG  
 */
 
-// 卡牌属性枚举
+// 属性枚举
 export enum ENature {
+  grass,
+  fire,
+  water,
+  bug,
+  flying,
+  normal,
+  poison,
+  electric,
+  ground,
+  fairy,
+  fighting,
+  rock,
+  ghost,
+  ice,
+  psychic,
+  dark,
+  steel,
 
 };
+
 
 // 卡牌状态
 export enum ECardStatus {

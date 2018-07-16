@@ -2,7 +2,7 @@
     {
         "skillId": "10001",
         "name": "水枪",
-        "nature": "Water",
+        "nature": "water",
         "desc": "对敌方1张卡牌造成{0}点魔法伤害",
         "descArgs": "Num_int:40",
         "formula": "Lo_op_rd@1#Ef_mag@Num_int:40",
@@ -13,7 +13,7 @@
     {
         "skillId": "10002",
         "name": "泡沫光线",
-        "nature": "Water",
+        "nature": "water",
         "desc": "对敌方2张卡牌造成{0}点魔法伤害",
         "descArgs": "Num_int:40",
         "formula": "Lo_op_rd@2#Ef_mag@Num_int:40",
@@ -24,7 +24,7 @@
     {
         "skillId": "10003",
         "name": "冲浪",
-        "nature": "Water",
+        "nature": "water",
         "desc": "对敌方3张卡牌造成{0}点魔法伤害",
         "descArgs": "Num_int:40",
         "formula": "Lo_op_rd@3#Ef_mag@Num_int:40",
@@ -35,7 +35,7 @@
     {
         "skillId": "10101",
         "name": "火苗",
-        "nature": "Fire",
+        "nature": "fire",
         "desc": "对敌方1张卡牌造成{0}点魔法伤害，并有45%概率进入烧伤状态",
         "descArgs": "Num_int:30",
         "formula": "Lo_op_rd@1#Ef_mag@Num_int:30#Con_per@45?Ef_buf@101@1",
@@ -46,7 +46,7 @@
     {
         "skillId": "10102",
         "name": "火焰推进",
-        "nature": "Fire",
+        "nature": "fire",
         "desc": "对敌方2张卡牌造成{0}点魔法伤害，并有40%概率进入烧伤状态",
         "descArgs": "Num_int:30",
         "formula": "Lo_op_rd@2#Ef_mag@Num_int:30#Con_per@40?Ef_buf@101@1",
@@ -57,7 +57,7 @@
     {
         "skillId": "10103",
         "name": "喷射火焰",
-        "nature": "Fire",
+        "nature": "fire",
         "desc": "对敌方3张卡牌造成{0}点魔法伤害，并有35%概率进入烧伤状态",
         "descArgs": "Num_int:30",
         "formula": "Lo_op_rd@3#Ef_mag@Num_int:30#Con_per@35?Ef_buf@101@1",
@@ -68,7 +68,7 @@
     {
         "skillId": "10201",
         "name": "飞叶快刀",
-        "nature": "Grass",
+        "nature": "grass",
         "desc": "对敌方1张卡牌造成{0}点魔法伤害，自身回复相同的血量",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@1#Ef_mag_hea@Num_int:20",
@@ -79,7 +79,7 @@
     {
         "skillId": "10202",
         "name": "藤鞭",
-        "nature": "Grass",
+        "nature": "grass",
         "desc": "对敌方2张卡牌造成{0}点魔法伤害，自身回复相同的血量",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@2#Ef_mag_hea@Num_int:20",
@@ -90,7 +90,7 @@
     {
         "skillId": "10203",
         "name": "阳光烈焰",
-        "nature": "Grass",
+        "nature": "grass",
         "desc": "对敌方3张卡牌造成{0}点魔法伤害，自身回复相同的血量",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@3#Ef_mag_hea@Num_int:20",
@@ -101,7 +101,7 @@
     {
         "skillId": "10301",
         "name": "电击",
-        "nature": "Elec",
+        "nature": "elec",
         "desc": "对敌方1张卡牌造成{0}点魔法伤害，并有40%概率进入麻痹状态",
         "descArgs": "Num_int:25",
         "formula": "Lo_op_rd@1#Ef_mag@Num_int:25#Con_per@40?Ef_buf@102@1",
@@ -112,7 +112,7 @@
     {
         "skillId": "10302",
         "name": "十万伏特",
-        "nature": "Elec",
+        "nature": "elec",
         "desc": "对敌方2张卡牌造成{0}点魔法伤害，并有35%概率进入麻痹状态",
         "descArgs": "Num_int:25",
         "formula": "Lo_op_rd@2#Ef_mag@Num_int:25#Con_per@35?Ef_buf@102@1",
@@ -123,7 +123,7 @@
     {
         "skillId": "10303",
         "name": "打雷",
-        "nature": "Elec",
+        "nature": "elec",
         "desc": "对敌方3张卡牌造成{0}点魔法伤害，并有30%概率进入麻痹状态",
         "descArgs": "Num_int:25",
         "formula": "Lo_op_rd@3#Ef_mag@Num_int:25#Con_per@30?Ef_buf@102@1",
@@ -134,7 +134,7 @@
     {
         "skillId": "10401",
         "name": "细雪",
-        "nature": "Ice",
+        "nature": "ice",
         "desc": "对敌方1张卡牌造成{0}点魔法伤害，并有35%概率进入冰冻状态",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@1#Ef_mag@Num_int:20#Con_per@35?Ef_buf@103@1",
@@ -145,7 +145,7 @@
     {
         "skillId": "10402",
         "name": "冰冻光线",
-        "nature": "Ice",
+        "nature": "ice",
         "desc": "对敌方2张卡牌造成{0}点魔法伤害，并有30%概率进入冰冻状态",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@2#Ef_mag@Num_int:20#Con_per@30?Ef_buf@103@1",
@@ -156,7 +156,7 @@
     {
         "skillId": "10403",
         "name": "暴风雪",
-        "nature": "Ice",
+        "nature": "ice",
         "desc": "对敌方3张卡牌造成{0}点魔法伤害，并有25%概率进入冰冻状态",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@3#Ef_mag@Num_int:20#Con_per@25?Ef_buf@103@1",
@@ -167,7 +167,7 @@
     {
         "skillId": "10501",
         "name": "电光一闪",
-        "nature": "Normal",
+        "nature": "normal",
         "desc": "对敌方剩余血量最低的1张卡牌造成{0}点绝对伤害",
         "descArgs": "Num_int:25",
         "formula": "Lo_pr_mn@Ttm_op@Pro_hp_cur@1#Ef_abs@Num_int:25",
@@ -178,7 +178,7 @@
     {
         "skillId": "10502",
         "name": "神速",
-        "nature": "Normal",
+        "nature": "normal",
         "desc": "对敌方剩余血量最低的2张卡牌造成{0}点绝对伤害",
         "descArgs": "Num_int:25",
         "formula": "Lo_pr_mn@Ttm_op@Pro_hp_cur@2#Ef_abs@Num_int:25",
@@ -189,7 +189,7 @@
     {
         "skillId": "10503",
         "name": "破坏死光",
-        "nature": "Normal",
+        "nature": "normal",
         "desc": "对敌方剩余血量最低的3张卡牌造成{0}点绝对伤害",
         "descArgs": "Num_int:25",
         "formula": "Lo_pr_mn@Ttm_op@Pro_hp_cur@3#Ef_abs@Num_int:25",
@@ -200,7 +200,7 @@
     {
         "skillId": "10601",
         "name": "龙息",
-        "nature": "Dragon",
+        "nature": "dragon",
         "desc": "对敌方1张卡牌造成{0}点绝对伤害，若目标拥有【光之壁】或【反射壁】则伤害提升200%",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@1#Con_ac_has_sk@14006@14007?Ef_abs@Num_int:60||Ef_abs@Num_int:20",
@@ -211,7 +211,7 @@
     {
         "skillId": "10602",
         "name": "龙之波动",
-        "nature": "Dragon",
+        "nature": "dragon",
         "desc": "对敌方2张卡牌造成{0}点绝对伤害，若目标拥有【光之壁】或【反射壁】则伤害提升200%",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@2#Con_ac_has_sk@14006@14007?Ef_abs@Num_int:60||Ef_abs@Num_int:20",
@@ -222,7 +222,7 @@
     {
         "skillId": "10603",
         "name": "逆鳞",
-        "nature": "Dragon",
+        "nature": "dragon",
         "desc": "对敌方3张卡牌造成{0}点绝对伤害，若目标拥有【光之壁】或【反射壁】则伤害提升200%",
         "descArgs": "Num_int:20",
         "formula": "Lo_op_rd@3#Con_ac_has_sk@14006@14007?Ef_abs@Num_int:60||Ef_abs@Num_int:20",
@@ -233,7 +233,7 @@
     {
         "skillId": "10701",
         "name": "念力",
-        "nature": "Psychic",
+        "nature": "psychic",
         "desc": "\"对敌方1张卡牌造成{0}点特殊伤害",
         "descArgs": "并减少{1}~{2}点攻击力\"",
         "formula": "Num_int:20||Num_int:5||Num_int:10",
@@ -244,7 +244,7 @@
     {
         "skillId": "10702",
         "name": "幻象光线",
-        "nature": "Psychic",
+        "nature": "psychic",
         "desc": "\"对敌方2张卡牌造成{0}点特殊伤害",
         "descArgs": "并减少{1}~{2}点攻击力\"",
         "formula": "Num_int:20||Num_int:5||Num_int:10",
@@ -255,7 +255,7 @@
     {
         "skillId": "10703",
         "name": "精神干扰",
-        "nature": "Psychic",
+        "nature": "psychic",
         "desc": "\"对敌方3张卡牌造成{0}点特殊伤害",
         "descArgs": "并减少{1}~{2}点攻击力\"",
         "formula": "Num_int:20||Num_int:5||Num_int:10",
@@ -266,7 +266,7 @@
     {
         "skillId": "10801",
         "name": "咬住",
-        "nature": "Dark",
+        "nature": "dark",
         "desc": "\"对敌方1张卡牌造成{0}点特殊伤害",
         "descArgs": "并增加自身{1}点攻击力\"",
         "formula": "Num_int:20||Num_int:10",
@@ -277,7 +277,7 @@
     {
         "skillId": "10802",
         "name": "恶之波动",
-        "nature": "Dark",
+        "nature": "dark",
         "desc": "\"对敌方2张卡牌造成{0}点特殊伤害",
         "descArgs": "并增加自身{1}点攻击力\"",
         "formula": "Num_int:20||Num_int:10",
@@ -288,7 +288,7 @@
     {
         "skillId": "10803",
         "name": "咬碎",
-        "nature": "Dark",
+        "nature": "dark",
         "desc": "\"对敌方3张卡牌造成{0}点特殊伤害",
         "descArgs": "并增加自身{1}点攻击力\"",
         "formula": "Num_int:20||Num_int:10",
@@ -299,7 +299,7 @@
     {
         "skillId": "10901",
         "name": "落石",
-        "nature": "Rock",
+        "nature": "rock",
         "desc": "对敌方1张卡牌造成{0}~{1}点特殊伤害",
         "descArgs": "Num_int:10||Num_int:50",
         "formula": "Lo_op_rd@1#Ef_spe@Num_int_rd:10:50",
@@ -310,7 +310,7 @@
     {
         "skillId": "10902",
         "name": "岩崩",
-        "nature": "Rock",
+        "nature": "rock",
         "desc": "对敌方2张卡牌造成{0}~{1}点特殊伤害",
         "descArgs": "Num_int:10||Num_int:50",
         "formula": "Lo_op_rd@2#Ef_spe@Num_int_rd:10:50",
@@ -321,7 +321,7 @@
     {
         "skillId": "10903",
         "name": "地震",
-        "nature": "Rock",
+        "nature": "rock",
         "desc": "对敌方3张卡牌造成{0}~{1}点特殊伤害",
         "descArgs": "Num_int:10||Num_int:50",
         "formula": "Lo_op_rd@3#Ef_spe@Num_int_rd:10:50",
@@ -332,7 +332,7 @@
     {
         "skillId": "11001",
         "name": "啄",
-        "nature": "Flying",
+        "nature": "flying",
         "desc": "对敌方1张卡牌造成{0}点特殊伤害",
         "descArgs": "Num_int:30",
         "formula": "Lo_op_rd@1#Ef_spe@Num_int:30",
@@ -343,7 +343,7 @@
     {
         "skillId": "11002",
         "name": "翅膀拍击",
-        "nature": "Flying",
+        "nature": "flying",
         "desc": "对敌方2张卡牌造成{0}点特殊伤害",
         "descArgs": "Num_int:30",
         "formula": "Lo_op_rd@2#Ef_spe@Num_int:30",
@@ -354,7 +354,7 @@
     {
         "skillId": "11003",
         "name": "空气切割",
-        "nature": "Flying",
+        "nature": "flying",
         "desc": "对敌方3张卡牌造成{0}点特殊伤害",
         "descArgs": "Num_int:30",
         "formula": "Lo_op_rd@3#Ef_spe@Num_int:30",
@@ -365,7 +365,7 @@
     {
         "skillId": "11101",
         "name": "音速拳",
-        "nature": "Fighting",
+        "nature": "fighting",
         "desc": "减少自身{0}点血量，对敌方1张卡牌造成{0}点特殊伤害",
         "descArgs": "Num_int:20||Num_int:40",
         "formula": "Lo_sf#Ef_abs@Num_int:20^Lo_op_rd@1#Ef_spe@Num_int:40",
@@ -376,7 +376,7 @@
     {
         "skillId": "11102",
         "name": "十字拳",
-        "nature": "Fighting",
+        "nature": "fighting",
         "desc": "减少自身{0}点血量，对敌方2张卡牌造成{0}点特殊伤害",
         "descArgs": "Num_int:20||Num_int:40",
         "formula": "Lo_sf#Ef_abs@Num_int:20^Lo_op_rd@2#Ef_spe@Num_int:40",
@@ -387,7 +387,7 @@
     {
         "skillId": "11103",
         "name": "近身战",
-        "nature": "Fighting",
+        "nature": "fighting",
         "desc": "减少自身{0}点血量，对敌方3张卡牌造成{0}点特殊伤害",
         "descArgs": "Num_int:20||Num_int:40",
         "formula": "Lo_sf#Ef_abs@Num_int:20^Lo_op_rd@3#Ef_spe@Num_int:40",
@@ -398,7 +398,7 @@
     {
         "skillId": "11201",
         "name": "毒针",
-        "nature": "Poison",
+        "nature": "poison",
         "desc": "对敌方1张卡牌施加{0}层中毒状态",
         "descArgs": "Num_int:1",
         "formula": "Lo_op_rd@1#Ef_buf@104@Num_int:1@20",
@@ -409,7 +409,7 @@
     {
         "skillId": "11202",
         "name": "溶解液",
-        "nature": "Poison",
+        "nature": "poison",
         "desc": "对敌方2张卡牌施加{0}层中毒状态",
         "descArgs": "Num_int:1",
         "formula": "Lo_op_rd@2#Ef_buf@104@Num_int:1@20",
@@ -420,7 +420,7 @@
     {
         "skillId": "11203",
         "name": "毒爆弹",
-        "nature": "Poison",
+        "nature": "poison",
         "desc": "对敌方3张卡牌施加{0}层中毒状态",
         "descArgs": "Num_int:1",
         "formula": "Lo_op_rd@3#Ef_buf@104@Num_int:1@20",
@@ -431,7 +431,7 @@
     {
         "skillId": "12001",
         "name": "许愿",
-        "nature": "None",
+        "nature": "none",
         "desc": "使我方剩余血量最低的1张卡牌回复{0}点血量",
         "descArgs": "Num_int:25",
         "formula": "Lo_pro_mn@Ttm_sf@Pro_hp_cur@1#Ef_hea@Num_int:25",
@@ -442,7 +442,7 @@
     {
         "skillId": "12002",
         "name": "月光",
-        "nature": "None",
+        "nature": "none",
         "desc": "使我方剩余血量最低的1张卡牌回复{0}点血量",
         "descArgs": "Num_int:25",
         "formula": "Lo_pro_mn@Ttm_sf@Pro_hp_cur@1#Ef_hea@Num_int:25",
@@ -453,7 +453,7 @@
     {
         "skillId": "12004",
         "name": "芳香治疗",
-        "nature": "None",
+        "nature": "none",
         "desc": "使我方剩余血量最低的2张卡牌回复{0}点血量",
         "descArgs": "Num_int:25",
         "formula": "Lo_pro_mn@Ttm_sf@Pro_hp_cur@2#Ef_hea@Num_int:25",
@@ -464,7 +464,7 @@
     {
         "skillId": "12005",
         "name": "治愈铃声",
-        "nature": "None",
+        "nature": "none",
         "desc": "使我方剩余血量最低的3张卡牌回复{0}点血量",
         "descArgs": "Num_int:25",
         "formula": "Lo_pro_mn@Ttm_sf@Pro_hp_cur@3#Ef_hea@Num_int:25",
@@ -475,7 +475,7 @@
     {
         "skillId": "12006",
         "name": "自我再生",
-        "nature": "None",
+        "nature": "none",
         "desc": "回复自身{0}点血量",
         "descArgs": "Num_int:40",
         "formula": "Lo_sf#Ef_hea@Num_int:40",
@@ -486,7 +486,7 @@
     {
         "skillId": "12007",
         "name": "报恩",
-        "nature": "None",
+        "nature": "none",
         "desc": "回复我方英雄{0}点血量",
         "descArgs": "Num_int:50",
         "formula": "Lo_sf_hr#Ef_hea@Num_int:50",
@@ -497,7 +497,7 @@
     {
         "skillId": "12008",
         "name": "巨大化",
-        "nature": "None",
+        "nature": "none",
         "desc": "增加自身{0}攻击力",
         "descArgs": "Num_int:10",
         "formula": "Lo_sf#Ef_atk_add@Num_int:10",
@@ -508,7 +508,7 @@
     {
         "skillId": "12009",
         "name": "虚张声势",
-        "nature": "None",
+        "nature": "none",
         "desc": "首次攻击增加{0}攻击力",
         "descArgs": "Num_int:50",
         "formula": "Lo_sf#Ef_buf@107@1@Num_int:50",
@@ -519,7 +519,7 @@
     {
         "skillId": "12010",
         "name": "摇手指",
-        "nature": "None",
+        "nature": "none",
         "desc": "随机发动一个主动技能，技能等级视为{0}",
         "descArgs": "Num_int:1",
         "formula": "Lo_sf#Ef_funny@Num_int:1",
@@ -530,7 +530,7 @@
     {
         "skillId": "13001",
         "name": "剑舞",
-        "nature": "None",
+        "nature": "none",
         "desc": "攻击卡牌时，50%概率提升{0}%点攻击力",
         "descArgs": "Num_int:15",
         "formula": "Con_ac_type@Ttp_card&&Con_per@50?Lo_sf#Ef_buf@108:1:Num_int:15",
@@ -541,7 +541,7 @@
     {
         "skillId": "13002",
         "name": "龙舞",
-        "nature": "None",
+        "nature": "none",
         "desc": "攻击卡牌时，若血量小于目标，提升{0}%点攻击力",
         "descArgs": "Num_int:15",
         "formula": "Con_ac_type@Ttp_card&&Con_num_more@Num_pro:Tcd_ac:Pro_hp_cur:0:100@Num_pro:Tcd_ca:Pro_hp_cur:0:100?Lo_sf#Ef_buf@108:1:Num_int:15",
@@ -552,7 +552,7 @@
     {
         "skillId": "13003",
         "name": "居合斩",
-        "nature": "None",
+        "nature": "none",
         "desc": "攻击卡牌时，无视【影分身】【替身】技能",
         "descArgs": "",
         "formula": "Lo_sf#Ef_ace@14004@14005",
@@ -563,7 +563,7 @@
     {
         "skillId": "13004",
         "name": "吸收拳",
-        "nature": "None",
+        "nature": "none",
         "desc": "造成物理伤害时，治疗自身伤害值{0}%血量",
         "descArgs": "Num_int:10",
         "formula": "Lo_sf#Ef_hea@Num_hurt:Ht_phy:10",
@@ -574,7 +574,7 @@
     {
         "skillId": "13005",
         "name": "吸血",
-        "nature": "None",
+        "nature": "none",
         "desc": "造成物理伤害时，治疗自身伤害值{0}%血量",
         "descArgs": "Num_int:10",
         "formula": "Lo_sf#Ef_hea@Num_hurt:Ht_phy:10",
@@ -585,7 +585,7 @@
     {
         "skillId": "13006",
         "name": "聚气",
-        "nature": "None",
+        "nature": "none",
         "desc": "造成物理伤害时，增加{0}点攻击力",
         "descArgs": "Num_int:20",
         "formula": "Con_num_more@Num_hurt:Ht_phy:0:100@0?Lo_sf#Ef_atk_add@Num_int:20",
@@ -596,7 +596,7 @@
     {
         "skillId": "13007",
         "name": "瞪眼",
-        "nature": "None",
+        "nature": "none",
         "desc": "造成物理伤害时，减少目标{0}攻击力",
         "descArgs": "Num_int:20",
         "formula": "Con_num_more@Num_hurt:Ht_phy:0:100@0?Lo_ac#Ef_atk_add@Num_int:-20",
@@ -607,7 +607,7 @@
     {
         "skillId": "14001",
         "name": "变硬",
-        "nature": "None",
+        "nature": "none",
         "desc": "减少{0}点物理伤害",
         "descArgs": "Num_int:30",
         "formula": "Lo_sf#Ef_hurt_dis@Ht_phy@Num_int:30",
@@ -618,7 +618,7 @@
     {
         "skillId": "14002",
         "name": "变圆",
-        "nature": "None",
+        "nature": "none",
         "desc": "减少{0}点物理伤害",
         "descArgs": "Num_int:30",
         "formula": "Lo_sf#Ef_hurt_dis@Ht_phy@Num_int:30",
@@ -629,7 +629,7 @@
     {
         "skillId": "14003",
         "name": "保护",
-        "nature": "None",
+        "nature": "none",
         "desc": "减少{0}点魔法伤害和特殊伤害",
         "descArgs": "Num_int:20",
         "formula": "Lo_sf#Ef_hurt_dis@Ht_mag@Num_int:20#Ef_hurt_dis@Ht_spe@Num_int:20",
@@ -640,7 +640,7 @@
     {
         "skillId": "14004",
         "name": "影分身",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到攻击时有{0}%概率进行闪避",
         "descArgs": "Num_int:5:30",
         "formula": "Con_sk_fun@Fun_phy&&Con_per@Num_int:5:30?Lo_ca#Ef_mis",
@@ -651,7 +651,7 @@
     {
         "skillId": "14005",
         "name": "替身",
-        "nature": "None",
+        "nature": "none",
         "desc": "每次最多受到{0}点物理伤害",
         "descArgs": "Num_int:-30:350",
         "formula": "Lo_sk#Ef_hurt_max@Ht_phy@Num_int:-30:350",
@@ -662,7 +662,7 @@
     {
         "skillId": "14006",
         "name": "反射壁",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到的魔法伤害技能无效，并对施法者造成{0}点绝对伤害",
         "descArgs": "Num_int:30",
         "formula": "Con_sk_fun@Fun_mag?Lo_ca#Ef_mis#Ef_abs@Num_int:30",
@@ -673,7 +673,7 @@
     {
         "skillId": "14007",
         "name": "光之壁",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到的特殊伤害技能无效，并回复自身{0}点血量",
         "descArgs": "Num_int:20",
         "formula": "Con_sk_fun@Fun_spe?Lo_sf#Ef_mis#Ef_hea@Num_int:20",
@@ -684,7 +684,7 @@
     {
         "skillId": "14008",
         "name": "精神力",
-        "nature": "None",
+        "nature": "none",
         "desc": "不会进入异常状态",
         "descArgs": "",
         "formula": "Lo_sf#Ef_buf_mis@101@102@103@104@105@106",
@@ -695,7 +695,7 @@
     {
         "skillId": "14009",
         "name": "火焰之躯",
-        "nature": "None",
+        "nature": "none",
         "desc": "\"受到攻击时",
         "descArgs": "对攻击者造成{0}点绝对伤害，并有{1}%概率使攻击者进入烧伤状态\"",
         "formula": "Num_int:20||Num_int:5:30",
@@ -706,7 +706,7 @@
     {
         "skillId": "14010",
         "name": "静电",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到攻击时，对攻击者造成{0}点绝对伤害，有{1}%概率使攻击者进入麻痹状态",
         "descArgs": "Num_int:15||Num_int:5:25",
         "formula": "Con_sk_fun@Fun_phy?Lo_ca#Ef_abs@Num_int:15#Con_per@Num_int:5:25?Ef_buf@102@1",
@@ -717,7 +717,7 @@
     {
         "skillId": "14011",
         "name": "冰冻之躯",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到攻击时，对攻击者造成{0}点绝对伤害，有{1}%概率使攻击者进入冰冻状态",
         "descArgs": "Num_int:10||Num_int:5:20",
         "formula": "Con_sk_fun@Fun_phy?Lo_ca#Ef_abs@Num_int:10#Con_per@Num_int:5:20?Ef_buf@103@1",
@@ -728,7 +728,7 @@
     {
         "skillId": "14012",
         "name": "反击",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到攻击时，对攻击者造成{0}点绝对伤害",
         "descArgs": "Num_int:30",
         "formula": "Con_sk_fun@Fun_phy?Lo_ca#Ef_abs@Num_int:30",
@@ -739,7 +739,7 @@
     {
         "skillId": "14013",
         "name": "愤怒",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到攻击时，提升自身{0}点攻击力",
         "descArgs": "Num_int:20",
         "formula": "Con_sk_fun@Fun_phy?Lo_sf#Ef_atk_add@Num_int:20",
@@ -750,7 +750,7 @@
     {
         "skillId": "14014",
         "name": "大爆炸",
-        "nature": "None",
+        "nature": "none",
         "desc": "死亡时，对击杀者卡牌造成{0}点绝对伤害",
         "descArgs": "Num_int:40",
         "formula": "Lo_ca#Ef_abs@Num_int:40",
@@ -761,7 +761,7 @@
     {
         "skillId": "14015",
         "name": "起死回生",
-        "nature": "None",
+        "nature": "none",
         "desc": "死亡时，有{0}%概率回到手牌",
         "descArgs": "Num_int:5:30",
         "formula": "Lo_sf#Con_per@Num_int:5:30?Ef_recycle",
@@ -772,7 +772,7 @@
     {
         "skillId": "14016",
         "name": "接力棒",
-        "nature": "None",
+        "nature": "none",
         "desc": "死亡时，使我方{0}张已阵亡卡牌回到手牌中，手牌已满则回到牌堆",
         "descArgs": "Num_int:1",
         "formula": "Lo_sf_tb@Num_int:1#Ef_recycle",
@@ -783,7 +783,7 @@
     {
         "skillId": "14017",
         "name": "预知未来",
-        "nature": "None",
+        "nature": "none",
         "desc": "入场时，使我方{0}张已阵亡卡牌回到手牌中，手牌已满则回到牌堆",
         "descArgs": "Num_int:1",
         "formula": "Lo_sf_tb@Num_int:1#Ef_recycle",
@@ -794,7 +794,7 @@
     {
         "skillId": "14016",
         "name": "神秘守护",
-        "nature": "None",
+        "nature": "none",
         "desc": "入场时，使两侧卡牌增加{0}点血量",
         "descArgs": "Num_int:40",
         "formula": "Lo_sf_bs#Ef_hp_add@Num_int:40",
@@ -805,7 +805,7 @@
     {
         "skillId": "14017",
         "name": "神秘力量",
-        "nature": "None",
+        "nature": "none",
         "desc": "入场时，使两侧卡牌增加{0}点攻击力",
         "descArgs": "Num_int:20",
         "formula": "Lo_sf_bs#Ef_atk_add@Num_int:20",
@@ -816,7 +816,7 @@
     {
         "skillId": "15001",
         "name": "诅咒",
-        "nature": "None",
+        "nature": "none",
         "desc": "对敌方英雄造成{0}点伤害",
         "descArgs": "Num_int:40",
         "formula": "Lo_op_hr#Ef_abs@Num_int:40",
@@ -827,7 +827,7 @@
     {
         "skillId": "15002",
         "name": "黑夜魔影",
-        "nature": "None",
+        "nature": "none",
         "desc": "对敌方英雄造成自身攻击力{0}%点伤害",
         "descArgs": "Num_int:10",
         "formula": "Lo_op_hr#Ef_abs@Num_pro:Tcd_ca:Pro_atk_cur:10",
@@ -838,7 +838,7 @@
     {
         "skillId": "15003",
         "name": "追击",
-        "nature": "None",
+        "nature": "none",
         "desc": "对敌方卡牌造成物理伤害时，对敌方英雄造成伤害值{0}%的伤害",
         "descArgs": "Num_int:10",
         "formula": "Lo_op_hr#Ef_abs@Num_hurt:Ht_phy:10",
@@ -849,7 +849,7 @@
     {
         "skillId": "15004",
         "name": "唱歌",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方1张卡牌{0}%概率进入睡眠状态",
         "descArgs": "Num_int:5:20",
         "formula": "Lo_op_rd@1#Con_per@Num_int:5:20?Ef_buf@106@1",
@@ -860,7 +860,7 @@
     {
         "skillId": "15005",
         "name": "催眠术",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方2张卡牌{0}%概率进入睡眠状态",
         "descArgs": "Num_int:5:20",
         "formula": "Lo_op_rd@2#Con_per@Num_int:5:20?Ef_buf@106@1",
@@ -871,7 +871,7 @@
     {
         "skillId": "15006",
         "name": "恶魔之吻",
-        "nature": "None",
+        "nature": "none",
         "desc": "入场时，使敌方所有卡牌{0}%概率进入睡眠状态",
         "descArgs": "Num_int:5:20",
         "formula": "Lo_op_rd@3#Con_per@Num_int:5:20?Ef_buf@106@1",
@@ -882,7 +882,7 @@
     {
         "skillId": "15007",
         "name": "超声波",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方1张卡牌{0}%概率进入晕眩状态",
         "descArgs": "Num_int:5:30",
         "formula": "Lo_op_rd@1#Con_per@Num_int:5:30?Ef_buf@105@1",
@@ -893,7 +893,7 @@
     {
         "skillId": "15008",
         "name": "怪异光",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方2张卡牌{0}%概率进入晕眩状态",
         "descArgs": "Num_int:5:30",
         "formula": "Lo_op_rd@2#Con_per@Num_int:5:30?Ef_buf@105@1",
@@ -904,7 +904,7 @@
     {
         "skillId": "15009",
         "name": "天使之吻",
-        "nature": "None",
+        "nature": "none",
         "desc": "入场时，使敌方所有卡牌{0}%概率进入晕眩状态",
         "descArgs": "Num_int:5:30",
         "formula": "Lo_op_rd@3#Con_per@Num_int:5:30?Ef_buf@105@1",
@@ -915,7 +915,7 @@
     {
         "skillId": "15010",
         "name": "叫声",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方1张卡牌减少{0}~{1}点攻击力",
         "descArgs": "Num_int:10||Num_int:20",
         "formula": "Lo_op_rd@1#Ef_atk_add@Num_int_rd:-20:-10",
@@ -926,7 +926,7 @@
     {
         "skillId": "15011",
         "name": "摇尾巴",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方2张卡牌减少{0}~{1}点攻击力",
         "descArgs": "Num_int:10||Num_int:20",
         "formula": "Lo_op_rd@2#Ef_atk_add@Num_int_rd:-20:-10",
@@ -937,7 +937,7 @@
     {
         "skillId": "15012",
         "name": "恐惧颜",
-        "nature": "None",
+        "nature": "none",
         "desc": "使敌方3张卡牌减少{0}~{1}点攻击力",
         "descArgs": "Num_int:10||Num_int:20",
         "formula": "Lo_op_rd@3#Ef_atk_add@Num_int_rd:-20:-10",
@@ -948,7 +948,7 @@
     {
         "skillId": "15013",
         "name": "吹飞",
-        "nature": "None",
+        "nature": "none",
         "desc": "使正面卡牌{0}%概率回到手牌，手牌已满则回到牌堆",
         "descArgs": "Num_int:5:25",
         "formula": "Lo_op#Con_per@Num_int:5:25?Ef_back_to_hand",
@@ -959,7 +959,7 @@
     {
         "skillId": "15014",
         "name": "吼叫",
-        "nature": "None",
+        "nature": "none",
         "desc": "受到攻击时，使攻击者{0}%概率回到手牌，手牌已满则回到牌堆",
         "descArgs": "Num_int:5:25",
         "formula": "Con_sk_fun@Fun_phy&&Con_per@Num_int:5:25?Lo_ca#Ef_back_to_hand",
@@ -970,7 +970,7 @@
     {
         "skillId": "99999",
         "name": "攻击",
-        "nature": "None",
+        "nature": "none",
         "desc": "选择正面卡牌进行攻击，若正面没有卡牌则攻击敌方英雄",
         "descArgs": "",
         "formula": "Lo_op#Ef_phy@Num_pro:Tcd_ca:Pro_atk_cur:0:100",

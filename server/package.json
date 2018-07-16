@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format":"node logic/data/format.js",
+    "build":"npm run clear && tsc && npm run copydata ",
+    "copydata":"mkdir -p ./dist/data/json && cp -rf ./data/json/* ./dist/data/json",
+    "clear":"rm -rf ./dist/*",
+    "format":"node data/format.js",
     "test": "npx mocha --require intelli-espower-loader dist/test",
     "test-inspect": "npx mocha --require intelli-espower-loader --inspect-brk dist/test"
   },

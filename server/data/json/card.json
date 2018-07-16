@@ -7,7 +7,7 @@
             "妙蛙花"
         ],
         "quality": "Epic",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             318,
             405,
@@ -44,7 +44,7 @@
             "喷火龙"
         ],
         "quality": "Epic",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             309,
             405,
@@ -81,7 +81,7 @@
             "水箭龟"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             314,
             405,
@@ -118,7 +118,7 @@
             "巴大蝴"
         ],
         "quality": "General",
-        "nature": "Bug",
+        "nature": "bug",
         "racePointList": [
             195,
             205,
@@ -155,7 +155,7 @@
             "大针蜂"
         ],
         "quality": "General",
-        "nature": "Bug",
+        "nature": "bug",
         "racePointList": [
             195,
             205,
@@ -192,7 +192,7 @@
             "比雕"
         ],
         "quality": "General",
-        "nature": "Flying",
+        "nature": "flying",
         "racePointList": [
             251,
             349,
@@ -228,7 +228,7 @@
             "拉达"
         ],
         "quality": "General",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             253,
             413
@@ -263,7 +263,7 @@
             "阿柏怪"
         ],
         "quality": "General",
-        "nature": "Poison",
+        "nature": "poison",
         "racePointList": [
             288,
             438
@@ -298,7 +298,7 @@
             "雷丘"
         ],
         "quality": "Epic",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             320,
             485
@@ -333,7 +333,7 @@
             "穿山王"
         ],
         "quality": "General",
-        "nature": "Ground",
+        "nature": "ground",
         "racePointList": [
             300,
             450
@@ -368,7 +368,7 @@
             "皮克西"
         ],
         "quality": "Rare",
-        "nature": "Fairy",
+        "nature": "fairy",
         "racePointList": [
             323,
             483
@@ -403,7 +403,7 @@
             "九尾"
         ],
         "quality": "General",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             299,
             505
@@ -438,7 +438,7 @@
             "胖可丁"
         ],
         "quality": "General",
-        "nature": "Fairy",
+        "nature": "fairy",
         "racePointList": [
             270,
             435
@@ -474,7 +474,7 @@
             "叉字蝠"
         ],
         "quality": "Epic",
-        "nature": "Poison",
+        "nature": "poison",
         "racePointList": [
             245,
             455,
@@ -511,7 +511,7 @@
             "霸王花"
         ],
         "quality": "Rare",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             320,
             395,
@@ -547,7 +547,7 @@
             "三地鼠"
         ],
         "quality": "General",
-        "nature": "Ground",
+        "nature": "ground",
         "racePointList": [
             265,
             405
@@ -582,7 +582,7 @@
             "猫老大"
         ],
         "quality": "General",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             290,
             440
@@ -617,7 +617,7 @@
             "哥达鸭"
         ],
         "quality": "Rare",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             320,
             500
@@ -652,7 +652,7 @@
             "火爆猴"
         ],
         "quality": "General",
-        "nature": "Fighting",
+        "nature": "fighting",
         "racePointList": [
             305,
             455
@@ -687,7 +687,7 @@
             "风速狗"
         ],
         "quality": "Epic",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             350,
             555
@@ -723,7 +723,7 @@
             "快泳蛙"
         ],
         "quality": "Rare",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             300,
             385,
@@ -760,7 +760,7 @@
             "胡地"
         ],
         "quality": "Epic",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             310,
             400,
@@ -797,7 +797,7 @@
             "怪力"
         ],
         "quality": "Epic",
-        "nature": "Fighting",
+        "nature": "fighting",
         "racePointList": [
             305,
             405,
@@ -834,7 +834,7 @@
             "大食花"
         ],
         "quality": "Rare",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             300,
             390,
@@ -870,7 +870,7 @@
             "毒刺水母"
         ],
         "quality": "General",
-        "nature": "Poison",
+        "nature": "poison",
         "racePointList": [
             335,
             515
@@ -906,7 +906,7 @@
             "隆隆岩"
         ],
         "quality": "Rare",
-        "nature": "Rock",
+        "nature": "rock",
         "racePointList": [
             300,
             390,
@@ -942,7 +942,7 @@
             "呆河马"
         ],
         "quality": "General",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             315,
             490
@@ -977,7 +977,7 @@
             "三合一磁怪"
         ],
         "quality": "Rare",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             325,
             465
@@ -1011,7 +1011,7 @@
             "大葱鸭"
         ],
         "quality": "General",
-        "nature": "Flying",
+        "nature": "flying",
         "racePointList": [
             352
         ],
@@ -1045,7 +1045,7 @@
             "白海师"
         ],
         "quality": "General",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             325,
             475
@@ -1080,7 +1080,7 @@
             "臭臭泥"
         ],
         "quality": "General",
-        "nature": "Poison",
+        "nature": "poison",
         "racePointList": [
             325,
             500
@@ -1116,7 +1116,7 @@
             "耿鬼"
         ],
         "quality": "Epic",
-        "nature": "Ghost",
+        "nature": "ghost",
         "racePointList": [
             310,
             405,
@@ -1152,7 +1152,7 @@
             "大钢蛇"
         ],
         "quality": "Rare",
-        "nature": "Rock",
+        "nature": "rock",
         "racePointList": [
             385,
             510
@@ -1187,7 +1187,7 @@
             "顽皮弹"
         ],
         "quality": "General",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             330,
             480
@@ -1222,7 +1222,7 @@
             "双弹瓦斯"
         ],
         "quality": "General",
-        "nature": "Poison",
+        "nature": "poison",
         "racePointList": [
             340,
             490
@@ -1257,7 +1257,7 @@
             "幸福蛋"
         ],
         "quality": "Epic",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             450,
             540
@@ -1293,7 +1293,7 @@
             "刺龙王"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             295,
             440,
@@ -1328,7 +1328,7 @@
             "吸盘魔偶"
         ],
         "quality": "Epic",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             460
         ],
@@ -1362,7 +1362,7 @@
             "巨钳螳螂"
         ],
         "quality": "Epic",
-        "nature": "Bug",
+        "nature": "bug",
         "racePointList": [
             500,
             500
@@ -1396,7 +1396,7 @@
             "迷唇姐"
         ],
         "quality": "Epic",
-        "nature": "Ice",
+        "nature": "ice",
         "racePointList": [
             455
         ],
@@ -1429,7 +1429,7 @@
             "鸭嘴火龙"
         ],
         "quality": "Rare",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             495
         ],
@@ -1463,7 +1463,7 @@
             "暴鲤龙"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             200,
             540
@@ -1498,7 +1498,7 @@
             "水精灵"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             325,
             525
@@ -1533,7 +1533,7 @@
             "雷精灵"
         ],
         "quality": "Epic",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             325,
             525
@@ -1568,7 +1568,7 @@
             "火精灵"
         ],
         "quality": "Epic",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             325,
             525
@@ -1603,7 +1603,7 @@
             "太阳精灵"
         ],
         "quality": "Epic",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             325,
             525
@@ -1638,7 +1638,7 @@
             "月精灵"
         ],
         "quality": "Epic",
-        "nature": "Dark",
+        "nature": "dark",
         "racePointList": [
             325,
             525
@@ -1672,7 +1672,7 @@
             "乘龙"
         ],
         "quality": "Epic",
-        "nature": "Ice",
+        "nature": "ice",
         "racePointList": [
             535
         ],
@@ -1706,7 +1706,7 @@
             "3D龙2"
         ],
         "quality": "Epic",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             395,
             515
@@ -1740,7 +1740,7 @@
             "化石翼龙"
         ],
         "quality": "Epic",
-        "nature": "Rock",
+        "nature": "rock",
         "racePointList": [
             515
         ],
@@ -1773,7 +1773,7 @@
             "卡比兽"
         ],
         "quality": "Epic",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             540
         ],
@@ -1806,7 +1806,7 @@
             "急冻鸟"
         ],
         "quality": "Legend",
-        "nature": "Ice",
+        "nature": "ice",
         "racePointList": [
             580
         ],
@@ -1839,7 +1839,7 @@
             "闪电鸟"
         ],
         "quality": "Legend",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             580
         ],
@@ -1872,7 +1872,7 @@
             "火焰鸟"
         ],
         "quality": "Legend",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             580
         ],
@@ -1907,7 +1907,7 @@
             "快龙"
         ],
         "quality": "Legend",
-        "nature": "Dragon",
+        "nature": "dragon",
         "racePointList": [
             420,
             600,
@@ -1942,7 +1942,7 @@
             "超梦"
         ],
         "quality": "Legend",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             680
         ],
@@ -1975,7 +1975,7 @@
             "梦幻"
         ],
         "quality": "Legend",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             600
         ],
@@ -2010,7 +2010,7 @@
             "大竺葵"
         ],
         "quality": "Epic",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             315,
             405,
@@ -2047,7 +2047,7 @@
             "火爆兽"
         ],
         "quality": "Epic",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             309,
             405,
@@ -2084,7 +2084,7 @@
             "大力鳄"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             314,
             405,
@@ -2120,7 +2120,7 @@
             "猫头夜鹰"
         ],
         "quality": "General",
-        "nature": "Flying",
+        "nature": "flying",
         "racePointList": [
             262,
             442
@@ -2155,7 +2155,7 @@
             "波克基古"
         ],
         "quality": "Epic",
-        "nature": "Fairy",
+        "nature": "fairy",
         "racePointList": [
             245,
             405
@@ -2191,7 +2191,7 @@
             "电龙"
         ],
         "quality": "Rare",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             280,
             365,
@@ -2227,7 +2227,7 @@
             "玛力露丽"
         ],
         "quality": "General",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             250,
             420
@@ -2261,7 +2261,7 @@
             "胡说树"
         ],
         "quality": "Rare",
-        "nature": "Rock",
+        "nature": "rock",
         "racePointList": [
             410
         ],
@@ -2294,7 +2294,7 @@
             "梦妖"
         ],
         "quality": "Rare",
-        "nature": "Ghost",
+        "nature": "ghost",
         "racePointList": [
             435
         ],
@@ -2327,7 +2327,7 @@
             "果然翁"
         ],
         "quality": "Epic",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             405
         ],
@@ -2360,7 +2360,7 @@
             "壶壶"
         ],
         "quality": "Epic",
-        "nature": "Bug",
+        "nature": "bug",
         "racePointList": [
             505
         ],
@@ -2393,7 +2393,7 @@
             "赫拉克罗斯"
         ],
         "quality": "Epic",
-        "nature": "Bug",
+        "nature": "bug",
         "racePointList": [
             500
         ],
@@ -2426,7 +2426,7 @@
             "纽拉"
         ],
         "quality": "Epic",
-        "nature": "Dark",
+        "nature": "dark",
         "racePointList": [
             430
         ],
@@ -2459,7 +2459,7 @@
             "盔甲鸟"
         ],
         "quality": "Epic",
-        "nature": "Steel",
+        "nature": "steel",
         "racePointList": [
             465
         ],
@@ -2492,7 +2492,7 @@
             "大奶罐"
         ],
         "quality": "Epic",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             490
         ],
@@ -2525,7 +2525,7 @@
             "雷公"
         ],
         "quality": "Legend",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             580
         ],
@@ -2558,7 +2558,7 @@
             "炎帝"
         ],
         "quality": "Legend",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             580
         ],
@@ -2591,7 +2591,7 @@
             "水君"
         ],
         "quality": "Legend",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             580
         ],
@@ -2626,7 +2626,7 @@
             "班吉拉"
         ],
         "quality": "Legend",
-        "nature": "Rock",
+        "nature": "rock",
         "racePointList": [
             300,
             410,
@@ -2661,7 +2661,7 @@
             "洛奇亚"
         ],
         "quality": "Legend",
-        "nature": "Flying",
+        "nature": "flying",
         "racePointList": [
             680
         ],
@@ -2694,7 +2694,7 @@
             "凤王"
         ],
         "quality": "Legend",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             680
         ],
@@ -2727,7 +2727,7 @@
             "雪拉比"
         ],
         "quality": "Legend",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             600
         ],
@@ -2762,7 +2762,7 @@
             "蜥蜴王"
         ],
         "quality": "Epic",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             310,
             405,
@@ -2799,7 +2799,7 @@
             "火焰鸡"
         ],
         "quality": "Epic",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             310,
             405,
@@ -2836,7 +2836,7 @@
             "巨沼怪"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             310,
             405,
@@ -2873,7 +2873,7 @@
             "狩猎凤蝶"
         ],
         "quality": "General",
-        "nature": "Bug",
+        "nature": "bug",
         "racePointList": [
             195,
             205,
@@ -2909,7 +2909,7 @@
             "大王燕"
         ],
         "quality": "General",
-        "nature": "Flying",
+        "nature": "flying",
         "racePointList": [
             270,
             430
@@ -2945,7 +2945,7 @@
             "沙奈朵"
         ],
         "quality": "Epic",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             198,
             278,
@@ -2981,7 +2981,7 @@
             "优雅喵"
         ],
         "quality": "Rare",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             260,
             380
@@ -3015,7 +3015,7 @@
             "勾魂眼"
         ],
         "quality": "Rare",
-        "nature": "Ghost",
+        "nature": "ghost",
         "racePointList": [
             380
         ],
@@ -3048,7 +3048,7 @@
             "毒蔷薇"
         ],
         "quality": "Rare",
-        "nature": "Grass",
+        "nature": "grass",
         "racePointList": [
             400
         ],
@@ -3082,7 +3082,7 @@
             "雷电兽"
         ],
         "quality": "General",
-        "nature": "Electric",
+        "nature": "electric",
         "racePointList": [
             295,
             475
@@ -3117,7 +3117,7 @@
             "七夕青鸟"
         ],
         "quality": "Rare",
-        "nature": "Dragon",
+        "nature": "dragon",
         "racePointList": [
             310,
             490
@@ -3152,7 +3152,7 @@
             "美纳斯"
         ],
         "quality": "Epic",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             200,
             540
@@ -3186,7 +3186,7 @@
             "漂浮泡泡"
         ],
         "quality": "General",
-        "nature": "Normal",
+        "nature": "normal",
         "racePointList": [
             420
         ],
@@ -3220,7 +3220,7 @@
             "诅咒娃娃"
         ],
         "quality": "General",
-        "nature": "Ghost",
+        "nature": "ghost",
         "racePointList": [
             295,
             455
@@ -3254,7 +3254,7 @@
             "阿勃梭鲁"
         ],
         "quality": "Epic",
-        "nature": "Dark",
+        "nature": "dark",
         "racePointList": [
             465
         ],
@@ -3288,7 +3288,7 @@
             "冰鬼护"
         ],
         "quality": "Epic",
-        "nature": "Ice",
+        "nature": "ice",
         "racePointList": [
             300,
             480
@@ -3324,7 +3324,7 @@
             "血翼飞龙"
         ],
         "quality": "Legend",
-        "nature": "Dragon",
+        "nature": "dragon",
         "racePointList": [
             300,
             420,
@@ -3361,7 +3361,7 @@
             "巨金怪"
         ],
         "quality": "Legend",
-        "nature": "Steel",
+        "nature": "steel",
         "racePointList": [
             300,
             420,
@@ -3396,7 +3396,7 @@
             "拉帝亚斯"
         ],
         "quality": "Legend",
-        "nature": "Dragon",
+        "nature": "dragon",
         "racePointList": [
             600
         ],
@@ -3429,7 +3429,7 @@
             "拉帝欧斯"
         ],
         "quality": "Legend",
-        "nature": "Dragon",
+        "nature": "dragon",
         "racePointList": [
             600
         ],
@@ -3462,7 +3462,7 @@
             "盖欧卡"
         ],
         "quality": "Legend",
-        "nature": "Water",
+        "nature": "water",
         "racePointList": [
             670
         ],
@@ -3495,7 +3495,7 @@
             "古拉顿"
         ],
         "quality": "Legend",
-        "nature": "Fire",
+        "nature": "fire",
         "racePointList": [
             670
         ],
@@ -3528,7 +3528,7 @@
             "裂空座"
         ],
         "quality": "Legend",
-        "nature": "Dragon",
+        "nature": "dragon",
         "racePointList": [
             680
         ],
@@ -3561,7 +3561,7 @@
             "基拉祈"
         ],
         "quality": "Legend",
-        "nature": "Steel",
+        "nature": "steel",
         "racePointList": [
             600
         ],
@@ -3594,7 +3594,7 @@
             "代欧奇西斯·正常"
         ],
         "quality": "Legend",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             600
         ],
@@ -3627,7 +3627,7 @@
             "代欧奇西斯·攻击"
         ],
         "quality": "Legend",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             600
         ],
@@ -3660,7 +3660,7 @@
             "代欧奇西斯·防御"
         ],
         "quality": "Legend",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             600
         ],
@@ -3693,7 +3693,7 @@
             " "
         ],
         "quality": "Legend",
-        "nature": "Psychic",
+        "nature": "psychic",
         "racePointList": [
             600
         ],

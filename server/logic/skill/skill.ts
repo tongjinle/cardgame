@@ -27,22 +27,29 @@ import Card from '../card/card';
 import Hero from '../hero/hero';
 import {ESkillNature, ESkillType,} from '../schema';
 
-export default abstract  class Skill  {
-  id: number;
+export default class Skill  {
+  id: string;
   // 技能编号
-  skillId: number;
+  skillId: string;
   // 技能拥有者
   card: Card;
   // 名称
   name: string;
+  // 技能等级
+  level: number;
   // 属性
   nature: ESkillNature;
   // 描述
   desc: string;
   // 是否是主动技能
   useType: ESkillType;
-  // 索敌方式
   
+  // level需求
+  levelRequire: number;
+
+  // 公式
+  formula: string;
+
 
 
   constructor() {

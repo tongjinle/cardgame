@@ -37,6 +37,7 @@ format.skill = () => {
       propNameList.forEach((propName, index) => {
         rst[propName] = cellList[index];
       });
+      rst['nature'] = rst['nature'].toLowerCase();
       return rst;
     });
 
@@ -113,7 +114,7 @@ format.card = () => {
         cardId: cellList[0],
         nameList: cellList[1].split('||'),
         quality: cellList[2],
-        nature: cellList[3],
+        nature: cellList[3].toLowerCase(),
         racePointList: cellList[4].split('||').map(n=>n-0),
         waitRound: cellList[5]-0,
         power: cellList[6]-0,
