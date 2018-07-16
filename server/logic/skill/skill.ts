@@ -50,6 +50,11 @@ export default class Skill  {
   // 公式
   formula: string;
 
+  // 是否可以满足level需求
+  public get isLevelRequire() : boolean {
+    return this.card && this.card.level >= this.levelRequire;
+  }
+
 
 
   constructor() {

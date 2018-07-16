@@ -1,4 +1,5 @@
 import { ENature, ECardStatus, } from '../schema';
+import Buff from '../buff/buff';
 import Skill from '../skill/skill';
 import Hero from '../hero/hero';
 import Stage from '../stage/stage';
@@ -9,6 +10,10 @@ export default class Card {
   id: string;
   // cardId(用于数据文件中查找)
   cardId: string;
+  // 名称
+  name: string;
+  // 名称列表
+  nameList: string[];
   // 星
   star: number;
   // 上场前的等待回合
@@ -47,13 +52,17 @@ export default class Card {
   nature: ENature;
   // 技能列表
   skillList: Skill[];
+  // buff列表
+  buffList: Buff[];
   // 卡牌状态
   status: ECardStatus;
   // 所属的army
   army: Army;
   constructor() {
     this.status = ECardStatus.normal;
+    this.nameList = [];
     this.skillList = [];
+    this.buffList = [];
     this.racePoint = 0;
     this.racePointList = [];
     this.position = -1;
@@ -66,10 +75,14 @@ export default class Card {
     this.hp = this.maxHp = this.zeroHp + this.hpGrow * this.level;
     this.power = this.maxPower = this.zeroPower + this.powerGrow * this.level
 
+    // 名字
     // 种族值
     {
       [0, 5, 10].some((n, index) => {
-        if (this.level >= n) { this.racePoint = this.racePointList[index]; }
+        if (this.level >= n) {
+          this.name = this.nameList[index];
+          this.racePoint = this.racePointList[index];
+        }
         else { return true; }
         return false;
       });
@@ -79,8 +92,22 @@ export default class Card {
 
   }
 
+  // 增加buff
+  addBuff(buff: Buff) {
+    this.buffList.push(buff);
+    buff.card = this;
+  }
+
+  // 消除buff
+  removeBuff(buff: Buff) {
+    this.buffList = this.buffList.filter(bu => bu != buff);
+    buff.card = undefined;
+  }
+
+  // 增加技能
   addSkill(skill: Skill): void {
     this.skillList.push(skill);
+    skill.card = this;
   }
 
 

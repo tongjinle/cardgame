@@ -26,6 +26,7 @@ import fs from 'fs';
 import path from 'path';
 import Card from '../card/card';
 import Skill from '../skill/skill';
+import Buff from '../buff/buff';
 import { ENature, ESkillNature, } from '../schema';
 
 
@@ -90,6 +91,7 @@ export default class StageUtil {
     rst.hpGrow = sourceData.hpGrow;
     rst.powerGrow = sourceData.powerGrow;
 
+    rst.nameList.push(...sourceData.nameList);
     rst.racePointList.push(...sourceData.racePointList);
 
     // add skill
@@ -130,6 +132,28 @@ export default class StageUtil {
     return rst;
   }
 
+
+  createBuff(id: string, layer: number): Buff {
+    let rst: Buff;
+
+
+    rst = new Buff();
+
+    let sourceData: IBuffData = this.buffData.find(n => n.buffId === id);
+    if (!sourceData) {
+      throw "no such buff data";
+    }
+
+    rst.id = this.createRndId();
+    rst.buffId = id;
+    rst.name = sourceData.name;
+    rst.maxLayer = sourceData.maxLayer;
+    rst.clearLayer = sourceData.clearLayer;
+    rst.setLayer(layer);
+
+    return rst;
+  }
+
   // 唯一实例
   private static ins: StageUtil;
 
@@ -156,7 +180,7 @@ export default class StageUtil {
     this.buffData = JSON.parse(fs.readFileSync(`${filepath}/buff.json`, 'utf-8'));
   }
 
-  private createRndId():string{
+  private createRndId(): string {
     return Math.floor(1e16 * Math.random()).toString(16).slice(0, 12);
   }
 

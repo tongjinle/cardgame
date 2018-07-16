@@ -42,4 +42,17 @@ describe('从数据文件中创建卡牌,技能,buff', () => {
     assert(ca.power === 250 + 6 * 23);
     assert.deepEqual(ca.skillList.map(sk => sk.skillId), ['10103', '14004', '10601']);
   });  
+
+
+  it('通过id来创建buff', () => {
+    let bu = util.createBuff('101',3);
+    assert(bu.name === '烧伤');
+    assert(bu.maxLayer === 1);
+    // 因为最多是1层,所以设置了3层也没有用
+    assert(bu.layer === 1);  
+
+    bu.clear();
+    assert(bu.layer === 0);
+
+   });
 });
