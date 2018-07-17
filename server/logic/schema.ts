@@ -115,6 +115,8 @@ export enum EDefeat {
 
 // 技能流各个阶段
 export enum ECastFlowStep {
+  // 通知技能的发动
+  notifyCast,
   // 使用技能前
   beforeCast,
   // 被使用技能前

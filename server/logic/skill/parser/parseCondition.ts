@@ -40,7 +40,7 @@ enum ECondition {
   // todo
   Con_sk_fun_belong,
   // 被攻击者是否为某种类型,卡牌
-  Con_tar,
+  Con_ac_type,
 }
 
 enum ETargetType {
@@ -81,7 +81,7 @@ export default function parseCondition(stage: Stage, sender: Card, target: Card 
 
 // 解析单个条件语句
 function parseSingleCondition(stage: Stage, sender: Card, target: Card | Hero, conditionStr: string): boolean {
-  let rst: boolean = true;
+  let rst: boolean = false;
 
   let [typeStr, ...args] = conditionStr.split('@');
   let type: ECondition = ECondition[typeStr];
@@ -103,7 +103,7 @@ function parseSingleCondition(stage: Stage, sender: Card, target: Card | Hero, c
 
   } else if (ECondition.Con_sk_fun_belong === type) {
 
-  } else if (ECondition.Con_tar === type) {
+  } else if (ECondition.Con_ac_type === type) {
     let targetTypeStr = args[0];
     let targetType: ETargetType = ETargetType[targetTypeStr];
     if (ETargetType.Tty_card === targetType) {

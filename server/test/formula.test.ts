@@ -73,7 +73,7 @@ describe('公式', async () => {
 
   it('水枪', async () => {
     let formula = 'Lo_op_rd@1#Ef_mag@Num_int:40';
-    let flowList = parseFormula(stage, sender, formula);
+    let flowList = parseFormula(stage, sender, undefined, formula);
     let flow = flowList[0];
 
     assert(flowList.length === 1);
@@ -83,4 +83,36 @@ describe('公式', async () => {
     assert(flow.sender === sender);
     assert(flow.target === target);
   });
+
+  it('剑舞-Con开头', async () => {
+    let formula = 'Con_ac_type@Ttp_card&&Con_per@50?Lo_sf#Ef_buf@108:1:Num_int:15';
+    let flowList = parseFormula(stage, sender, undefined, formula);
+    console.log(flowList);
+  });
+
+
+  it('所有公式解析', async () => {
+    let file = `${__dirname}/../data/json/skill.json`;
+    let skillData: { name: string, formula: string }[] = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    let name: string;
+    let formula: string;
+    try {
+      skillData.forEach(n => {
+        name = n.name;
+        formula = n.formula;
+        parseFormula(stage, sender, undefined, formula);
+      });
+    } catch (e) {
+      console.error(name);
+      console.error(formula);
+      console.log('====================');
+      // console.error(e);
+
+    }
+  });
+
+
+
+
+
 });

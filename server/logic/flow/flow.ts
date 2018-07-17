@@ -30,6 +30,7 @@ import { ECastType, ECastSubtype, EFlowType, } from '../schema';
 
 // 效果流
 export default abstract class Flow<T = any> {
+  stage: Stage;
   // 效果流类型
   type: EFlowType;
   // 当前阶段

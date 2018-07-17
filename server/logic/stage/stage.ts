@@ -26,9 +26,11 @@ import Record from './record';
 import Army from '../army/army';
 import Card from '../card/card';
 import Hero from '../hero/hero';
+import Skill from '../skill/skill';
 import Buff from '../buff/buff';
 import Flow from '../flow/flow';
-import { ECombatStatus, EArmyColor, ERecord, EDefeat, } from '../schema';
+import CastFlow from '../flow/castFlow';
+import { ECombatStatus, EArmyColor, ERecord, EDefeat, EFlowType, ECastFlowStep, } from '../schema';
 import *  as conf from '../config';
 import rnd from 'seedrandom';
 
@@ -54,11 +56,15 @@ export default class Stage {
 
   private buffList: Buff[];
 
+  // castFlow列表
+  castFlowList: CastFlow[];
+
 
   constructor() {
     this.roundIndex = 0;
     this.seed = Math.random();
     this.rndGen = rnd(this.seed.toString());
+    this.castFlowList = [];
     this.recordList = [];
   }
 
@@ -187,7 +193,19 @@ export default class Stage {
     this.activeArmy.cardList.forEach(ca => {
       // 使用技能
       ca.skillList.forEach(sk => {
+        if (sk.isLevelRequired && sk.useType === ECastFlowStep.notifyCast) {
+          let caFlowList = sk.cast(this);
+          this.castFlowList.push(...caFlowList);
 
+
+          // 因为在处理flow的时候,也会形成新的flow,它们以一个栈的顺序来处理
+          while (this.castFlowList.length) {
+            let fl = this.castFlowList.pop();
+            fl.step = ECastFlowStep.beforeBeCast;
+            this.dealFlow(fl);
+          }
+
+        }
       });
 
       // 普通攻击
@@ -243,15 +261,34 @@ export default class Stage {
 
   // 处理效果流
   dealFlow(flow: Flow) {
-    // 遍历所有的buff
-    this.buffList.some(bu => {
-      // 如果流已经结束,就返回
-      if (flow.isDone) return true;
-      // 如果buff对这个flow具备触发条件,则处理这个flow
-      if (bu.trigger(this, flow)) {
-        bu.deal(this, flow);
-      }
+
+    if (flow instanceof CastFlow) {
+      let caFlow: CastFlow = flow;
+      caFlow.stepQueue.forEach(st => {
+        caFlow.step = st;
+        let skList = this.getActiveSkillList(st);
+        skList.forEach(sk => {
+          sk.dealFlow(flow);
+        });
+      });
+      flow.isDone = true;
+    }
+
+
+  }
+
+  private getActiveSkillList(step: ECastFlowStep, ) {
+    let rst: Skill[] = [];
+    this.armyList.forEach(ar => {
+      ar.cardList.forEach(ca => {
+        ca.skillList.forEach(sk => {
+          if (sk.isLevelRequired && sk.useType === step) {
+            rst.push(sk);
+          }
+        });
+      });
     });
+    return rst;
   }
 
 

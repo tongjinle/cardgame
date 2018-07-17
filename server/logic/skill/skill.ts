@@ -24,10 +24,13 @@
 
 import Stage from '../stage/stage';
 import Card from '../card/card';
+import Flow from '../flow/flow';
 import Hero from '../hero/hero';
-import {ESkillNature, ESkillType,} from '../schema';
+import { ESkillNature, ESkillType, EFlowType, ECastFlowStep, } from '../schema';
+import CastFlow from '../flow/castFlow';
+import parseFormula from './parser/parseFormula';
 
-export default class Skill  {
+export default class Skill {
   id: string;
   // 技能编号
   skillId: string;
@@ -41,9 +44,10 @@ export default class Skill  {
   nature: ESkillNature;
   // 描述
   desc: string;
-  // 是否是主动技能
-  useType: ESkillType;
-  
+
+  // 使用方式,其实就是flow的step
+  useType: ECastFlowStep;
+
   // level需求
   levelRequire: number;
 
@@ -51,7 +55,7 @@ export default class Skill  {
   formula: string;
 
   // 是否可以满足level需求
-  public get isLevelRequire() : boolean {
+  public get isLevelRequired(): boolean {
     return this.card && this.card.level >= this.levelRequire;
   }
 
@@ -63,15 +67,27 @@ export default class Skill  {
 
 
   // 索敌,查找目标
-  findTarget(stage:Stage): Card[] | Hero {
+  findTarget(stage: Stage): Card[] | Hero {
     let rst: Card[] | Hero;
     return rst;
   }
 
 
   // 技能效果
-  cast() {
+  cast(stage: Stage): CastFlow[] {
+    let rst: CastFlow[] = [];
+    let card = this.card;
+    let formula = this.formula;
+    rst.push(...parseFormula(stage, card, undefined, formula));
+    // rst.forEach(fl => fl.step = ECastFlowStep.beforeCast);
+    return rst;
+  }
 
+  // 技能效果,但是不产生新的flow
+  dealFlow(flow: CastFlow): void {
+    let { stage, sender, target, } = flow;
+    let formula = this.formula;
+    parseFormula(stage, sender as Card, target, formula);
   }
 
   toInfo() {
