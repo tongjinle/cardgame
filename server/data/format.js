@@ -38,6 +38,14 @@ format.skill = () => {
         rst[propName] = cellList[index];
       });
       rst['nature'] = rst['nature'].toLowerCase();
+
+      // useType的转换
+      {
+        let oldTypeList = 'Use_act,Use_be_atk,Use_be_def,Use_af_atk,Use_af_def,Use_die,Use_new,'.split(',');
+        let typeList = 'notifyCast,beforeCast,afterCast,beforeBeCast,afterBeCast,Use_die,Use_new'.split(',');
+        rst['useType'] = typeList[oldTypeList.indexOf(rst['useType'])];
+      }
+
       return rst;
     });
 
@@ -65,13 +73,13 @@ format.buff = () => {
     .map(line => {
       let cellList = line.split(',');
       let rst = {
-        buffId:cellList[0],
-        name:cellList[1],
-        desc:cellList[2],
-        maxLayer:cellList[3]-0,
-        clearLayer:cellList[4]-0,
-        triggerStep:cellList[5],
-        buffType:cellList[6],
+        buffId: cellList[0],
+        name: cellList[1],
+        desc: cellList[2],
+        maxLayer: cellList[3] - 0,
+        clearLayer: cellList[4] - 0,
+        triggerStep: cellList[5],
+        buffType: cellList[6],
       };
       return rst;
     });
@@ -105,7 +113,7 @@ format.card = () => {
         return {
           id: skillIdList[index],
           name: cellList[n],
-          level: skillLevelList[index]-0,
+          level: skillLevelList[index] - 0,
         };
       });
 
@@ -115,12 +123,12 @@ format.card = () => {
         nameList: cellList[1].split('||'),
         quality: cellList[2],
         nature: cellList[3].toLowerCase(),
-        racePointList: cellList[4].split('||').map(n=>n-0),
-        waitRound: cellList[5]-0,
-        power: cellList[6]-0,
-        hp: cellList[7]-0,
-        powerGrow: cellList[8]-0,
-        hpGrow: cellList[9]-0,
+        racePointList: cellList[4].split('||').map(n => n - 0),
+        waitRound: cellList[5] - 0,
+        power: cellList[6] - 0,
+        hp: cellList[7] - 0,
+        powerGrow: cellList[8] - 0,
+        hpGrow: cellList[9] - 0,
         skillList,
 
       };
@@ -138,8 +146,3 @@ for (let key in format) {
   fn();
 }
 console.timeEnd('format elapsed ...');
-
-
-
-
-
