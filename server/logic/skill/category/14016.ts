@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 神秘守护
+// 入场时，使两侧卡牌增加{0}点血量
+// Lo_sf_bs#Ef_hp_add@Num_int:40
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class shenmishouhu extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.enterStage;
   }
 
 

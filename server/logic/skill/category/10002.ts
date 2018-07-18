@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 泡沫光线
+// 对敌方2张卡牌造成{0}点魔法伤害
+// Lo_op_rd@2#Ef_mag@Num_int:40
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,7 +35,7 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class paomoguangxian extends Skill {
   constructor() {
     super();
     this.nature = schema.ESkillNature.water;

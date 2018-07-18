@@ -79,7 +79,46 @@ export default class Skill {
     return rst;
   }
 
-  
+  // 计算伤害
+  protected calcNormalDamage(factor: number, amount: number = 0): number {
+    let level = this.card.level;
+    return level * factor + amount;
+  }
+
+  // 从敌军随机索敌n个
+  protected findRndTargetFromEnemy(stage: Stage, count: number): Card[] {
+    let rst: Card[] = [];
+    let enemy = stage.armyList.find(ar => ar != this.card.army);
+    rst.push(... this.randomFetch(enemy.cardList, count, stage.rndGen));
+    return rst;
+  }
+
+  // 随机获取
+  protected randomFetch(list: any[], count: number, rndGen: () => number): any[] {
+    let rst: any[] = [];
+    let realCount = Math.min(list.length, count);
+    let rndInterval = (min: number, max: number): number => {
+      return Math.floor((max - min) * rndGen()) + min;
+    };
+
+    // 存放随机取出来的下标
+    let indexList: number[] = [];
+    while (1) {
+      if (!realCount) break;
+
+      let index = rndInterval(0, list.length - 1);
+      if (!indexList.some(n => n === index)) {
+        indexList.push(index);
+        realCount--;
+      }
+    }
+
+    rst = list.filter((n, index) => indexList.some(n => n == index));
+
+    return rst;
+  }
+
+
 
   toInfo() {
     let info = {

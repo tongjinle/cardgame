@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 龙息
+// 对敌方1张卡牌造成{0}点绝对伤害，若目标拥有【光之壁】或【反射壁】则伤害提升200%
+// Lo_op_rd@1#Con_ac_has_sk@14006@14007?Ef_abs@Num_int:60||Ef_abs@Num_int:20
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class longxi extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.dragon;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

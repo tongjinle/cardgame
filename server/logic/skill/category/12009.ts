@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 虚张声势
+// 首次攻击增加{0}攻击力
+// Lo_sf#Ef_buf@107@1@Num_int:50
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class xuzhangshengshi extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.enterStage;
   }
 
 

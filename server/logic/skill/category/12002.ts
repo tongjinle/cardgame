@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 月光
+// 使我方剩余血量最低的1张卡牌回复{0}点血量
+// Lo_pro_mn@Ttm_sf@Pro_hp_cur@1#Ef_hea@Num_int:25
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class yueguang extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.none;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

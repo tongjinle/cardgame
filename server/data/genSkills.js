@@ -9,7 +9,9 @@ genSkill =()=>{
   let skillData = JSON.parse(fs.readFileSync(filename,'utf-8'));
   skillData.forEach(sk=>{
     if(!sk.name) {return;}
-    let bareFileName = (pinyin(sk.name,{style:'normal'})+'').split(',').join('') + sk.skillId;
+    let cnPinyin = (pinyin(sk.name,{style:'normal'})+'').split(',').join('');
+    // let bareFileName =  + sk.skillId;
+    let bareFileName = sk.skillId;
     console.log(bareFileName);
     let skillFileName = __dirname + '/../logic/skill/category/' + bareFileName + '.ts';
     let nature = 'ESkillNature.'+sk.nature;
@@ -19,7 +21,7 @@ genSkill =()=>{
       .replace('{skill-name}',sk.name)
       .replace('{skill-desc}',sk.desc)
       .replace('{skill-formula}',sk.formula)
-
+      .replace('__moban__',cnPinyin)
       ;
     fs.writeFileSync(skillFileName,content,'utf-8');
   });

@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 反射壁
+// 受到的魔法伤害技能无效，并对施法者造成{0}点绝对伤害
+// Con_sk_fun@Fun_mag?Lo_ca#Ef_mis#Ef_abs@Num_int:30
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class fanshebi extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.afterCast;
   }
 
 

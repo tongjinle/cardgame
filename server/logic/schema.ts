@@ -211,7 +211,7 @@ export interface ICastDamage{
 }
 
 export interface ICastData {
-  damage?:ICastDamage,
+  damage:ICastDamage,
 }
 
 

@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 居合斩
+// 攻击卡牌时，无视【影分身】【替身】技能
+// Lo_sf#Ef_ace@14004@14005
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class juhezhan extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.beforeCast;
   }
 
 

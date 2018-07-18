@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 替身
+// 每次最多受到{0}点物理伤害
+// Lo_sk#Ef_hurt_max@Ht_phy@Num_int:-30:350
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class tishen extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.afterCast;
   }
 
 

@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 叫声
+// 使敌方1张卡牌减少{0}~{1}点攻击力
+// Lo_op_rd@1#Ef_atk_add@Num_int_rd:-20:-10
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class jiaosheng extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.none;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

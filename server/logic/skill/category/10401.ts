@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 细雪
+// 对敌方1张卡牌造成{0}点魔法伤害，并有35%概率进入冰冻状态
+// Lo_op_rd@1#Ef_mag@Num_int:20#Con_per@35?Ef_buf@103@1
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class xixue extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.ice;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

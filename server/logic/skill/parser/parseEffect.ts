@@ -74,7 +74,7 @@ export default function parseEffect(stage: Stage, sender: Card | Tool, target: C
   let [effectTypeStr, ...args] = effectStr.split('@');
   let type: EEffect = EEffect[effectTypeStr];
   if (EEffect.Ef_mag === type) {
-    rst.data.damage.magic = parseNumberFormulaWithEnv(args[0]);
+    rst.data.target.damage.magic = parseNumberFormulaWithEnv(args[0]);
   }
 
   return rst;

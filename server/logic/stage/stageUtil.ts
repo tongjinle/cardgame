@@ -152,7 +152,16 @@ export default class StageUtil {
   createSkill(id: string, level: number, levelRequire: number, ): Skill {
     let rst: Skill;
 
-    rst = new Skill();
+    // 动态加载类 start
+    let filename = '../skill/category/' + id;
+    let a = require(filename);
+    console.log('a',a,filename);
+    let kls:any = require('../skill/category/' + id).default;
+    // import kls = require('../skill/category/' + id);
+    // 动态加载类 end
+
+    rst = new kls();
+    console.log('kls: ' + rst);
 
     let sourceData: ISkillData = this.skillData.find(n => n.skillId === id);
     if (!sourceData) {
@@ -160,12 +169,12 @@ export default class StageUtil {
     }
 
     rst.id = this.createRndId();
-    rst.skillId = sourceData.skillId;
-    rst.name = sourceData.name;
-    rst.nature = ESkillNature[sourceData.nature];
+    // rst.skillId = sourceData.skillId;
+    // rst.name = sourceData.name;
+    // rst.nature = ESkillNature[sourceData.nature];
     rst.level = level;
     rst.levelRequire = levelRequire;
-    rst.formula = sourceData.formula;
+    // rst.formula = sourceData.formula;
 
 
     return rst;

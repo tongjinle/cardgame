@@ -8,6 +8,7 @@ import { EArmyColor, } from '../logic/schema';
 
 
 describe('从数据文件中创建卡牌,技能,buff', () => {
+  return;
   let util = StageUtil.getIns();
   it('通过id来创建技能', () => {
   

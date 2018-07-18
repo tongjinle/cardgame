@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 诅咒
+// 对敌方英雄造成{0}点伤害
+// Lo_op_hr#Ef_abs@Num_int:40
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class zuzhou extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.none;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

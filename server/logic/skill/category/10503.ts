@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 破坏死光
+// 对敌方剩余血量最低的3张卡牌造成{0}点绝对伤害
+// Lo_pr_mn@Ttm_op@Pro_hp_cur@3#Ef_abs@Num_int:25
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class pohuaisiguang extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.normal;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

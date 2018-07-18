@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 唱歌
+// 使敌方1张卡牌{0}%概率进入睡眠状态
+// Lo_op_rd@1#Con_per@Num_int:5:20?Ef_buf@106@1
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class changge extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.none;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

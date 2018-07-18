@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 静电
+// 受到攻击时，对攻击者造成{0}点绝对伤害，有{1}%概率使攻击者进入麻痹状态
+// Con_sk_fun@Fun_phy?Lo_ca#Ef_abs@Num_int:15#Con_per@Num_int:5:25?Ef_buf@102@1
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class jingdian extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.afterBeCast;
   }
 
 

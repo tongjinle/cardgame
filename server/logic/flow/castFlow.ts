@@ -36,7 +36,7 @@ import {
 
 // 效果流
 
-export default class CastFlow extends Flow<ICastData> {
+export default class CastFlow extends Flow<{ sender: ICastData, target: ICastData, }> {
   // 目标
   target: Card | Hero;
 
@@ -68,8 +68,18 @@ export default class CastFlow extends Flow<ICastData> {
   // 初始化数据
   private initData(): void {
     // 伤害
-    let damage: ICastDamage = { magic: 0, sacred: 0, special: 0, other: 0, physical: 0, };
-    this.data = { damage, };
+    this.data = {
+      sender: {
+        damage: this.genDamageData(),
+      },
+      target: {
+        damage: this.genDamageData(),
+      },
+    };
+  }
+
+  private genDamageData(): ICastDamage {
+    return { magic: 0, sacred: 0, special: 0, other: 0, physical: 0, };
   }
 }
 

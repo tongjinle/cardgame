@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 咬碎
+// 对敌方3张卡牌造成{0}点特殊伤害,并增加自身{1}点攻击力
+// Lo_op_rd@3#Ef_spe@Num_int:20^Lo_sf#Ef_atk_add@Num_int:10
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class yaosui extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.dark;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

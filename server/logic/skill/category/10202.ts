@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 藤鞭
+// 对敌方2张卡牌造成{0}点魔法伤害，自身回复相同的血量
+// Lo_op_rd@2#Ef_mag_hea@Num_int:20
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class tengbian extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.grass;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

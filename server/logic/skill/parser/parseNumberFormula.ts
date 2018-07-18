@@ -148,7 +148,7 @@ function getPropValue(card: Card, type: EProp): number {
 function getHurtVaule(flow: CastFlow, type: EHurt): number {
   let rst: number = 0;
   if (EHurt.Ht_phy === type) {
-    rst = flow.data.damage.physical;
+    rst = flow.data.target.damage.physical;
   }
   else {
     throw 'no such hurtType: ' + EHurt[type];

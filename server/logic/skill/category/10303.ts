@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 打雷
+// 对敌方3张卡牌造成{0}点魔法伤害，并有30%概率进入麻痹状态
+// Lo_op_rd@3#Ef_mag@Num_int:25#Con_per@30?Ef_buf@102@1
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class dalei extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.elec;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

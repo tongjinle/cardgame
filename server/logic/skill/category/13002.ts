@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 龙舞
+// 攻击卡牌时，若血量小于目标，提升{0}%点攻击力
+// Con_ac_type@Ttp_card&&Con_num_more@Num_pro:Tcd_ac:Pro_hp_cur:0:100@Num_pro:Tcd_ca:Pro_hp_cur:0:100?Lo_sf#Ef_buf@108:1:Num_int:15
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,11 +35,11 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class longwu extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
-    this.useType = schema.ECastFlowStep.notifyCast;
+    this.nature = schema.ESkillNature.none;
+    this.useType = schema.ECastFlowStep.beforeCast;
   }
 
 

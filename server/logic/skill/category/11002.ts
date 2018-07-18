@@ -22,9 +22,9 @@
                佛祖保佑       永无BUG  
 */
 
-// {skill-name}
-// {skill-desc}
-// {skill-formula}
+// 翅膀拍击
+// 对敌方2张卡牌造成{0}点特殊伤害
+// Lo_op_rd@2#Ef_spe@Num_int:30
 
 import Stage from '../../stage/stage';
 import Card from '../../card/card';
@@ -35,10 +35,10 @@ import * as schema from '../../schema';
 import CastFlow from '../../flow/castFlow';
 
 
-export default class __moban__ extends Skill {
+export default class chibangpaiji extends Skill {
   constructor() {
     super();
-    this.nature = schema.ESkillNature.water;
+    this.nature = schema.ESkillNature.flying;
     this.useType = schema.ECastFlowStep.notifyCast;
   }
 

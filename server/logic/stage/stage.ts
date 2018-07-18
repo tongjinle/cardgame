@@ -30,7 +30,7 @@ import Skill from '../skill/skill';
 import Buff from '../buff/buff';
 import Flow from '../flow/flow';
 import CastFlow from '../flow/castFlow';
-import { ECombatStatus, EArmyColor, ERecord, EDefeat, EFlowType, ECastFlowStep, } from '../schema';
+import { ECombatStatus, EArmyColor, ERecord, EDefeat, EFlowType, ECastFlowStep, ICastDamage, } from '../schema';
 import *  as conf from '../config';
 import rnd from 'seedrandom';
 
@@ -59,7 +59,7 @@ export default class Stage {
   // castFlow列表
   castFlowList: CastFlow[];
 
-  
+
 
   constructor() {
     this.roundIndex = 0;
@@ -268,27 +268,39 @@ export default class Stage {
       flow.stepQueue.forEach(st => {
         flow.step = st;
         let caList: Card[] = [];
-        if(flow.sender instanceof Card){
+        if (flow.sender instanceof Card) {
           caList.push(flow.sender);
         }
-        if(flow.target instanceof Card){
+        if (flow.target instanceof Card) {
           caList.push(flow.target);
         }
         caList.forEach(ca => {
           ca.skillList.forEach(sk => {
+            if (sk.isLevelRequired && sk.useType === st) {
+              sk.cast(this, flow);
+            }
           });
-        });
-        [flow.sender,flow.target]
-        let skList: Skill[] = [];
-        skList.forEach(sk => {
-          // sk.dealFlow(flow);
         });
       });
       flow.isDone = true;
 
+
+      // 计算相关的伤害,治疗等等
+      // todo
+      // 处理sender
+      {
+        this.calcFlow(flow.sender as Card, flow.data.sender);
+      }
+
     }
 
 
+  }
+
+  calcFlow(target: Card | Hero, effect: { damage: ICastDamage }) {
+    let { damage } = effect;
+    let lastHp = target.hp;
+    target.hp = Math.max(0, target.hp - damage.magic - damage.other - damage.physical - damage.sacred - damage.special);
   }
 
 
