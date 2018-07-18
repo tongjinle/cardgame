@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"npm run clear && tsc && npm run copydata ",
-    "copydata":"mkdir -p ./dist/data/json && cp -rf ./data/json/* ./dist/data/json",
-    "clear":"rm -rf ./dist/*",
-    "format":"node data/format.js",
+    "build": "npm run clear && tsc && npm run copydata ",
+    "copydata": "mkdir -p ./dist/data/json && cp -rf ./data/json/* ./dist/data/json",
+    "clear": "rm -rf ./dist/*",
+    "format": "node data/format.js",
     "test": "npx mocha --require intelli-espower-loader dist/test",
     "test-inspect": "npx mocha --require intelli-espower-loader --inspect-brk dist/test"
   },
@@ -20,13 +20,14 @@
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
-    "@types/node": "^7.0.12",
-    "@types/supertest": "^2.0.0",
     "@types/mocha": "^5.2.4",
+    "@types/node": "^7.0.12",
     "@types/power-assert": "^1.5.0",
     "@types/seedrandom": "^2.4.27",
+    "@types/supertest": "^2.0.0",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^5.2.0",
+    "node-pinyin": "^0.2.3",
     "power-assert": "^1.6.0"
   },
   "directories": {

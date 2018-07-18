@@ -74,7 +74,7 @@ export default class Skill {
 
 
   // 技能效果
-  cast(stage: Stage): CastFlow[] {
+  cast(stage: Stage, flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
     let card = this.card;
     let formula = this.formula;
