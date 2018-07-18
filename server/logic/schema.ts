@@ -41,7 +41,6 @@ export enum ENature {
   psychic,
   dark,
   steel,
-
 };
 
 
@@ -127,7 +126,12 @@ export enum ECastFlowStep {
   afterBeCast,
   // 使用技能后
   afterCast,
-
+  // 死亡
+  die,
+  // 进入stage,登场
+  enterStage,
+  // 普通攻击
+  attack,
 }
 
 // 效果类型
@@ -179,6 +183,8 @@ export enum ESkillNature {
   ghost,
   diss,
   assist,
+  none,
+  dark,
 }
 
 

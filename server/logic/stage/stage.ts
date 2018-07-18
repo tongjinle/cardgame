@@ -281,7 +281,7 @@ export default class Stage {
         [flow.sender,flow.target]
         let skList: Skill[] = [];
         skList.forEach(sk => {
-          sk.dealFlow(flow);
+          // sk.dealFlow(flow);
         });
       });
       flow.isDone = true;

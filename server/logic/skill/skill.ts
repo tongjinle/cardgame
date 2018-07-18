@@ -76,19 +76,10 @@ export default class Skill {
   // 技能效果
   cast(stage: Stage, flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
-    let card = this.card;
-    let formula = this.formula;
-    rst.push(...parseFormula(stage, card, undefined, formula));
-    // rst.forEach(fl => fl.step = ECastFlowStep.beforeCast);
     return rst;
   }
 
-  // 技能效果,但是不产生新的flow
-  dealFlow(flow: CastFlow): void {
-    let { stage, sender, target, } = flow;
-    let formula = this.formula;
-    parseFormula(stage, sender as Card, target, formula);
-  }
+  
 
   toInfo() {
     let info = {

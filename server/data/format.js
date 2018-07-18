@@ -31,7 +31,28 @@ format.skill = () => {
       return true;
     })
     .map(line => {
-      let cellList = line.split(',');
+      // let cellList = line.split(',');
+
+      // 不能用逗号直接分割,是因为可能在"描述"这个字段中,会有逗号的存在
+
+
+      let cellList = [];
+      let isIgnore = false;
+      let lineArr = line.split('');
+      let cellContent = [];
+      for(let i=0;i<lineArr.length;i++){
+        let li = lineArr[i];
+        if(!isIgnore && li===','){
+          cellList.push(cellContent.join(''));
+          cellContent=[];
+          continue;
+        }
+        if(li==='"'){
+          isIgnore = !isIgnore;
+        }else{
+          cellContent.push(li);
+        }
+      }
       let propNameList = 'skillId,name,nature,desc,descArgs,formula,useType,funcType,funcDesc'.split(',');
       let rst = {};
       propNameList.forEach((propName, index) => {
@@ -41,9 +62,13 @@ format.skill = () => {
 
       // useType的转换
       {
-        let oldTypeList = 'Use_act,Use_be_atk,Use_be_def,Use_af_atk,Use_af_def,Use_die,Use_new,'.split(',');
-        let typeList = 'notifyCast,beforeCast,afterCast,beforeBeCast,afterBeCast,Use_die,Use_new'.split(',');
-        rst['useType'] = typeList[oldTypeList.indexOf(rst['useType'])];
+        let oldTypeList = 'Use_act,Use_be_atk,Use_be_def,Use_af_atk,Use_af_def,Use_die,Use_new,Use_atk'.split(',');
+        let typeList = 'notifyCast,beforeCast,afterCast,beforeBeCast,afterBeCast,die,enterStage,attack'.split(',');
+        let newType = typeList[oldTypeList.indexOf(rst['useType'])];
+        // if(rst.skillId === '10801'){
+        //   console.log(rst['useType'],newType);
+        // }
+        rst['useType'] = newType;
       }
 
       return rst;
