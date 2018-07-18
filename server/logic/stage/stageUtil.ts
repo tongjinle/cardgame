@@ -24,10 +24,14 @@
 
 import fs from 'fs';
 import path from 'path';
+import Stage from '..//stage/stage';
 import Card from '../card/card';
+import Hero from '../hero/hero';
 import Skill from '../skill/skill';
 import Buff from '../buff/buff';
-import { ENature, ESkillNature, } from '../schema';
+import Army from '../army/army';
+
+import { ENature, ESkillNature, EArmyColor, } from '../schema';
 
 
 interface ICardData {
@@ -67,8 +71,43 @@ interface IBuffData {
   buffType: string,
 }
 
+interface ICardInfo {
+  // 卡牌id
+  cardId: string,
+  // 卡牌的等级
+  level?: number
+}
+
+
+
 // 舞台帮助函数
 export default class StageUtil {
+  // 创建一个军队
+  // 黑色军队的英雄生命值,然后是红色
+  createStage(): Stage {
+    let st = new Stage();
+
+    return st;
+  }
+
+  createArmy(color: EArmyColor, heroHp: number, cardInfoList: ICardInfo[]): Army {
+    let rst: Army = new Army();
+    rst.color = color;
+    
+    // hero
+    let he = new Hero();
+    he.cardCount = 6;
+    he.hp = heroHp;
+    rst.hero = he;
+
+    // card
+    rst.cardListForDraw.push(...cardInfoList.map(info => this.createCard(info.cardId, info.level)));
+
+    return rst;
+  };
+
+
+
   // 创建一个卡牌,通过一个卡牌编号
   createCard(id: string, level: number = 0): Card {
     let rst: Card;

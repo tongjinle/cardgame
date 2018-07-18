@@ -91,7 +91,16 @@ export default class Skill {
   }
 
   toInfo() {
-    let info = {};
+    let info = {
+      id: this.id,
+      name: this.name,
+      level: this.level,
+      nature: this.nature,
+      useType: this.useType,
+      useTypeStr: ECastFlowStep[this.useType],
+      levelRequire: this.levelRequire,
+      formalua: this.formula,
+    };
     return info;
   }
 

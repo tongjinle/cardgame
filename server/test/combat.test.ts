@@ -1,13 +1,15 @@
 import assert = require("assert");
 import Stage from '../logic/stage/stage';
+import StageUtil from '../logic/stage/stageUtil';
 import Army from '../logic/army/army';
 import Card from '../logic/card/card';
 import Hero from '../logic/hero/hero';
 import { EArmyColor, } from '../logic/schema';
 import fs from 'fs';
+import * as Helper from './testHelper';
 
 describe('战斗', () => {
-  it('剧本', async () => {
+  it('没有技能的战斗', async () => {
     let st = new Stage();
     let black: Army, red: Army;
 
@@ -61,6 +63,16 @@ describe('战斗', () => {
 
     fs.writeFileSync('testlog.txt', st.recordList.map(n => { return JSON.stringify(n, undefined, 4) + '\n'; }), 'utf-8');
 
+  });
+
+  it('简单的技能的战斗', async () => {
+    let st = StageUtil.getIns().createStage();
+    let black = StageUtil.getIns().createArmy( EArmyColor.black,1000,[{cardId:'100004'}]);
+    let red = StageUtil.getIns().createArmy( EArmyColor.red,1000,[{cardId:'100004'}]);
+    st.loadArmyList([black, red]);
+    st.combat();
+    // fs.writeFileSync('testlog.txt', st.recordList.map(n => { return JSON.stringify(n, undefined, 4) + '\n'; }), 'utf-8');
+    fs.writeFileSync('testlog.txt', JSON.stringify(st.recordList, undefined, 4)  , 'utf-8');
   });
 });
 

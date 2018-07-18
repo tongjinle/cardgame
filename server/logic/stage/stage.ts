@@ -59,6 +59,7 @@ export default class Stage {
   // castFlow列表
   castFlowList: CastFlow[];
 
+  
 
   constructor() {
     this.roundIndex = 0;
@@ -263,33 +264,48 @@ export default class Stage {
   dealFlow(flow: Flow) {
 
     if (flow instanceof CastFlow) {
-      let caFlow: CastFlow = flow;
-      caFlow.stepQueue.forEach(st => {
-        caFlow.step = st;
-        let skList = this.getActiveSkillList(st);
+
+      flow.stepQueue.forEach(st => {
+        flow.step = st;
+        let caList: Card[] = [];
+        if(flow.sender instanceof Card){
+          caList.push(flow.sender);
+        }
+        if(flow.target instanceof Card){
+          caList.push(flow.target);
+        }
+        caList.forEach(ca => {
+          ca.skillList.forEach(sk => {
+          });
+        });
+        [flow.sender,flow.target]
+        let skList: Skill[] = [];
         skList.forEach(sk => {
           sk.dealFlow(flow);
         });
       });
       flow.isDone = true;
+
     }
 
 
   }
 
-  private getActiveSkillList(step: ECastFlowStep, ) {
-    let rst: Skill[] = [];
-    this.armyList.forEach(ar => {
-      ar.cardList.forEach(ca => {
-        ca.skillList.forEach(sk => {
-          if (sk.isLevelRequired && sk.useType === step) {
-            rst.push(sk);
-          }
-        });
-      });
-    });
-    return rst;
-  }
+
+  // 放弃,想复杂了
+  // private getActiveSkillList(step: ECastFlowStep, ) {
+  //   let rst: Skill[] = [];
+  //   this.armyList.forEach(ar => {
+  //     ar.cardList.forEach(ca => {
+  //       ca.skillList.forEach(sk => {
+  //         if (sk.isLevelRequired && sk.useType === step) {
+  //           rst.push(sk);
+  //         }
+  //       });
+  //     });
+  //   });
+  //   return rst;
+  // }
 
 
 
@@ -299,10 +315,10 @@ export default class Stage {
     if (this.isReplay) return;
 
     let rec = {
-      type,
-      typeStr: ERecord[type],
-      info,
       roundIndex: this.roundIndex,
+      typeStr: ERecord[type],
+      type,
+      info,
     };
     this.recordList.push(rec);
   };
