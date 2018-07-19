@@ -32,6 +32,7 @@ import {
   ECastType, ECastSubtype, EFlowType, ECastFlowStep,
   ICastData,
   ICastDamage,
+  ICastProp,
 } from '../schema';
 
 // 效果流
@@ -71,15 +72,22 @@ export default class CastFlow extends Flow<{ sender: ICastData, target: ICastDat
     this.data = {
       sender: {
         damage: this.genDamageData(),
+        prop: this.genPropData(),
       },
       target: {
         damage: this.genDamageData(),
+        prop: this.genPropData(),
       },
     };
   }
 
   private genDamageData(): ICastDamage {
     return { magic: 0, sacred: 0, special: 0, other: 0, physical: 0, };
+  }
+
+
+  private genPropData(): ICastProp {
+    return { powerList: [], };
   }
 }
 

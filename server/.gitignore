@@ -1,4 +1,5 @@
 dist
 node_modules
 testlog.txt
+testlog.gzip
 !.gitkeep

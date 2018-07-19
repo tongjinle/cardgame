@@ -54,6 +54,10 @@ export default class Skill {
   // 公式
   formula: string;
 
+  // 随机函数,默认使用系统的随机函数
+  // 在stage状态下,会使用stage的rndGen
+  rndGen: () => number = Math.random;
+
   // 是否可以满足level需求
   public get isLevelRequired(): boolean {
     return this.card && this.card.level >= this.levelRequire;
@@ -79,17 +83,30 @@ export default class Skill {
     return rst;
   }
 
-  // 计算伤害
-  protected calcNormalDamage(factor: number, amount: number = 0): number {
-    let level = this.card.level;
-    return level * factor + amount;
+  // 计算
+  protected calcNormal(factor: number, amount: number = 0): number {
+    return this.level * factor + amount;
   }
+
+  protected calcInterval(factorInterval: [number, number], amountInterval: [number, number] = [0, 0]): number {
+    // 在区间中取一个随机数
+    let getInterval = (min: number, max: number) => Math.floor((max - min) * this.rndGen()) + min;
+
+    let factor0: number = factorInterval[0];
+    let factor1: number = factorInterval[1];
+    let amount0: number = amountInterval[0];
+    let amount1: number = amountInterval[1];
+
+    return getInterval(factor0, factor1) * this.level + getInterval(amount0, amount1);
+  }
+
+  private getR
 
   // 从敌军随机索敌n个
   protected findRndTargetFromEnemy(stage: Stage, count: number): Card[] {
     let rst: Card[] = [];
     let enemy = stage.armyList.find(ar => ar != this.card.army);
-    rst.push(... this.randomFetch(enemy.cardList, count, stage.rndGen));
+    rst.push(... this.randomFetch(enemy.cardList, count, this.rndGen));
     return rst;
   }
 

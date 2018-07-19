@@ -90,18 +90,27 @@ export default class StageUtil {
     return st;
   }
 
+  createHero(hp: number): Hero {
+    let he = new Hero();
+    he.id = this.createRndId('he');
+    he.hp = hp;
+    he.cardCount = 6;
+    return he;
+  }
+
   createArmy(color: EArmyColor, heroHp: number, cardInfoList: ICardInfo[]): Army {
     let rst: Army = new Army();
     rst.color = color;
-    
+
     // hero
-    let he = new Hero();
-    he.cardCount = 6;
-    he.hp = heroHp;
-    rst.hero = he;
+    rst.hero = this.createHero(heroHp);
 
     // card
-    rst.cardListForDraw.push(...cardInfoList.map(info => this.createCard(info.cardId, info.level)));
+    rst.cardListForDraw.push(...cardInfoList.map(info => {
+      let ca = this.createCard(info.cardId, info.level);
+      ca.army = rst;
+      return ca;
+    }));
 
     return rst;
   };
@@ -119,7 +128,7 @@ export default class StageUtil {
     }
 
 
-    rst.id = this.createRndId();
+    rst.id = this.createRndId('ca');
     rst.cardId = sourceData.cardId;
     rst.nature = ENature[sourceData.nature];
     rst.waitRound = sourceData.waitRound;
@@ -155,20 +164,18 @@ export default class StageUtil {
     // 动态加载类 start
     let filename = '../skill/category/' + id;
     let a = require(filename);
-    console.log('a',a,filename);
-    let kls:any = require('../skill/category/' + id).default;
+    let kls: any = require('../skill/category/' + id).default;
     // import kls = require('../skill/category/' + id);
     // 动态加载类 end
 
     rst = new kls();
-    console.log('kls: ' + rst);
 
     let sourceData: ISkillData = this.skillData.find(n => n.skillId === id);
     if (!sourceData) {
       throw "no such skill data";
     }
 
-    rst.id = this.createRndId();
+    rst.id = this.createRndId('sk');
     // rst.skillId = sourceData.skillId;
     // rst.name = sourceData.name;
     // rst.nature = ESkillNature[sourceData.nature];
@@ -192,7 +199,7 @@ export default class StageUtil {
       throw "no such buff data";
     }
 
-    rst.id = this.createRndId();
+    rst.id = this.createRndId('bu');
     rst.buffId = id;
     rst.name = sourceData.name;
     rst.maxLayer = sourceData.maxLayer;
@@ -228,8 +235,8 @@ export default class StageUtil {
     this.buffData = JSON.parse(fs.readFileSync(`${filepath}/buff.json`, 'utf-8'));
   }
 
-  private createRndId(): string {
-    return Math.floor(1e16 * Math.random()).toString(16).slice(0, 12);
+  private createRndId(prefix: string = ''): string {
+    return prefix + Math.floor(1e16 * Math.random()).toString(16).slice(0, 12);
   }
 
 

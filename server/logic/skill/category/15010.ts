@@ -47,6 +47,8 @@ export default class jiaosheng extends Skill {
   // 索敌,查找目标
   findTarget(stage: Stage): Card[] | Hero {
     let rst: Card[] | Hero;
+    let caList = this.findRndTargetFromEnemy(stage, 1);
+    rst = caList;
     return rst;
   }
 
@@ -54,6 +56,16 @@ export default class jiaosheng extends Skill {
   // 技能效果
   cast(stage: Stage, flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
+    let taList: Card[] = this.findTarget(stage) as Card[];
+
+    // 减弱的攻击力
+    let po: number = this.calcInterval([-20, -10]);
+    taList.forEach(ta => {
+      let fl = new CastFlow(this.card, ta);
+      fl.data.target.prop.powerList.push({ type: 'number', amount: po, isForever: true });
+
+      rst.push(fl);
+    });
     return rst;
   }
 

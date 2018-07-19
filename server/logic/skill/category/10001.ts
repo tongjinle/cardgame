@@ -58,7 +58,7 @@ export default class __shuiqiang__ extends Skill {
     let targetList: Card[] = this.findTarget(stage) as Card[];
 
     // damage
-    let da: number = this.calcNormalDamage(40);
+    let da: number = this.calcNormal(40);
     targetList.forEach(ta => {
       let fl = new CastFlow(this.card, ta);
       fl.data.target.damage.magic = da;

@@ -30,7 +30,13 @@ import Skill from '../skill/skill';
 import Buff from '../buff/buff';
 import Flow from '../flow/flow';
 import CastFlow from '../flow/castFlow';
-import { ECombatStatus, EArmyColor, ERecord, EDefeat, EFlowType, ECastFlowStep, ICastDamage, } from '../schema';
+import {
+  ECombatStatus, EArmyColor, ERecord, EDefeat, EFlowType, ECastFlowStep,
+  ICastDamage,
+  ICastProp,
+  ICastData,
+  EBuff,
+} from '../schema';
 import *  as conf from '../config';
 import rnd from 'seedrandom';
 
@@ -75,6 +81,16 @@ export default class Stage {
     // 默认是准备状态
     this.status = ECombatStatus.pending;
 
+
+    // skill rndGen 使用 stage的rndGen
+    armyList.forEach(ar => {
+      ar.cardListForDraw.forEach(ca => {
+        ca.skillList.forEach(sk => {
+          sk.rndGen = this.rndGen;
+        });
+      });
+    });
+
     // record
     this.writeRecord(ERecord.prepare, { armyList: this.armyList.map(ar => ar.toInfo()), });
   }
@@ -87,14 +103,15 @@ export default class Stage {
 
     // record
     this.writeRecord(ERecord.start);
-    let count = 100;
-    while (count) {
+    while (1) {
       this.judge();
       if (this.status as ECombatStatus === ECombatStatus.end) {
         break;
       }
 
-      this.activeArmy = this.getActiveArmy();
+
+      this.getActiveArmy();
+
 
       this.drawCard();
       this.putCard();
@@ -105,23 +122,39 @@ export default class Stage {
 
       this.clearCombatField();
 
+      this.reduceBuff();
+
       // 回合数统计
       this.roundIndex++;
-      count--;
     }
   }
 
   // 确定行动方
-  getActiveArmy(): Army {
+  getActiveArmy() {
+    let ar: Army;
+    // 第一次获取行动方
     if (!this.activeArmy) {
-      return this.getFirstActiveArmy();
+      ar = this.getFirstActiveArmy();
     }
     // 交换回合
-    let army = this.armyList.find(ar => ar != this.activeArmy);
+    else {
+      ar = this.armyList.find(ar => ar != this.activeArmy);
+    }
+
+    this.activeArmy = ar;
 
     // record
-    this.writeRecord(ERecord.round, { heroId: army.hero.id, });
-    return army;
+    this.writeRecord(ERecord.round, { color: ar.color, colorStr: EArmyColor[ar.color], });
+  }
+
+
+  // 清理每个回合的buff
+  reduceBuff(): void {
+    this.activeArmy.cardList.forEach(ca => {
+      ca.buffList.forEach(bu => {
+        bu.reduceLayer();
+      });
+    });
   }
 
 
@@ -129,14 +162,16 @@ export default class Stage {
 
   // 抽牌(尝试)
   drawCard(): void {
-    if (this.activeArmy.cardListForWait.length < conf.CardMaxCount && this.activeArmy.cardListForDraw.length > 0) {
+    const maxCount = conf.CARD_WAIT_MAX_COUNT;
+
+    if (this.activeArmy.cardListForWait.length < maxCount && this.activeArmy.cardListForDraw.length > 0) {
       let index = Math.floor(this.rndGen() * this.activeArmy.cardListForDraw.length);
       let card = this.activeArmy.cardListForDraw[index];
       this.activeArmy.cardListForDraw.splice(index, 1);
       this.activeArmy.cardListForWait.push(card);
 
       // record
-      this.writeRecord(ERecord.drawCard, { card: card.toInfo() });
+      this.writeRecord(ERecord.drawCard, { cardId: card.id, });
 
       // 刷新手牌位置
       this.resetCardPosition(this.activeArmy.cardListForWait);
@@ -147,6 +182,7 @@ export default class Stage {
 
   // 手牌上场(尝试)
   putCard(): void {
+    const maxCount = conf.CARD_MAX_COUNT;
     // 减少等待回合
     this.activeArmy.cardListForWait.forEach(ca => {
       ca.waitRound = Math.max(0, ca.waitRound - 1);
@@ -157,24 +193,29 @@ export default class Stage {
     // 查看能上场的手牌
     // while,因为上场的可能不止一个
     let ca: Card;
-    while (this.activeArmy.cardList.length < conf.CardMaxCount && (ca = this.activeArmy.cardListForWait.find(ca => ca.waitRound === 0))) {
+    // 需要被记录的card的id列表
+    let caIdList: string[] = [];
+    while (this.activeArmy.cardList.length < maxCount && (ca = this.activeArmy.cardListForWait.find(ca => ca.waitRound === 0))) {
       // 上场
       let index = this.activeArmy.cardListForWait.indexOf(ca);
       this.activeArmy.cardListForWait.splice(index, 1);
       this.activeArmy.cardList.push(ca);
 
+      caIdList.push(ca.id);
+
       // record
-      this.writeRecord(ERecord.putCard, { card: ca.toInfo() });
+      this.writeRecord(ERecord.putCard, { card: ca.id, });
     }
 
     // 刷新手牌位置
-    this.resetCardPosition(this.activeArmy.cardList);
+    this.resetCardPosition(this.activeArmy.cardList, caIdList);
   }
 
   // 刷新手牌位置
-  resetCardPosition(list: Card[]): void {
+  // cardIdList必须为写记录的card,因为他们可能是从一个卡牌区域到另一个卡牌区域
+  resetCardPosition(list: Card[], cardIdList?: string[]): void {
     list.forEach((ca, index) => {
-      if (ca.position !== index) {
+      if (ca.position !== index || (cardIdList && cardIdList.some(id => list.some(li => li.id === id)))) {
         let lastPosition = ca.position;
         ca.position = index;
 
@@ -186,7 +227,7 @@ export default class Stage {
 
   // 使用道具(尝试)
   castTool(): void {
-
+    // todo
   }
 
   // 卡牌攻击
@@ -198,6 +239,8 @@ export default class Stage {
           let caFlowList = sk.cast(this);
           this.castFlowList.push(...caFlowList);
 
+          // record
+          this.writeRecord(ERecord.castCardSkill, { cardId: ca.id, skillId: sk.id, });
 
           // 因为在处理flow的时候,也会形成新的flow,它们以一个栈的顺序来处理
           while (this.castFlowList.length) {
@@ -213,10 +256,13 @@ export default class Stage {
       {
         let target = ca.findTargetForCard(this);
         let lastHp = target.hp;
-        target && ca.attack(target);
 
-        // record
-        this.writeRecord(ERecord.cardAttack, { cardId: ca.id, targetId: target.id, lastHp, hp: target.hp, });
+        if (target) {
+          ca.attack(target);
+
+          // record
+          this.writeRecord(ERecord.cardAttack, { cardId: ca.id, targetId: target.id, lastHp, hp: target.hp, });
+        }
       }
     });
   }
@@ -239,6 +285,7 @@ export default class Stage {
 
   // 判断胜负
   judge(): void {
+    // 英雄被击败 或者 卡牌被击败
     this.armyList.some(ar => {
       if (ar.hero.hp <= 0) {
         this.status = ECombatStatus.end;
@@ -252,7 +299,22 @@ export default class Stage {
         this.writeRecord(ERecord.end, { loserId: ar.hero.id, defeatType: EDefeat.card, });
         return true;
       }
-    })
+    });
+
+    // 无法在最大回合数决出胜负
+    if (this.roundIndex === conf.ROUND_MAX_COUNT) {
+      let loser: Army;
+      let hp: number = Infinity;
+      this.armyList.forEach(ar => {
+        if (hp > ar.hero.hp) {
+          hp = ar.hero.hp;
+          loser = ar;
+        }
+      });
+      this.status = ECombatStatus.end;
+      // record
+      this.writeRecord(ERecord.end, { loserId: loser.hero.id, defeatType: EDefeat.maxRound, });
+    }
   }
 
   // 确定第一个回合的行动方
@@ -284,12 +346,14 @@ export default class Stage {
       });
       flow.isDone = true;
 
+      // console.log((flow.data.sender.prop);
+      // console.log((flow.data.target.prop);
 
       // 计算相关的伤害,治疗等等
-      // todo
-      // 处理sender
+      // 处理sender && target
       {
-        this.calcFlow(flow.sender as Card, flow.data.sender);
+        this.calcFlow(flow.sender as Card, flow.sender as Card, flow.data.sender);
+        this.calcFlow(flow.sender as Card, flow.target, flow.data.target);
       }
 
     }
@@ -297,10 +361,70 @@ export default class Stage {
 
   }
 
-  calcFlow(target: Card | Hero, effect: { damage: ICastDamage }) {
-    let { damage } = effect;
-    let lastHp = target.hp;
-    target.hp = Math.max(0, target.hp - damage.magic - damage.other - damage.physical - damage.sacred - damage.special);
+  calcFlow(sender: Card, target: Card | Hero, effect: ICastData) {
+    let { damage, prop, } = effect;
+    let info: any = {};
+    // 处理伤害
+    {
+      let lastHp = target.hp;
+      target.hp = Math.max(0, target.hp - damage.magic - damage.other - damage.physical - damage.sacred - damage.special);
+
+      // info
+      if (lastHp !== target.hp) {
+        info.damage = damage;
+        info.lastHp = lastHp;
+        info.hp = target.hp;
+
+      }
+    }
+
+    // 处理属性变化
+    {
+      if (target instanceof Card) {
+        prop.powerList.forEach(n => {
+          let lastPower = target.power;
+
+          let bu = new Buff();
+          bu.layer = 1;
+          bu.maxLayer = -1;
+          bu.clearLayer = -1;
+          bu.data = n.amount;
+          bu.isForever = !!n.isForever;
+
+          if (n.type === 'number') {
+            bu.type = EBuff.powerAdd;
+          } else if (n.type === 'percent') {
+            bu.type = EBuff.powerMul;
+          } else {
+            throw 'wrong power buff type';
+          }
+          target.addBuff(bu);
+
+          // info
+          {
+            info.buffList = info.buffList || [];
+            let buInfo: any = bu.toInfo();
+
+            // 补上power的改变
+            let power = target.power;
+            buInfo.lastPower = lastPower;
+            buInfo.power = power;
+
+            info.buffList.push(buInfo);
+          }
+        });
+      }
+    }
+
+    // console.log(info, Object.keys(info).length);
+    if (Object.keys(info).length) {
+      info.cardId = sender.id;
+      info.targetId = target.id;
+      this.writeRecord(ERecord.castCardSkillEffect, info);
+
+    }
+
+
   }
 
 

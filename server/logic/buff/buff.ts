@@ -26,6 +26,7 @@ import Card from '../card/card';
 import Hero from '../hero/hero';
 import Stage from '../stage/stage';
 import Flow from '../flow/flow';
+import {EBuff, } from '../schema';
 
 export default class Buff {
   // id
@@ -33,6 +34,8 @@ export default class Buff {
   buffId: string;
   // 名称
   name: string;
+  // 类型
+  type: EBuff;
   // 描述
   desc: string;
   // 当前层数
@@ -41,8 +44,12 @@ export default class Buff {
   maxLayer: number;
   // 每个回合清楚的层数
   clearLayer: number;
+  // 是否为永久buff
+  isForever: boolean;
   // 所属的card
   card: Card;
+  // 额外数据,比如攻击力增加需要记录增加了几点
+  data: any;
 
   // 触发器
   trigger(stage: Stage, flow: Flow): boolean {
@@ -61,7 +68,11 @@ export default class Buff {
   }
 
   // 清除层数
-  clear(): void {
+  reduceLayer(): void {
+    if(this.isForever){
+      return;
+    }
+
     if (this.clearLayer == -1) {
       this.layer = 0;
     } else {
@@ -75,6 +86,18 @@ export default class Buff {
     }
   }
 
+  toInfo(){
+    let info = {
+      id:this.id,
+      buffId:this.buffId,
+      name:this.name,
+      type:this.type,
+      typeStr:EBuff[this.type],
+      layer:this.layer,
+      data:this.data,
+    };
+    return info;
+  }
 
 
 

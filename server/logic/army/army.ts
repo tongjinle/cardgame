@@ -31,6 +31,9 @@ export default class Army {
   // 这个值较大的决定了哪方拥有优先攻击权
   getTotalValue(): number {
     let rst: number = 0;
+    rst = this.cardListForDraw.reduce((prev, ca) => {
+      return prev + ca.racePoint;
+    }, 0);
     return rst;
   }
 

@@ -22,6 +22,27 @@
                佛祖保佑       永无BUG  
 */
 
+// buff类型
+export enum EBuff {
+  // 烧伤
+  burn,
+  // 麻痹,无法攻击
+  lull,
+  // 冰冻,无法行动
+  free,
+  // 中毒
+  poison,
+  // 晕眩
+  stun,
+  // 睡眠
+  sleep,
+  // 攻击增强,+数值
+  powerAdd,
+  // 攻击倍增,+百分比
+  powerMul,
+}
+
+
 // 属性枚举
 export enum ENature {
   grass,
@@ -94,6 +115,8 @@ export enum ERecord {
   castTool,
   // 卡牌技能攻击
   castCardSkill,
+  // 卡牌技能攻击效果
+  castCardSkillEffect,
   // 卡牌普通攻击(目标,伤害)
   cardAttack,
   // 卡牌离场(也就是死亡,卡牌信息)
@@ -110,6 +133,8 @@ export enum EDefeat {
   hero,
   // 击溃对方所有卡牌
   card,
+  // 最大回合,比较英雄血量
+  maxRound,
 }
 
 // 技能流各个阶段
@@ -196,24 +221,34 @@ export enum ESkillType {
   unactive,
 }
 
-
-export interface ICastDamage{
+// cast的伤害记录
+export interface ICastDamage {
   // 法术伤害
-  magic,
+  magic: number,
   // 物理伤害
-  physical,
+  physical: number,
   // 神圣伤害
-  sacred,
+  sacred: number,
   // 特殊伤害
-  special,
+  special: number,
   // 其他伤害(例如"毒")
-  other,
+  other: number,
 }
 
+// cast的属性变化记录 
+export interface ICastProp {
+  // 攻击力的增减
+  // 攻击力的增减百分比
+  // 用数组保持一个先后顺序
+  powerList: { amount: number, type: 'number' | 'percent', isForever?: boolean,  }[],
+}
+
+
+// cast的数据包
 export interface ICastData {
-  damage:ICastDamage,
+  damage: ICastDamage,
+  prop: ICastProp,
 }
-
 
 
 

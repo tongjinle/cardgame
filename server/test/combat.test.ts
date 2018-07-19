@@ -7,9 +7,11 @@ import Hero from '../logic/hero/hero';
 import { EArmyColor, } from '../logic/schema';
 import fs from 'fs';
 import * as Helper from './testHelper';
+import zlib from 'zlib';
+
 
 describe('战斗', () => {
-  it('没有技能的战斗', async () => {
+  xit('没有技能的战斗', async () => {
     let st = new Stage();
     let black: Army, red: Army;
 
@@ -28,7 +30,8 @@ describe('战斗', () => {
       {
         ca = new Card();
         ca.hp = 80;
-        ca.power = 10;
+        ca.zeroPower = 10;
+        ca.powerGrow = 0;
         ca.waitRound = 3;
       }
       black.cardListForDraw.push(ca);
@@ -48,7 +51,8 @@ describe('战斗', () => {
       {
         ca = new Card();
         ca.hp = 100;
-        ca.power = 20;
+        ca.zeroPower = 20;
+        ca.powerGrow = 0;
         ca.waitRound = 1;
       }
       red.cardListForDraw.push(ca);
@@ -72,7 +76,9 @@ describe('战斗', () => {
     st.loadArmyList([black, red]);
     st.combat();
     // fs.writeFileSync('testlog.txt', st.recordList.map(n => { return JSON.stringify(n, undefined, 4) + '\n'; }), 'utf-8');
-    fs.writeFileSync('testlog.txt', JSON.stringify(st.recordList, undefined, 4)  , 'utf-8');
+    let content = JSON.stringify(st.recordList, undefined, 4);
+    fs.writeFileSync('testlog.txt',   content, 'utf-8');
+    fs.writeFileSync('testlog.gzip', zlib.gzipSync(content));
   });
 });
 
