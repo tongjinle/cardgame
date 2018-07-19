@@ -23,7 +23,7 @@ export default class Card {
   // 位置
   position: number;
   // 种族值
-  public get racePoint():number{
+  public get racePoint(): number {
     return this.racePointList[this.wakeLevel];
   }
   // 种族值序列表
@@ -60,13 +60,13 @@ export default class Card {
   // 0级生命值
   zeroHp: number;
   // 生命值(当前生命值)
-  private _hp : number;
-  public get hp() : number {
+  private _hp: number;
+  public get hp(): number {
     return this._hp;
   }
-  public set hp(v : number) {
-    this._hp = Math.max(0,v);
-    if(this.hp ===0){
+  public set hp(v: number) {
+    this._hp = Math.max(0, v);
+    if (this.hp === 0) {
       this.die();
     }
   }
@@ -105,7 +105,7 @@ export default class Card {
   // 所属的army
   army: Army;
   // 所属的stage
-  public get stage() : Stage {
+  public get stage(): Stage {
     return this.army ? this.army.stage : undefined;
   }
 
@@ -153,7 +153,7 @@ export default class Card {
   // 普通攻击(攻击卡牌)
   attack(target: Card | Hero): void {
     let damage: number = this.power;
-    target.hp = Math.max(0, target.hp - damage);
+    target.hp -= damage;
   }
 
   // 寻找卡牌的攻击对象
@@ -170,9 +170,9 @@ export default class Card {
   }
 
   // 死亡
-  die():void{
+  die(): void {
     // 把棋子移除
-    this.army.cardList = this.army.cardList.filter(ca => ca === this);
+    this.army.cardList = this.army.cardList.filter(ca => ca !== this);
 
     // 通知stage去judge,因为有可能游戏结束
     this.stage.judge();

@@ -375,7 +375,7 @@ export default class Stage {
     // 处理伤害
     {
       let lastHp = target.hp;
-      target.hp = Math.max(0, target.hp - damage.magic - damage.other - damage.physical - damage.sacred - damage.special);
+      target.hp -= (damage.magic + damage.other + damage.physical + damage.sacred + damage.special);
 
       // info
       if (lastHp !== target.hp) {
