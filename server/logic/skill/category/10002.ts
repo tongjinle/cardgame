@@ -47,6 +47,7 @@ export default class paomoguangxian extends Skill {
   // 索敌,查找目标
   findTarget(stage: Stage): Card[] | Hero {
     let rst: Card[] | Hero;
+    rst = this.findRndTargetFromEnemy(stage, 2);
     return rst;
   }
 
@@ -54,6 +55,15 @@ export default class paomoguangxian extends Skill {
   // 技能效果
   cast(stage: Stage, flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
+    let targetList: Card[] = this.findTarget(stage) as Card[];
+
+    // damage
+    let da: number = this.calcNormal(40);
+    targetList.forEach(ta => {
+      let fl = new CastFlow(this.card, ta);
+      fl.data.target.damage.magic = da;
+      rst.push(fl);
+    });
     return rst;
   }
 

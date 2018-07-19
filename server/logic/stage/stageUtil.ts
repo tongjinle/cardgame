@@ -104,6 +104,7 @@ export default class StageUtil {
 
     // hero
     rst.hero = this.createHero(heroHp);
+    rst.hero.army = rst;
 
     // card
     rst.cardListForDraw.push(...cardInfoList.map(info => {

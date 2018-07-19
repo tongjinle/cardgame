@@ -11,6 +11,13 @@ import zlib from 'zlib';
 
 
 describe('战斗', () => {
+  function writeLog(name:string,st:Stage):void{
+    let content = JSON.stringify(st.recordList, undefined, 4);
+    fs.writeFileSync(__dirname+'/../log/'+ name+'.log', content, 'utf-8');
+    fs.writeFileSync(__dirname+'/../log/'+ name+'.gzip', zlib.gzipSync(content));
+  }
+
+
   xit('没有技能的战斗', async () => {
     let st = new Stage();
     let black: Army, red: Army;
@@ -69,16 +76,29 @@ describe('战斗', () => {
 
   });
 
-  it('简单的技能的战斗', async () => {
+  it('绿毛虫 vs 绿毛虫', async () => {
     let st = StageUtil.getIns().createStage();
     let black = StageUtil.getIns().createArmy( EArmyColor.black,1000,[{cardId:'100004'}]);
     let red = StageUtil.getIns().createArmy( EArmyColor.red,1000,[{cardId:'100004'}]);
     st.loadArmyList([black, red]);
     st.combat();
-    // fs.writeFileSync('testlog.txt', st.recordList.map(n => { return JSON.stringify(n, undefined, 4) + '\n'; }), 'utf-8');
-    let content = JSON.stringify(st.recordList, undefined, 4);
-    fs.writeFileSync('testlog.txt',   content, 'utf-8');
-    fs.writeFileSync('testlog.gzip', zlib.gzipSync(content));
+
+    writeLog('绿毛虫 vs 绿毛虫', st);
   });
+
+
+
+  it('杰尼龟 vs 杰尼龟', async () => {
+    let st = StageUtil.getIns().createStage();
+    let black = StageUtil.getIns().createArmy( EArmyColor.black,1000,[{cardId:'100003'}]);
+    let red = StageUtil.getIns().createArmy( EArmyColor.red,1000,[{cardId:'100003'}]);
+    st.loadArmyList([black, red]);
+    st.combat();
+
+    writeLog('杰尼龟 vs 杰尼龟', st);
+  });
+
+
+
 });
 

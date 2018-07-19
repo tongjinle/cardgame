@@ -1,5 +1,6 @@
 import { EArmyColor, } from '../schema';
 
+import Stage from '../stage/stage';
 import Hero from '../hero/hero';
 import Card from '../card/card';
 import Tool from '../tool/tool';
@@ -19,6 +20,8 @@ export default class Army {
   cardList: Card[];
   // 道具列表
   toolList: Tool[];
+  // 所属场景
+  stage: Stage;
 
   constructor() {
     this.cardListForDraw = [];

@@ -60,7 +60,17 @@ export default class Card {
   // 0级生命值
   zeroHp: number;
   // 生命值(当前生命值)
-  hp: number;
+  private _hp : number;
+  public get hp() : number {
+    return this._hp;
+  }
+  public set hp(v : number) {
+    this._hp = Math.max(0,v);
+    if(this.hp ===0){
+      this.die();
+    }
+  }
+
   // 最大生命值
   public get maxHp(): number {
     return this.zeroHp + this.hpGrow * this.level;
@@ -94,6 +104,11 @@ export default class Card {
   status: ECardStatus;
   // 所属的army
   army: Army;
+  // 所属的stage
+  public get stage() : Stage {
+    return this.army ? this.army.stage : undefined;
+  }
+
   constructor() {
     this.status = ECardStatus.normal;
     this.nameList = [];
@@ -130,6 +145,7 @@ export default class Card {
 
 
   // 使用技能攻击(尝试)
+  // 放弃,已经在skill类中实现
   cast(skill: Skill): void {
 
   }
@@ -151,6 +167,15 @@ export default class Card {
     }
     // 其次寻找hero对象
     return enemy.hero;
+  }
+
+  // 死亡
+  die():void{
+    // 把棋子移除
+    this.army.cardList = this.army.cardList.filter(ca => ca === this);
+
+    // 通知stage去judge,因为有可能游戏结束
+    this.stage.judge();
   }
 
   toInfo() {

@@ -84,7 +84,9 @@ export default class Stage {
 
     // skill rndGen 使用 stage的rndGen
     armyList.forEach(ar => {
+      ar.stage = this;
       ar.cardListForDraw.forEach(ca => {
+        // 随机种子
         ca.skillList.forEach(sk => {
           sk.rndGen = this.rndGen;
         });
@@ -232,9 +234,11 @@ export default class Stage {
 
   // 卡牌攻击
   cardCombat(): void {
-    this.activeArmy.cardList.forEach(ca => {
+    this.activeArmy.cardList.some(ca => {
+      // if (this.status === ECombatStatus.end) { return true;}
       // 使用技能
       ca.skillList.forEach(sk => {
+        if (this.status === ECombatStatus.end) { return true; }
         if (sk.isLevelRequired && sk.useType === ECastFlowStep.notifyCast) {
           let caFlowList = sk.cast(this);
           this.castFlowList.push(...caFlowList);
@@ -252,8 +256,11 @@ export default class Stage {
         }
       });
 
+
       // 普通攻击
       {
+        if (this.status === ECombatStatus.end) { return true; }
+
         let target = ca.findTargetForCard(this);
         let lastHp = target.hp;
 
@@ -264,6 +271,7 @@ export default class Stage {
           this.writeRecord(ERecord.cardAttack, { cardId: ca.id, targetId: target.id, lastHp, hp: target.hp, });
         }
       }
+      return false;
     });
   }
 
