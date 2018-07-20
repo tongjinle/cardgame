@@ -25,6 +25,7 @@
 import Record from './record';
 import Army from '../army/army';
 import Card from '../card/card';
+import Tool from '../tool/tool';
 import Hero from '../hero/hero';
 import Skill from '../skill/skill';
 import Buff from '../buff/buff';
@@ -362,7 +363,8 @@ export default class Stage {
       {
         // this.calcFlow(flow.sender as Card, flow.sender as Card, flow.data);
         // this.calcFlow(flow.sender as Card, flow.target, flow.data);
-        this.calcFlow(flow.data);
+        this.calcFlow('sender', flow);
+        this.calcFlow('target', flow);
       }
 
     }
@@ -370,8 +372,102 @@ export default class Stage {
 
   }
 
-  calcFlow(dataList: ICastData[]): void {
-    dataList.forEach(n => { });
+
+  calcFlow(role: 'sender' | 'target', flow: CastFlow) {
+    let { sender, target, data: dataList } = flow;
+
+    // 首先清理immune
+    let immuneIdList = dataList.filter(n => n.immuneId).map(n => n.immuneId);
+    dataList = dataList.filter(n => !(n.sender && immuneIdList.indexOf(n.sender.id) >= 0) || (n.target && immuneIdList.indexOf(n.target.id) >= 0));
+
+    let curr: Card | Tool | Hero;
+    if ('sender' === role) {
+      curr = flow.sender;
+    } else if ('target' === role) {
+      curr = flow.target;
+    }
+
+    let info: any = {};
+
+    let lastHp: number;
+    let lastPower: number;
+    if (curr instanceof Card || curr instanceof Hero) {
+      lastHp = curr.hp;
+    }
+    if (curr instanceof Card) {
+      lastPower = curr.power;
+    }
+
+
+
+    let damage = 0;
+    dataList.forEach(n => {
+      let ef = n[role];
+      if ((curr instanceof Card || curr instanceof Hero) && ef) {
+        // 伤害
+        {
+          damage += (ef.data.magic || 0) + (ef.data.physical || 0) + (ef.data.sacred || 0) + (ef.data.special || 0) + (ef.data.other || 0) + (ef.data.magicHeal | 0);
+
+        }
+        // 效果
+        // -- power
+        if (curr instanceof Card && ef.data.power) {
+
+          let { type, isForever, amount, } = ef.data.power;
+          let bu = new Buff();
+          bu.layer = 1;
+          bu.maxLayer = -1;
+          bu.clearLayer = -1;
+          bu.data = amount;
+          bu.isForever = !!isForever;
+
+          if (type === 'number') {
+            bu.type = EBuff.powerAdd;
+          } else if (type === 'percent') {
+            bu.type = EBuff.powerMul;
+          } else {
+            throw 'wrong power buff type';
+          }
+          curr.addBuff(bu);
+          // info
+          {
+            info.buffList = info.buffList || [];
+            let buInfo: any = bu.toInfo();
+            info.buffList.push(buInfo);
+          }
+        }
+      }
+    });
+
+    // 血量的改变
+    if (curr instanceof Card || curr instanceof Hero) {
+      curr.hp -= damage;
+      // info
+      if (lastHp !== curr.hp) {
+
+        info.damage = damage;
+        info.lastHp = lastHp;
+        info.hp = target.hp;
+      }
+    }
+
+
+
+
+    // 状态的改变
+    // 补上power的改变
+    if (curr instanceof Card) {
+
+      if (lastPower !== curr.power) {
+        info.lastPower = lastPower;
+        info.power = curr.power;
+
+      }
+
+    }
+    this.writeRecord(ERecord.castCardSkillEffect, info);
+
+
   }
 
   // calcFlow(sender: Card, target: Card | Hero, effect: ICastData[]) {
