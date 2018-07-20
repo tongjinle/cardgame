@@ -45,15 +45,35 @@ export default class fanshebi extends Skill {
 
 
   // 索敌,查找目标
-  findTarget(stage: Stage): Card[] | Hero {
+  findTarget(): Card[] | Hero {
     let rst: Card[] | Hero;
     return rst;
   }
 
 
   // 技能效果
-  cast(stage: Stage, flow?: CastFlow): CastFlow[] {
+  cast(flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
+
+    // 自身是目标的时候
+    if (this.card == flow.target) {
+      let hasMagicDamage: boolean = false;
+
+
+      flow.data.forEach(n => {
+        if (n.target) {
+          hasMagicDamage = hasMagicDamage || n.target.data.magic > 0 || n.target.data.magicHeal > 0;
+          if (n.target.data.magic > 0 || n.target.data.magicHeal > 0) {
+            flow.addImmuneData(n.target.id);
+          }
+        }
+      });
+      if (hasMagicDamage) {
+        let amount = this.level * 30;
+        flow.addData({ role: 'sender', data: { sacred: amount } });
+      }
+    }
+
     return rst;
   }
 

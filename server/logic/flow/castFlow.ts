@@ -23,6 +23,7 @@
 */
 
 import Stage from '../stage/stage';
+import StageUtil from '../stage/stageUtil';
 import Army from '../army/army';
 import Card from '../card/card';
 import Tool from '../tool/tool';
@@ -32,12 +33,14 @@ import {
   ECastType, ECastSubtype, EFlowType, ECastFlowStep,
   ICastData,
   ICastDamage,
+  ICastHeal,
   ICastProp,
+  ICastItemData,
 } from '../schema';
 
 // 效果流
 
-export default class CastFlow extends Flow<{ sender: ICastData, target: ICastData, }> {
+export default class CastFlow extends Flow<ICastData[]> {
   // 目标
   target: Card | Hero;
 
@@ -62,33 +65,60 @@ export default class CastFlow extends Flow<{ sender: ICastData, target: ICastDat
 
     this.sender = sender;
     this.target = target;
-    this.initData();
+    this.data = [];
+  }
+
+  addData(...dataList: { role: 'sender' | 'target', data: ICastItemData }[]): void {
+    // id用以锁定一个动作
+    let id: string = StageUtil.getIns().createRndId('ef');
+    dataList.forEach(n => {
+      let data: ICastData = {};
+      let innerData = { id, data: n.data };
+      data[n.role] = innerData;
+      this.data.push(data);
+    });
+  }
+
+  addImmuneData(id:string):void{
+    this.data.push({ immuneId: id, });
   }
 
 
-  // 初始化数据
-  private initData(): void {
-    // 伤害
-    this.data = {
-      sender: {
-        damage: this.genDamageData(),
-        prop: this.genPropData(),
-      },
-      target: {
-        damage: this.genDamageData(),
-        prop: this.genPropData(),
-      },
-    };
-  }
+  // // 初始化数据
+  // private initData(): void {
+  //   let genData = () => {
+  //     return {
+  //       damage: this.genDamageData(),
+  //       prop: this.genPropData(),
+  //       heal: this.genHealData(),
+  //     };
+  //   };
+  //   // 伤害
+  //   this.data = [];
+  // }
 
-  private genDamageData(): ICastDamage {
-    return { magic: 0, sacred: 0, special: 0, other: 0, physical: 0, };
-  }
+  // private genDamageData(): ICastDamage {
+  //   return {
+  //     magic: 0,
+  //     sacred: 0,
+  //     special: 0,
+  //     other: 0,
+  //     physical: 0,
+  //     magicHeal: 0,
+  //   };
+  // }
+
+  // private genHealData(): ICastHeal {
+  //   return {
+  //     heal: 0,
+  //   };
+  // }
+
+  // private genPropData(): ICastProp {
+  //   return { powerList: [], };
+  // }
 
 
-  private genPropData(): ICastProp {
-    return { powerList: [], };
-  }
 }
 
 

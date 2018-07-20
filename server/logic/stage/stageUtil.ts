@@ -236,7 +236,7 @@ export default class StageUtil {
     this.buffData = JSON.parse(fs.readFileSync(`${filepath}/buff.json`, 'utf-8'));
   }
 
-  private createRndId(prefix: string = ''): string {
+  public createRndId(prefix: string = ''): string {
     return prefix + Math.floor(1e16 * Math.random()).toString(16).slice(0, 12);
   }
 

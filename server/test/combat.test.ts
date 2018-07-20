@@ -11,10 +11,10 @@ import zlib from 'zlib';
 
 
 describe('战斗', () => {
-  function writeLog(name:string,st:Stage):void{
+  function writeLog(name: string, st: Stage): void {
     let content = JSON.stringify(st.recordList, undefined, 4);
-    fs.writeFileSync(__dirname+'/../log/'+ name+'.log', content, 'utf-8');
-    fs.writeFileSync(__dirname+'/../log/'+ name+'.gzip', zlib.gzipSync(content));
+    fs.writeFileSync(__dirname + '/../log/' + name + '.log', content, 'utf-8');
+    fs.writeFileSync(__dirname + '/../log/' + name + '.gzip', zlib.gzipSync(content));
   }
 
 
@@ -76,10 +76,10 @@ describe('战斗', () => {
 
   });
 
-  it('绿毛虫 vs 绿毛虫', async () => {
+  xit('绿毛虫 vs 绿毛虫', async () => {
     let st = StageUtil.getIns().createStage();
-    let black = StageUtil.getIns().createArmy( EArmyColor.black,1000,[{cardId:'100004'}]);
-    let red = StageUtil.getIns().createArmy( EArmyColor.red,1000,[{cardId:'100004'}]);
+    let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100004' }]);
+    let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004' }]);
     st.loadArmyList([black, red]);
     st.combat();
 
@@ -88,14 +88,52 @@ describe('战斗', () => {
 
 
 
-  it('杰尼龟 vs 杰尼龟', async () => {
+  xit('杰尼龟 vs 杰尼龟', async () => {
     let st = StageUtil.getIns().createStage();
-    let black = StageUtil.getIns().createArmy( EArmyColor.black,1000,[{cardId:'100003'}]);
-    let red = StageUtil.getIns().createArmy( EArmyColor.red,1000,[{cardId:'100003'}]);
+    let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }]);
+    let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100003' }]);
     st.loadArmyList([black, red]);
     st.combat();
 
     writeLog('杰尼龟 vs 杰尼龟', st);
+  });
+
+
+
+  xit('杰尼龟 vs 绿毛虫', async () => {
+    let st = StageUtil.getIns().createStage();
+    let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }]);
+    let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004' }]);
+    st.loadArmyList([black, red]);
+    st.combat();
+
+    writeLog('杰尼龟 vs 绿毛虫', st);
+  });
+
+
+
+
+  xit('杰尼龟 vs 绿毛虫(5)', async () => {
+    let st = StageUtil.getIns().createStage();
+    let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }]);
+    let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004', level: 5 }]);
+    st.loadArmyList([black, red]);
+    st.combat();
+
+    writeLog('杰尼龟 vs 绿毛虫(5)', st);
+  });
+
+
+
+
+  it('杰尼龟*6 vs 绿毛虫*6', async () => {
+    let st = StageUtil.getIns().createStage();
+    let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' },]);
+    let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' },]);
+    st.loadArmyList([black, red]);
+    st.combat();
+
+    writeLog('杰尼龟*6 vs 绿毛虫*6', st);
   });
 
 

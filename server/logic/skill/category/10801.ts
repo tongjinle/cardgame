@@ -45,14 +45,14 @@ export default class yaozhu extends Skill {
 
 
   // 索敌,查找目标
-  findTarget(stage: Stage): Card[] | Hero {
+  findTarget(): Card[] | Hero {
     let rst: Card[] | Hero;
     return rst;
   }
 
 
   // 技能效果
-  cast(stage: Stage, flow?: CastFlow): CastFlow[] {
+  cast(flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
     return rst;
   }

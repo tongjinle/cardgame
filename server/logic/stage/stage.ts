@@ -240,7 +240,7 @@ export default class Stage {
       ca.skillList.forEach(sk => {
         if (this.status === ECombatStatus.end) { return true; }
         if (sk.isLevelRequired && sk.useType === ECastFlowStep.notifyCast) {
-          let caFlowList = sk.cast(this);
+          let caFlowList = sk.cast();
           this.castFlowList.push(...caFlowList);
 
           // record
@@ -347,7 +347,7 @@ export default class Stage {
         caList.forEach(ca => {
           ca.skillList.forEach(sk => {
             if (sk.isLevelRequired && sk.useType === st) {
-              sk.cast(this, flow);
+              sk.cast(flow);
             }
           });
         });
@@ -360,8 +360,9 @@ export default class Stage {
       // 计算相关的伤害,治疗等等
       // 处理sender && target
       {
-        this.calcFlow(flow.sender as Card, flow.sender as Card, flow.data.sender);
-        this.calcFlow(flow.sender as Card, flow.target, flow.data.target);
+        // this.calcFlow(flow.sender as Card, flow.sender as Card, flow.data);
+        // this.calcFlow(flow.sender as Card, flow.target, flow.data);
+        this.calcFlow(flow.data);
       }
 
     }
@@ -369,71 +370,75 @@ export default class Stage {
 
   }
 
-  calcFlow(sender: Card, target: Card | Hero, effect: ICastData) {
-    let { damage, prop, } = effect;
-    let info: any = {};
-    // 处理伤害
-    {
-      let lastHp = target.hp;
-      target.hp -= (damage.magic + damage.other + damage.physical + damage.sacred + damage.special);
-
-      // info
-      if (lastHp !== target.hp) {
-        info.damage = damage;
-        info.lastHp = lastHp;
-        info.hp = target.hp;
-
-      }
-    }
-
-    // 处理属性变化
-    {
-      if (target instanceof Card) {
-        prop.powerList.forEach(n => {
-          let lastPower = target.power;
-
-          let bu = new Buff();
-          bu.layer = 1;
-          bu.maxLayer = -1;
-          bu.clearLayer = -1;
-          bu.data = n.amount;
-          bu.isForever = !!n.isForever;
-
-          if (n.type === 'number') {
-            bu.type = EBuff.powerAdd;
-          } else if (n.type === 'percent') {
-            bu.type = EBuff.powerMul;
-          } else {
-            throw 'wrong power buff type';
-          }
-          target.addBuff(bu);
-
-          // info
-          {
-            info.buffList = info.buffList || [];
-            let buInfo: any = bu.toInfo();
-
-            // 补上power的改变
-            let power = target.power;
-            buInfo.lastPower = lastPower;
-            buInfo.power = power;
-
-            info.buffList.push(buInfo);
-          }
-        });
-      }
-    }
-
-    // console.log(info, Object.keys(info).length);
-    if (Object.keys(info).length) {
-      info.cardId = sender.id;
-      info.targetId = target.id;
-      this.writeRecord(ERecord.castCardSkillEffect, info);
-
-    }
-
-
+  calcFlow(dataList: ICastData[]): void {
+    dataList.forEach(n => { });
   }
+
+  // calcFlow(sender: Card, target: Card | Hero, effect: ICastData[]) {
+  //   let { damage, prop, } = effect;
+  //   let info: any = {};
+  //   // 处理伤害
+  //   {
+  //     let lastHp = target.hp;
+  //     target.hp -= (damage.magic + damage.other + damage.physical + damage.sacred + damage.special);
+
+  //     // info
+  //     if (lastHp !== target.hp) {
+  //       info.damage = damage;
+  //       info.lastHp = lastHp;
+  //       info.hp = target.hp;
+
+  //     }
+  //   }
+
+  //   // 处理属性变化
+  //   {
+  //     if (target instanceof Card) {
+  //       prop.powerList.forEach(n => {
+  //         let lastPower = target.power;
+
+  //         let bu = new Buff();
+  //         bu.layer = 1;
+  //         bu.maxLayer = -1;
+  //         bu.clearLayer = -1;
+  //         bu.data = n.amount;
+  //         bu.isForever = !!n.isForever;
+
+  //         if (n.type === 'number') {
+  //           bu.type = EBuff.powerAdd;
+  //         } else if (n.type === 'percent') {
+  //           bu.type = EBuff.powerMul;
+  //         } else {
+  //           throw 'wrong power buff type';
+  //         }
+  //         target.addBuff(bu);
+
+  //         // info
+  //         {
+  //           info.buffList = info.buffList || [];
+  //           let buInfo: any = bu.toInfo();
+
+  //           // 补上power的改变
+  //           let power = target.power;
+  //           buInfo.lastPower = lastPower;
+  //           buInfo.power = power;
+
+  //           info.buffList.push(buInfo);
+  //         }
+  //       });
+  //     }
+  //   }
+
+  //   // console.log(info, Object.keys(info).length);
+  //   if (Object.keys(info).length) {
+  //     info.cardId = sender.id;
+  //     info.targetId = target.id;
+  //     this.writeRecord(ERecord.castCardSkillEffect, info);
+
+  //   }
+
+
+  // }
 
 
   // 放弃,想复杂了

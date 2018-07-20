@@ -45,15 +45,27 @@ export default class huomiao extends Skill {
 
 
   // 索敌,查找目标
-  findTarget(stage: Stage): Card[] | Hero {
+  findTarget(): Card[] | Hero {
     let rst: Card[] | Hero;
+    rst = this.findRndTargetFromEnemy(this.stage, 1);
     return rst;
   }
 
 
   // 技能效果
-  cast(stage: Stage, flow?: CastFlow): CastFlow[] {
+  cast(flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
+
+    let taList = this.findTarget() as Card[];
+    let amount = this.level * 30;
+    let isGenBuff: boolean = this.rndGen() <= .45;
+    taList.forEach(ta=>{
+      // let fl = new CastFlow(this.card, ta);
+      // fl.data.target.damage.magic = amount;
+      // fl.data.target.
+
+    });
+
     return rst;
   }
 

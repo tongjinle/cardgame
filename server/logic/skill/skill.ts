@@ -28,7 +28,6 @@ import Flow from '../flow/flow';
 import Hero from '../hero/hero';
 import { ESkillNature, ESkillType, EFlowType, ECastFlowStep, } from '../schema';
 import CastFlow from '../flow/castFlow';
-import parseFormula from './parser/parseFormula';
 
 export default class Skill {
   id: string;
@@ -63,7 +62,9 @@ export default class Skill {
     return this.card && this.card.level >= this.levelRequire;
   }
 
-
+  public get stage(): Stage {
+    return this.card.stage;
+  }
 
   constructor() {
 
@@ -71,14 +72,14 @@ export default class Skill {
 
 
   // 索敌,查找目标
-  findTarget(stage: Stage): Card[] | Hero {
+  findTarget(): Card[] | Hero {
     let rst: Card[] | Hero;
     return rst;
   }
 
 
   // 技能效果
-  cast(stage: Stage, flow?: CastFlow): CastFlow[] {
+  cast(flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
     return rst;
   }
@@ -100,7 +101,13 @@ export default class Skill {
     return getInterval(factor0, factor1) * this.level + getInterval(amount0, amount1);
   }
 
-  private getR
+  protected findTargetFromSelfByProp(stage: Stage, count: number, propName: 'hp', sortType: 1 | -1, ): Card[] {
+    let rst: Card[] = [];
+    let self = this.card.army;
+    let caList = this.sort(self.cardList, propName, sortType);
+    rst = caList.slice(0, count);
+    return rst;
+  }
 
   // 从敌军随机索敌n个
   protected findRndTargetFromEnemy(stage: Stage, count: number): Card[] {
@@ -109,6 +116,23 @@ export default class Skill {
     rst.push(... this.randomFetch(enemy.cardList, count, this.rndGen));
     return rst;
   }
+
+
+  // 纯函数,返回一个排好序的数组
+  private sort(list: Card[], propName: string, sortType: 1 | -1, ): Card[] {
+    let rst: Card[] = [];
+    // 浅拷贝
+    let caList = [...list];
+    caList.sort((a, b) => {
+      if ('hp' === propName) {
+        return (a.hp - b.hp) * sortType;
+      }
+      return 0;
+    });
+    return rst;
+  }
+
+
 
   // 随机获取
   protected randomFetch(list: any[], count: number, rndGen: () => number): any[] {

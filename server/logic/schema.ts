@@ -233,6 +233,8 @@ export interface ICastDamage {
   special: number,
   // 其他伤害(例如"毒")
   other: number,
+  // 法术吸血
+  magicHeal: number,
 }
 
 // cast的属性变化记录 
@@ -240,16 +242,56 @@ export interface ICastProp {
   // 攻击力的增减
   // 攻击力的增减百分比
   // 用数组保持一个先后顺序
-  powerList: { amount: number, type: 'number' | 'percent', isForever?: boolean,  }[],
+  powerList: { amount: number, type: 'number' | 'percent', isForever?: boolean, }[],
+}
+
+// cast的治疗记录
+export interface ICastHeal {
+  // 普通治疗
+  heal: number,
+  // 法术吸血
+  magicHeal: number,
+
+
 }
 
 
 // cast的数据包
 export interface ICastData {
-  damage: ICastDamage,
-  prop: ICastProp,
+  // damage: ICastDamage,
+  // heal:ICastHeal,
+  // prop: ICastProp,
+  // id用来表示是一个action,如果一个不能完成,则都不能完成
+  sender?: { id: string, data: ICastItemData },
+  target?: { id: string, data: ICastItemData },
+  // 免疫说明,在所有技能中,有的技能比如"反射壁"是可以顶掉"魔法伤害的"
+  // 使得某个id的动作全部失效
+  immuneId?: string,
 }
 
+// cast的数据包的单元数据
+export interface ICastItemData {
+  // 法术伤害
+  magic?: number,
+  // 物理伤害
+  physical?: number,
+  // 神圣伤害
+  sacred?: number,
+  // 特殊伤害
+  special?: number,
+  // 其他伤害(例如"毒")
+  other?: number,
+  // 法术吸血
+  magicHeal?: number,
+  // 治疗
+  heal?: number,
+  // 攻击力
+  power?: { amount: number, type: 'number' | 'percent', isForever?: boolean, },
+  // buff
+  buff?: { action: 'add' | 'remove', buffId: string, level?: number },
+  immune?: { id: string, }
+
+}
 
 
 

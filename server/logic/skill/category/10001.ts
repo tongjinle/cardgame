@@ -45,23 +45,23 @@ export default class __shuiqiang__ extends Skill {
 
 
   // 索敌,查找目标
-  findTarget(stage: Stage): Card[] | Hero {
+  findTarget(): Card[] | Hero {
     let rst: Card[] | Hero;
-    rst = this.findRndTargetFromEnemy(stage, 1);
+    rst = this.findRndTargetFromEnemy(this.stage, 1);
     return rst;
   }
 
 
   // 技能效果
-  cast(stage: Stage, flow?: CastFlow): CastFlow[] {
+  cast(flow?: CastFlow): CastFlow[] {
     let rst: CastFlow[] = [];
-    let targetList: Card[] = this.findTarget(stage) as Card[];
+    let targetList: Card[] = this.findTarget() as Card[];
 
     // damage
-    let da: number = this.calcNormal(40);
+    let amount: number = this.calcNormal(40);
     targetList.forEach(ta => {
       let fl = new CastFlow(this.card, ta);
-      fl.data.target.damage.magic = da;
+      fl.addData({ role: 'target', data: { magic: amount, } });
       rst.push(fl);
     });
 
