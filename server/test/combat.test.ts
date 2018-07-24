@@ -76,7 +76,7 @@ describe('战斗', () => {
 
   });
 
-  xit('绿毛虫 vs 绿毛虫', async () => {
+  it('绿毛虫 vs 绿毛虫', async () => {
     let st = StageUtil.getIns().createStage();
     let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100004' }]);
     let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004' }]);
@@ -88,7 +88,7 @@ describe('战斗', () => {
 
 
 
-  xit('杰尼龟 vs 杰尼龟', async () => {
+  it('杰尼龟 vs 杰尼龟', async () => {
     let st = StageUtil.getIns().createStage();
     let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }]);
     let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100003' }]);
@@ -100,7 +100,7 @@ describe('战斗', () => {
 
 
 
-  xit('杰尼龟 vs 绿毛虫', async () => {
+  it('杰尼龟 vs 绿毛虫', async () => {
     let st = StageUtil.getIns().createStage();
     let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }]);
     let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004' }]);
@@ -126,7 +126,7 @@ describe('战斗', () => {
 
 
 
-  it('杰尼龟*6 vs 绿毛虫*6', async () => {
+  xit('杰尼龟*6 vs 绿毛虫*6', async () => {
     let st = StageUtil.getIns().createStage();
     let black = StageUtil.getIns().createArmy(EArmyColor.black, 1000, [{ cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' }, { cardId: '100003' },]);
     let red = StageUtil.getIns().createArmy(EArmyColor.red, 1000, [{ cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' }, { cardId: '100004' },]);
